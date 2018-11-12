@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="12" passed="12">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Differ Regression Test Suite" duration-ms="1571" started-at="2018-11-12T15:43:07Z" finished-at="2018-11-12T15:43:08Z">
+    <groups>
+    </groups>
+    <test name="Differ Regression Tests" duration-ms="1571" started-at="2018-11-12T15:43:07Z" finished-at="2018-11-12T15:43:08Z">
+      <class name="requests.SetSideValueTest">
+        <test-method status="PASS" signature="setBaseURI()[pri:0, instance:requests.SetSideValueTest@366e2eef]" name="setBaseURI" is-config="true" duration-ms="320" started-at="2018-11-12T15:43:06Z" finished-at="2018-11-12T15:43:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBaseURI -->
+        <test-method status="PASS" signature="testEmptyStringSideShouldReturnSideNameNotSupportedException()[pri:0, instance:requests.SetSideValueTest@366e2eef]" name="testEmptyStringSideShouldReturnSideNameNotSupportedException" duration-ms="955" started-at="2018-11-12T15:43:07Z" finished-at="2018-11-12T15:43:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyStringSideShouldReturnSideNameNotSupportedException -->
+        <test-method status="PASS" signature="testHtmlContentTypeShouldReturnUnsupportedMediaType()[pri:0, instance:requests.SetSideValueTest@366e2eef]" name="testHtmlContentTypeShouldReturnUnsupportedMediaType" duration-ms="15" started-at="2018-11-12T15:43:08Z" finished-at="2018-11-12T15:43:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHtmlContentTypeShouldReturnUnsupportedMediaType -->
+        <test-method status="PASS" signature="testLeftSideShouldReturnAcceptedLeftSideBase64Data()[pri:0, instance:requests.SetSideValueTest@366e2eef]" name="testLeftSideShouldReturnAcceptedLeftSideBase64Data" duration-ms="369" started-at="2018-11-12T15:43:08Z" finished-at="2018-11-12T15:43:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLeftSideShouldReturnAcceptedLeftSideBase64Data -->
+        <test-method status="PASS" signature="testLeftandRideSidesShouldReturnAcceptedDataForBothSides()[pri:0, instance:requests.SetSideValueTest@366e2eef]" name="testLeftandRideSidesShouldReturnAcceptedDataForBothSides" duration-ms="44" started-at="2018-11-12T15:43:08Z" finished-at="2018-11-12T15:43:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLeftandRideSidesShouldReturnAcceptedDataForBothSides -->
+        <test-method status="PASS" signature="testNoContentTypeShouldReturnUnsupportedMediaType()[pri:0, instance:requests.SetSideValueTest@366e2eef]" name="testNoContentTypeShouldReturnUnsupportedMediaType" duration-ms="16" started-at="2018-11-12T15:43:08Z" finished-at="2018-11-12T15:43:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNoContentTypeShouldReturnUnsupportedMediaType -->
+        <test-method status="PASS" signature="testNonBase64DataShouldReturnDataNotBase64Exception()[pri:0, instance:requests.SetSideValueTest@366e2eef]" name="testNonBase64DataShouldReturnDataNotBase64Exception" duration-ms="37" started-at="2018-11-12T15:43:08Z" finished-at="2018-11-12T15:43:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNonBase64DataShouldReturnDataNotBase64Exception -->
+        <test-method status="PASS" signature="testNonIntegerIDShouldReturnMethodNotAllowed()[pri:0, instance:requests.SetSideValueTest@366e2eef]" name="testNonIntegerIDShouldReturnMethodNotAllowed" duration-ms="33" started-at="2018-11-12T15:43:08Z" finished-at="2018-11-12T15:43:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNonIntegerIDShouldReturnMethodNotAllowed -->
+        <test-method status="PASS" signature="testPutMethodShouldReturnMethodNotAllowed()[pri:0, instance:requests.SetSideValueTest@366e2eef]" name="testPutMethodShouldReturnMethodNotAllowed" duration-ms="13" started-at="2018-11-12T15:43:08Z" finished-at="2018-11-12T15:43:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPutMethodShouldReturnMethodNotAllowed -->
+        <test-method status="PASS" signature="testRightSideShouldReturnAcceptedRightSideBase64Data()[pri:0, instance:requests.SetSideValueTest@366e2eef]" name="testRightSideShouldReturnAcceptedRightSideBase64Data" duration-ms="18" started-at="2018-11-12T15:43:08Z" finished-at="2018-11-12T15:43:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRightSideShouldReturnAcceptedRightSideBase64Data -->
+        <test-method status="PASS" signature="testTextContentTypeShouldReturnUnsupportedMediaType()[pri:0, instance:requests.SetSideValueTest@366e2eef]" name="testTextContentTypeShouldReturnUnsupportedMediaType" duration-ms="10" started-at="2018-11-12T15:43:08Z" finished-at="2018-11-12T15:43:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTextContentTypeShouldReturnUnsupportedMediaType -->
+        <test-method status="PASS" signature="testUndefinedSideShouldReturnSideNameNotSupportedException()[pri:0, instance:requests.SetSideValueTest@366e2eef]" name="testUndefinedSideShouldReturnSideNameNotSupportedException" duration-ms="25" started-at="2018-11-12T15:43:08Z" finished-at="2018-11-12T15:43:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUndefinedSideShouldReturnSideNameNotSupportedException -->
+        <test-method status="PASS" signature="testXmlContentTypeShouldReturnUnsupportedMediaType()[pri:0, instance:requests.SetSideValueTest@366e2eef]" name="testXmlContentTypeShouldReturnUnsupportedMediaType" duration-ms="15" started-at="2018-11-12T15:43:08Z" finished-at="2018-11-12T15:43:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testXmlContentTypeShouldReturnUnsupportedMediaType -->
+      </class> <!-- requests.SetSideValueTest -->
+    </test> <!-- Differ Regression Tests -->
+  </suite> <!-- Differ Regression Test Suite -->
+</testng-results>

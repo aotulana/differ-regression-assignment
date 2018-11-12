@@ -7,20 +7,21 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- * Created by Adebowale on 10/11/2018.
+ * @author Adebowale Otulana
  */
 public class TestBase {
-    /*
-        This is assuming that this project might not be run on the same machine as the application under test.
-        Hence the HOST will be set from a property file
-     */
+    /**
+     * This is assuming that this project might not be run on the same machine as the application under test.
+     * Hence the HOST will be set from the environment property file in the resources folder of the project.
+     **/
     public static Properties environment;
 
     public void initializeBaseURI() throws IOException {
 
-        //Read file within project and get HOST
+        //Read file from location within project and get the defined HOST
         environment = new Properties();
-        FileInputStream environmentFile = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/environment.properties");
+        FileInputStream environmentFile = new FileInputStream(System.getProperty("user.dir")
+                + "/src/main/resources/environment.properties"); //Location of the property file
         environment.load(environmentFile);
 
         //Set base URI

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Differ_Regression_Test_Suite">
+              <span class="suite-name border-passed">Differ Regression Test Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Differ_Regression_Test_Suite">
+                    <span>C:\Users\aotulana\repos\differ-regression-assignment\differ-regression-assignment-suite-runner.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Differ_Regression_Test_Suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Differ_Regression_Test_Suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Differ_Regression_Test_Suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Differ_Regression_Test_Suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Differ_Regression_Test_Suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Differ_Regression_Test_Suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">12 methods,   12 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Differ_Regression_Test_Suite" class="hide-methods passed suite-Differ_Regression_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-Differ_Regression_Test_Suite -->
+                      <a href="#" panel-name="suite-Differ_Regression_Test_Suite" class="show-methods passed suite-Differ_Regression_Test_Suite"> (show)</a> <!-- show-methods passed suite-Differ_Regression_Test_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Differ_Regression_Test_Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.SetSideValueTest" hash-for-method="testEmptyStringSideShouldReturnSideNameNotSupportedException">testEmptyStringSideShouldReturnSideNameNotSupportedException</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.SetSideValueTest" hash-for-method="testHtmlContentTypeShouldReturnUnsupportedMediaType">testHtmlContentTypeShouldReturnUnsupportedMediaType</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.SetSideValueTest" hash-for-method="testLeftSideShouldReturnAcceptedLeftSideBase64Data">testLeftSideShouldReturnAcceptedLeftSideBase64Data</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.SetSideValueTest" hash-for-method="testLeftandRideSidesShouldReturnAcceptedDataForBothSides">testLeftandRideSidesShouldReturnAcceptedDataForBothSides</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.SetSideValueTest" hash-for-method="testNoContentTypeShouldReturnUnsupportedMediaType">testNoContentTypeShouldReturnUnsupportedMediaType</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.SetSideValueTest" hash-for-method="testNonBase64DataShouldReturnDataNotBase64Exception">testNonBase64DataShouldReturnDataNotBase64Exception</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.SetSideValueTest" hash-for-method="testNonIntegerIDShouldReturnMethodNotAllowed">testNonIntegerIDShouldReturnMethodNotAllowed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.SetSideValueTest" hash-for-method="testPutMethodShouldReturnMethodNotAllowed">testPutMethodShouldReturnMethodNotAllowed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.SetSideValueTest" hash-for-method="testRightSideShouldReturnAcceptedRightSideBase64Data">testRightSideShouldReturnAcceptedRightSideBase64Data</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.SetSideValueTest" hash-for-method="testTextContentTypeShouldReturnUnsupportedMediaType">testTextContentTypeShouldReturnUnsupportedMediaType</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.SetSideValueTest" hash-for-method="testUndefinedSideShouldReturnSideNameNotSupportedException">testUndefinedSideShouldReturnSideNameNotSupportedException</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.SetSideValueTest" hash-for-method="testXmlContentTypeShouldReturnUnsupportedMediaType">testXmlContentTypeShouldReturnUnsupportedMediaType</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Differ_Regression_Test_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Differ_Regression_Test_Suite" class="panel Differ_Regression_Test_Suite">
+          <div class="suite-Differ_Regression_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">requests.SetSideValueTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEmptyStringSideShouldReturnSideNameNotSupportedException">
+                  </a> <!-- testEmptyStringSideShouldReturnSideNameNotSupportedException -->
+                  <span class="method-name">testEmptyStringSideShouldReturnSideNameNotSupportedException</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testHtmlContentTypeShouldReturnUnsupportedMediaType">
+                  </a> <!-- testHtmlContentTypeShouldReturnUnsupportedMediaType -->
+                  <span class="method-name">testHtmlContentTypeShouldReturnUnsupportedMediaType</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLeftSideShouldReturnAcceptedLeftSideBase64Data">
+                  </a> <!-- testLeftSideShouldReturnAcceptedLeftSideBase64Data -->
+                  <span class="method-name">testLeftSideShouldReturnAcceptedLeftSideBase64Data</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLeftandRideSidesShouldReturnAcceptedDataForBothSides">
+                  </a> <!-- testLeftandRideSidesShouldReturnAcceptedDataForBothSides -->
+                  <span class="method-name">testLeftandRideSidesShouldReturnAcceptedDataForBothSides</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNoContentTypeShouldReturnUnsupportedMediaType">
+                  </a> <!-- testNoContentTypeShouldReturnUnsupportedMediaType -->
+                  <span class="method-name">testNoContentTypeShouldReturnUnsupportedMediaType</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNonBase64DataShouldReturnDataNotBase64Exception">
+                  </a> <!-- testNonBase64DataShouldReturnDataNotBase64Exception -->
+                  <span class="method-name">testNonBase64DataShouldReturnDataNotBase64Exception</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNonIntegerIDShouldReturnMethodNotAllowed">
+                  </a> <!-- testNonIntegerIDShouldReturnMethodNotAllowed -->
+                  <span class="method-name">testNonIntegerIDShouldReturnMethodNotAllowed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPutMethodShouldReturnMethodNotAllowed">
+                  </a> <!-- testPutMethodShouldReturnMethodNotAllowed -->
+                  <span class="method-name">testPutMethodShouldReturnMethodNotAllowed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRightSideShouldReturnAcceptedRightSideBase64Data">
+                  </a> <!-- testRightSideShouldReturnAcceptedRightSideBase64Data -->
+                  <span class="method-name">testRightSideShouldReturnAcceptedRightSideBase64Data</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testTextContentTypeShouldReturnUnsupportedMediaType">
+                  </a> <!-- testTextContentTypeShouldReturnUnsupportedMediaType -->
+                  <span class="method-name">testTextContentTypeShouldReturnUnsupportedMediaType</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUndefinedSideShouldReturnSideNameNotSupportedException">
+                  </a> <!-- testUndefinedSideShouldReturnSideNameNotSupportedException -->
+                  <span class="method-name">testUndefinedSideShouldReturnSideNameNotSupportedException</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testXmlContentTypeShouldReturnUnsupportedMediaType">
+                  </a> <!-- testXmlContentTypeShouldReturnUnsupportedMediaType -->
+                  <span class="method-name">testXmlContentTypeShouldReturnUnsupportedMediaType</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Differ_Regression_Test_Suite-class-passed -->
+        </div> <!-- panel Differ_Regression_Test_Suite -->
+        <div panel-name="test-xml-Differ_Regression_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\aotulana\repos\differ-regression-assignment\differ-regression-assignment-suite-runner.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Differ Regression Test Suite&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;utilities.ExtentReporterNG&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Differ Regression Tests&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;requests.SetSideValueTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Differ Regression Tests --&gt;
+&lt;/suite&gt; &lt;!-- Differ Regression Test Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Differ_Regression_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Differ Regression Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Differ Regression Tests (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Differ_Regression_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Differ Regression Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Differ_Regression_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Differ Regression Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Differ_Regression_Test_Suite');
+function tableData_Differ_Regression_Test_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(12);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testEmptyStringSideShouldReturnSideNameNotSupportedException')
+data.setCell(0, 2, 'requests.SetSideValueTest')
+data.setCell(0, 3, 955);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testLeftSideShouldReturnAcceptedLeftSideBase64Data')
+data.setCell(1, 2, 'requests.SetSideValueTest')
+data.setCell(1, 3, 369);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testLeftandRideSidesShouldReturnAcceptedDataForBothSides')
+data.setCell(2, 2, 'requests.SetSideValueTest')
+data.setCell(2, 3, 44);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testNonBase64DataShouldReturnDataNotBase64Exception')
+data.setCell(3, 2, 'requests.SetSideValueTest')
+data.setCell(3, 3, 37);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testNonIntegerIDShouldReturnMethodNotAllowed')
+data.setCell(4, 2, 'requests.SetSideValueTest')
+data.setCell(4, 3, 33);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testUndefinedSideShouldReturnSideNameNotSupportedException')
+data.setCell(5, 2, 'requests.SetSideValueTest')
+data.setCell(5, 3, 25);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testRightSideShouldReturnAcceptedRightSideBase64Data')
+data.setCell(6, 2, 'requests.SetSideValueTest')
+data.setCell(6, 3, 18);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testNoContentTypeShouldReturnUnsupportedMediaType')
+data.setCell(7, 2, 'requests.SetSideValueTest')
+data.setCell(7, 3, 16);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testXmlContentTypeShouldReturnUnsupportedMediaType')
+data.setCell(8, 2, 'requests.SetSideValueTest')
+data.setCell(8, 3, 15);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testHtmlContentTypeShouldReturnUnsupportedMediaType')
+data.setCell(9, 2, 'requests.SetSideValueTest')
+data.setCell(9, 3, 15);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testPutMethodShouldReturnMethodNotAllowed')
+data.setCell(10, 2, 'requests.SetSideValueTest')
+data.setCell(10, 3, 13);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testTextContentTypeShouldReturnUnsupportedMediaType')
+data.setCell(11, 2, 'requests.SetSideValueTest')
+data.setCell(11, 3, 10);
+window.suiteTableData['Differ_Regression_Test_Suite']= { tableData: data, tableDiv: 'times-div-Differ_Regression_Test_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <div id="times-div-Differ_Regression_Test_Suite">
+              </div> <!-- times-div-Differ_Regression_Test_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Differ_Regression_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Differ Regression Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Differ_Regression_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Differ_Regression_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">requests.SetSideValueTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setBaseURI</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="test-method">
+                <span class="method-name">testEmptyStringSideShouldReturnSideNameNotSupportedException</span>
+                <span class="method-start">332 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testHtmlContentTypeShouldReturnUnsupportedMediaType</span>
+                <span class="method-start">1288 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testLeftSideShouldReturnAcceptedLeftSideBase64Data</span>
+                <span class="method-start">1304 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testLeftandRideSidesShouldReturnAcceptedDataForBothSides</span>
+                <span class="method-start">1674 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testNoContentTypeShouldReturnUnsupportedMediaType</span>
+                <span class="method-start">1719 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testNonBase64DataShouldReturnDataNotBase64Exception</span>
+                <span class="method-start">1735 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testNonIntegerIDShouldReturnMethodNotAllowed</span>
+                <span class="method-start">1773 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testPutMethodShouldReturnMethodNotAllowed</span>
+                <span class="method-start">1807 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testRightSideShouldReturnAcceptedRightSideBase64Data</span>
+                <span class="method-start">1820 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testTextContentTypeShouldReturnUnsupportedMediaType</span>
+                <span class="method-start">1839 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUndefinedSideShouldReturnSideNameNotSupportedException</span>
+                <span class="method-start">1849 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testXmlContentTypeShouldReturnUnsupportedMediaType</span>
+                <span class="method-start">1874 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Differ Regression Test Suite" >
+    <listeners>
+        <listener class-name="utilities.ExtentReporterNG" />
+    </listeners>
+
+    <test name="Differ Regression Tests" >
+        <classes>
+            <class name="requests.SetSideValueTest" />
+        </classes>
+    </test>
+</suite>
