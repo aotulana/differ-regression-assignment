@@ -3,10 +3,9 @@ package utilities;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.testng.annotations.BeforeSuite;
 
-import java.io.IOException;
 import java.util.Base64;
+import java.util.Random;
 
 import static io.restassured.RestAssured.given;
 import static utilities.Endpoints.diffSidesPath;
@@ -24,6 +23,8 @@ public class TestUtililities {
     public static String errorMessage;
     public static String leftValue;
     public static String rightValue;
+    public static long id;
+    public static String detail;
     public static String type;
     public static JsonPath jSONResponse;
 
@@ -33,11 +34,10 @@ public class TestUtililities {
      *
      * @return  A JsonPath equivalence of the RESTAssured response
      */
-    public static JsonPath rawResponseToJson(Response r)
+    public static void convertResponseToJson(Response r)
     {
         String response = r.asString();
-        JsonPath responseString = new JsonPath(response);
-        return responseString;
+        jSONResponse = new JsonPath(response);
     }
 
     /**
@@ -97,5 +97,10 @@ public class TestUtililities {
                             contentType(ContentType.JSON). //Verify Content Type of response
                 extract().
                         response();
+    }
+
+    //Generate unique ID using timestamp and convert to long
+    public static void generateUniqueID() {
+        id = new Random().nextLong();
     }
 }

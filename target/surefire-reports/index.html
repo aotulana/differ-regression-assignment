@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Differ_Regression_Test_Suite">
-              <span class="suite-name border-passed">Differ Regression Test Suite</span>
+              <span class="suite-name border-failed">Differ Regression Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">12 methods,   12 passed</span>
+                    <span class="method-stats">17 methods, 3 failed,   14 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Differ_Regression_Test_Suite" class="hide-methods failed suite-Differ_Regression_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Differ_Regression_Test_Suite -->
+                      <a href="#" panel-name="suite-Differ_Regression_Test_Suite" class="show-methods failed suite-Differ_Regression_Test_Suite"> (show)</a> <!-- show-methods failed suite-Differ_Regression_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Differ_Regression_Test_Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.DifferentiateTest" hash-for-method="testDifferAgainstNullLeftSideShouldDifferentLength">testDifferAgainstNullLeftSideShouldDifferentLength</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.DifferentiateTest" hash-for-method="testDifferAgainstNullRightSideShouldDifferentLength">testDifferAgainstNullRightSideShouldDifferentLength</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.DifferentiateTest" hash-for-method="testDifferNotInitializedIDShouldReturnNotFound">testDifferNotInitializedIDShouldReturnNotFound</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Differ_Regression_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +124,16 @@
                       <a href="#" panel-name="suite-Differ_Regression_Test_Suite" class="show-methods passed suite-Differ_Regression_Test_Suite"> (show)</a> <!-- show-methods passed suite-Differ_Regression_Test_Suite -->
                     </span>
                     <div class="method-list-content passed suite-Differ_Regression_Test_Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.DifferentiateTest" hash-for-method="testDifferOfEqualSidesShouldReturnEqual">testDifferOfEqualSidesShouldReturnEqual</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.SetSideValueTest" hash-for-method="testEmptyBodyShouldReturnBadRequest">testEmptyBodyShouldReturnBadRequest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Differ_Regression_Test_Suite" title="requests.SetSideValueTest" hash-for-method="testEmptyStringSideShouldReturnSideNameNotSupportedException">testEmptyStringSideShouldReturnSideNameNotSupportedException</a> <!-- method navigator-link -->
@@ -172,12 +206,91 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Differ_Regression_Test_Suite" class="panel Differ_Regression_Test_Suite">
+          <div class="suite-Differ_Regression_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">requests.DifferentiateTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDifferAgainstNullLeftSideShouldDifferentLength">
+                  </a> <!-- testDifferAgainstNullLeftSideShouldDifferentLength -->
+                  <span class="method-name">testDifferAgainstNullLeftSideShouldDifferentLength</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Left side contains no value.] but found [null]
+	at requests.DifferentiateTest.testDifferAgainstNullLeftSideShouldDifferentLength(DifferentiateTest.java:47)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDifferAgainstNullRightSideShouldDifferentLength">
+                  </a> <!-- testDifferAgainstNullRightSideShouldDifferentLength -->
+                  <span class="method-name">testDifferAgainstNullRightSideShouldDifferentLength</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Right side contains no value.] but found [null]
+	at requests.DifferentiateTest.testDifferAgainstNullRightSideShouldDifferentLength(DifferentiateTest.java:60)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDifferNotInitializedIDShouldReturnNotFound">
+                  </a> <!-- testDifferNotInitializedIDShouldReturnNotFound -->
+                  <span class="method-name">testDifferNotInitializedIDShouldReturnNotFound</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;404&gt; but was &lt;200&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:483)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:655)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:123)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:131)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
+	at requests.DifferentiateTest.testDifferNotInitializedIDShouldReturnNotFound(DifferentiateTest.java:75)
+... Removed 38 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Differ_Regression_Test_Suite-class-failed -->
+          <div class="suite-Differ_Regression_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">requests.DifferentiateTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDifferOfEqualSidesShouldReturnEqual">
+                  </a> <!-- testDifferOfEqualSidesShouldReturnEqual -->
+                  <span class="method-name">testDifferOfEqualSidesShouldReturnEqual</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Differ_Regression_Test_Suite-class-passed -->
           <div class="suite-Differ_Regression_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">requests.SetSideValueTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEmptyBodyShouldReturnBadRequest">
+                  </a> <!-- testEmptyBodyShouldReturnBadRequest -->
+                  <span class="method-name">testEmptyBodyShouldReturnBadRequest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="testEmptyStringSideShouldReturnSideNameNotSupportedException">
@@ -280,6 +393,7 @@
   &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Differ Regression Tests&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;requests.SetSideValueTest&quot;/&gt;
+      &lt;class name=&quot;requests.DifferentiateTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Differ Regression Tests --&gt;
 &lt;/suite&gt; &lt;!-- Differ Regression Test Suite --&gt;
@@ -293,7 +407,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Differ Regression Tests (1 class)</span>
+                <span class="test-name">Differ Regression Tests (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -319,55 +433,75 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(12);
+data.addRows(17);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testEmptyStringSideShouldReturnSideNameNotSupportedException')
+data.setCell(0, 1, 'testEmptyBodyShouldReturnBadRequest')
 data.setCell(0, 2, 'requests.SetSideValueTest')
-data.setCell(0, 3, 955);
+data.setCell(0, 3, 1342);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testLeftSideShouldReturnAcceptedLeftSideBase64Data')
-data.setCell(1, 2, 'requests.SetSideValueTest')
-data.setCell(1, 3, 369);
+data.setCell(1, 1, 'testDifferAgainstNullLeftSideShouldDifferentLength')
+data.setCell(1, 2, 'requests.DifferentiateTest')
+data.setCell(1, 3, 60);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testLeftandRideSidesShouldReturnAcceptedDataForBothSides')
-data.setCell(2, 2, 'requests.SetSideValueTest')
-data.setCell(2, 3, 44);
+data.setCell(2, 1, 'testDifferOfEqualSidesShouldReturnEqual')
+data.setCell(2, 2, 'requests.DifferentiateTest')
+data.setCell(2, 3, 47);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testNonBase64DataShouldReturnDataNotBase64Exception')
+data.setCell(3, 1, 'testLeftandRideSidesShouldReturnAcceptedDataForBothSides')
 data.setCell(3, 2, 'requests.SetSideValueTest')
-data.setCell(3, 3, 37);
+data.setCell(3, 3, 44);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testNonIntegerIDShouldReturnMethodNotAllowed')
-data.setCell(4, 2, 'requests.SetSideValueTest')
-data.setCell(4, 3, 33);
+data.setCell(4, 1, 'testDifferAgainstNullRightSideShouldDifferentLength')
+data.setCell(4, 2, 'requests.DifferentiateTest')
+data.setCell(4, 3, 40);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testUndefinedSideShouldReturnSideNameNotSupportedException')
+data.setCell(5, 1, 'testNonBase64DataShouldReturnDataNotBase64Exception')
 data.setCell(5, 2, 'requests.SetSideValueTest')
-data.setCell(5, 3, 25);
+data.setCell(5, 3, 27);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testRightSideShouldReturnAcceptedRightSideBase64Data')
+data.setCell(6, 1, 'testLeftSideShouldReturnAcceptedLeftSideBase64Data')
 data.setCell(6, 2, 'requests.SetSideValueTest')
-data.setCell(6, 3, 18);
+data.setCell(6, 3, 27);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testNoContentTypeShouldReturnUnsupportedMediaType')
+data.setCell(7, 1, 'testUndefinedSideShouldReturnSideNameNotSupportedException')
 data.setCell(7, 2, 'requests.SetSideValueTest')
-data.setCell(7, 3, 16);
+data.setCell(7, 3, 23);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testXmlContentTypeShouldReturnUnsupportedMediaType')
-data.setCell(8, 2, 'requests.SetSideValueTest')
-data.setCell(8, 3, 15);
+data.setCell(8, 1, 'testDifferNotInitializedIDShouldReturnNotFound')
+data.setCell(8, 2, 'requests.DifferentiateTest')
+data.setCell(8, 3, 23);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'testHtmlContentTypeShouldReturnUnsupportedMediaType')
+data.setCell(9, 1, 'testRightSideShouldReturnAcceptedRightSideBase64Data')
 data.setCell(9, 2, 'requests.SetSideValueTest')
-data.setCell(9, 3, 15);
+data.setCell(9, 3, 21);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'testPutMethodShouldReturnMethodNotAllowed')
+data.setCell(10, 1, 'testNonIntegerIDShouldReturnMethodNotAllowed')
 data.setCell(10, 2, 'requests.SetSideValueTest')
-data.setCell(10, 3, 13);
+data.setCell(10, 3, 20);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'testTextContentTypeShouldReturnUnsupportedMediaType')
+data.setCell(11, 1, 'testEmptyStringSideShouldReturnSideNameNotSupportedException')
 data.setCell(11, 2, 'requests.SetSideValueTest')
-data.setCell(11, 3, 10);
+data.setCell(11, 3, 20);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testHtmlContentTypeShouldReturnUnsupportedMediaType')
+data.setCell(12, 2, 'requests.SetSideValueTest')
+data.setCell(12, 3, 17);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testPutMethodShouldReturnMethodNotAllowed')
+data.setCell(13, 2, 'requests.SetSideValueTest')
+data.setCell(13, 3, 14);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testXmlContentTypeShouldReturnUnsupportedMediaType')
+data.setCell(14, 2, 'requests.SetSideValueTest')
+data.setCell(14, 3, 14);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'testNoContentTypeShouldReturnUnsupportedMediaType')
+data.setCell(15, 2, 'requests.SetSideValueTest')
+data.setCell(15, 3, 13);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testTextContentTypeShouldReturnUnsupportedMediaType')
+data.setCell(16, 2, 'requests.SetSideValueTest')
+data.setCell(16, 3, 10);
 window.suiteTableData['Differ_Regression_Test_Suite']= { tableData: data, tableDiv: 'times-div-Differ_Regression_Test_Suite'}
 return data;
 }
@@ -398,58 +532,94 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">requests.SetSideValueTest</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
+              <div class="chronological-class-name">requests.DifferentiateTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
                 <span class="method-name">setBaseURI</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">requests.SetSideValueTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setBaseURI</span>
+                <span class="method-start">317 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">testEmptyBodyShouldReturnBadRequest</span>
+                <span class="method-start">330 ms</span>
+              </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testEmptyStringSideShouldReturnSideNameNotSupportedException</span>
-                <span class="method-start">332 ms</span>
+                <span class="method-start">1673 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testHtmlContentTypeShouldReturnUnsupportedMediaType</span>
-                <span class="method-start">1288 ms</span>
+                <span class="method-start">1694 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testLeftSideShouldReturnAcceptedLeftSideBase64Data</span>
-                <span class="method-start">1304 ms</span>
+                <span class="method-start">1711 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testLeftandRideSidesShouldReturnAcceptedDataForBothSides</span>
-                <span class="method-start">1674 ms</span>
+                <span class="method-start">1738 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testNoContentTypeShouldReturnUnsupportedMediaType</span>
-                <span class="method-start">1719 ms</span>
+                <span class="method-start">1782 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testNonBase64DataShouldReturnDataNotBase64Exception</span>
-                <span class="method-start">1735 ms</span>
+                <span class="method-start">1795 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testNonIntegerIDShouldReturnMethodNotAllowed</span>
-                <span class="method-start">1773 ms</span>
+                <span class="method-start">1822 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testPutMethodShouldReturnMethodNotAllowed</span>
-                <span class="method-start">1807 ms</span>
+                <span class="method-start">1842 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testRightSideShouldReturnAcceptedRightSideBase64Data</span>
-                <span class="method-start">1820 ms</span>
+                <span class="method-start">1856 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testTextContentTypeShouldReturnUnsupportedMediaType</span>
-                <span class="method-start">1839 ms</span>
+                <span class="method-start">1878 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testUndefinedSideShouldReturnSideNameNotSupportedException</span>
-                <span class="method-start">1849 ms</span>
+                <span class="method-start">1888 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testXmlContentTypeShouldReturnUnsupportedMediaType</span>
-                <span class="method-start">1874 ms</span>
+                <span class="method-start">1911 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">requests.DifferentiateTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testDifferAgainstNullLeftSideShouldDifferentLength</span>
+                <span class="method-start">1926 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testDifferAgainstNullRightSideShouldDifferentLength</span>
+                <span class="method-start">1994 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testDifferNotInitializedIDShouldReturnNotFound</span>
+                <span class="method-start">2034 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDifferOfEqualSidesShouldReturnEqual</span>
+                <span class="method-start">2058 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

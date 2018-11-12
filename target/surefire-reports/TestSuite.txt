@@ -1,4 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.578 s - in TestSuite
+Tests run: 17, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.294 s <<< FAILURE! - in TestSuite
+testDifferAgainstNullLeftSideShouldDifferentLength(requests.DifferentiateTest)  Time elapsed: 0.073 s  <<< FAILURE!
+java.lang.AssertionError: expected [Left side contains no value.] but found [null]
+	at requests.DifferentiateTest.testDifferAgainstNullLeftSideShouldDifferentLength(DifferentiateTest.java:47)
+
+testDifferAgainstNullRightSideShouldDifferentLength(requests.DifferentiateTest)  Time elapsed: 0.038 s  <<< FAILURE!
+java.lang.AssertionError: expected [Right side contains no value.] but found [null]
+	at requests.DifferentiateTest.testDifferAgainstNullRightSideShouldDifferentLength(DifferentiateTest.java:60)
+
+testDifferNotInitializedIDShouldReturnNotFound(requests.DifferentiateTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at requests.DifferentiateTest.testDifferNotInitializedIDShouldReturnNotFound(DifferentiateTest.java:75)
+

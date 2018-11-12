@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Differ Regression Test Suite]">
+  <listeners>
+    <listener class-name="utilities.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Differ Regression Tests(failed)">
+    <classes>
+      <class name="requests.DifferentiateTest">
+        <methods>
+          <include name="testDifferAgainstNullRightSideShouldDifferentLength"/>
+          <include name="testDifferAgainstNullLeftSideShouldDifferentLength"/>
+          <include name="testDifferNotInitializedIDShouldReturnNotFound"/>
+          <include name="setBaseURI"/>
+        </methods>
+      </class> <!-- requests.DifferentiateTest -->
+    </classes>
+  </test> <!-- Differ Regression Tests(failed) -->
+</suite> <!-- Failed suite [Differ Regression Test Suite] -->

@@ -2,14 +2,11 @@ package requests;
 
 import hook.TestBase;
 import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.util.Date;
 
 import static io.restassured.RestAssured.given;
 import static utilities.TestUtililities.*;
@@ -44,7 +41,7 @@ public class SetSideValueTest extends TestBase {
                 extract().
                         response();
 
-        jSONResponse = rawResponseToJson(response); //Convert raw response to JSON format
+        convertResponseToJson(response); //Convert raw response to JSON format
         errorCode = jSONResponse.getInt("errorCode"); //Get error code from response JSON
         errorMessage = jSONResponse.getString("errorMessage"); //Get error message from response JSON
         Assert.assertEquals(errorCode, Integer.valueOf(415));
@@ -67,7 +64,7 @@ public class SetSideValueTest extends TestBase {
                 extract().
                         response();
 
-        jSONResponse = rawResponseToJson(response); //Converts raw response to JSON format
+        convertResponseToJson(response); //Converts raw response to JSON format
         errorCode = jSONResponse.getInt("errorCode"); //Get error code from JSON response
         errorMessage = jSONResponse.getString("errorMessage"); //Get error message from response JSON
         Assert.assertEquals(errorCode, Integer.valueOf(501));
@@ -87,6 +84,23 @@ public class SetSideValueTest extends TestBase {
                 then().
                         assertThat().
                             statusCode(405). //Verify HTTP Status Code
+                extract().
+                        response();
+    }
+
+    @Test
+    public void testEmptyStringIDShouldReturnNotFound() {
+        response =
+                given().
+                        contentType(ContentType.JSON).
+                        pathParam("id",""). //Empty String ID parameter
+                        pathParam("side", "left").
+                        body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
+                when().
+                        post(setSideValuePath()).
+                then().
+                        assertThat().
+                            statusCode(404). //Verify HTTP Status Code
                 extract().
                         response();
     }
@@ -146,7 +160,7 @@ public class SetSideValueTest extends TestBase {
     public void testNoContentTypeShouldReturnUnsupportedMediaType() {
         response =
                 given().
-                        //contentType(ContentType.JSON).    //No Content Type
+                        //No Content Type
                         pathParam("id",18).
                         pathParam("side", "right").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
@@ -192,13 +206,13 @@ public class SetSideValueTest extends TestBase {
     }
 
     @Test
-    public void testEmptyBodyShouldReturnBadRequest() {
+    public void testNoBodyShouldReturnBadRequest() {
         response =
                 given().
                         contentType(ContentType.JSON).
                         pathParam("id",22).
                         pathParam("side", "right").
-                        body(""). //Empty Body
+                        //No Body
                 when().
                         post(setSideValuePath()).
                 then().
@@ -208,7 +222,34 @@ public class SetSideValueTest extends TestBase {
                 extract().
                         response();
 
-        jSONResponse = rawResponseToJson(response); //Convert raw response to JSON format
+        convertResponseToJson(response); //Convert raw response to JSON format
+        errorCode = jSONResponse.getInt("errorCode"); //Get error code from response JSON
+        errorMessage = jSONResponse.getString("errorMessage"); //Get error message from response JSON
+        Assert.assertEquals(errorCode, Integer.valueOf(400));
+        Assert.assertEquals(errorMessage, "Value in request body cannot be empty.");
+    }
+
+    /**
+     * It is assumed that empty string in the body of the request should return a bad request
+     */
+    @Test
+    public void testEmptyStringBodyShouldReturnBadRequest() {
+        response =
+                given().
+                        contentType(ContentType.JSON).
+                        pathParam("id",22).
+                        pathParam("side", "right").
+                        body("\"\"").
+                when().
+                        post(setSideValuePath()).
+                then().
+                        assertThat().
+                            statusCode(400). //Verify HTTP Status Code
+                            contentType(ContentType.JSON).
+                extract().
+                        response();
+
+        convertResponseToJson(response); //Convert raw response to JSON format
         errorCode = jSONResponse.getInt("errorCode"); //Get error code from response JSON
         errorMessage = jSONResponse.getString("errorMessage"); //Get error message from response JSON
         Assert.assertEquals(errorCode, Integer.valueOf(400));
@@ -218,8 +259,7 @@ public class SetSideValueTest extends TestBase {
     @Test
     public void testLeftSideShouldReturnAcceptedLeftSideBase64Data() {
         setSideValue(10, "left", "123456789000"); //Value entered is encoded in the method
-
-        jSONResponse = rawResponseToJson(response); //Convert raw response to JSON format
+        convertResponseToJson(response); //Convert raw response to JSON format
         leftValue = jSONResponse.getString("left"); //Get left value from response
         Assert.assertEquals(leftValue, encodeInBase64("123456789000"));
     }
@@ -227,27 +267,32 @@ public class SetSideValueTest extends TestBase {
     @Test
     public void testRightSideShouldReturnAcceptedRightSideBase64Data() {
         setSideValue(21, "right", "12345abcd"); //Value entered is encoded by the method
-
-        jSONResponse = rawResponseToJson(response); //Convert raw response to JSON format
+        convertResponseToJson(response); //Convert raw response to JSON format
         rightValue = jSONResponse.getString("right"); //Get right value from response
         Assert.assertEquals(rightValue, encodeInBase64("12345abcd"));
     }
 
     @Test
     public void testLeftandRideSidesShouldReturnAcceptedDataForBothSides() {
-        //Generate unique ID using timestamp and convert to long
-        String timestamp = String.format("%ts",new Date());
-        long id = Long.parseLong(timestamp);
-
-        //Set the same unique ID for both left and right sides
+        //Set the same ID for both left and right sides
+        generateUniqueID();
         setSideValue(id, "left", "adebowale");
         setSideValue(id, "right", "formatting12345");
-
-        JsonPath rightSideResponse =  rawResponseToJson(response); //Convert right side response to JSON format
-        leftValue = rightSideResponse.getString("left"); //Get left value from right side response
-        rightValue = rightSideResponse.getString("right"); //Get right value from right side response
-
+        convertResponseToJson(response); //Convert right side response to JSON format
+        leftValue = jSONResponse.getString("left"); //Get left value from right side response
+        rightValue = jSONResponse.getString("right"); //Get right value from right side response
         Assert.assertEquals(leftValue, encodeInBase64("adebowale"));
         Assert.assertEquals(rightValue, encodeInBase64("formatting12345"));
     }
+
+    @Test
+    public void testSameIDOnSameSideShouldReturnUpdatedValue() {
+        generateUniqueID();
+        setSideValue(id, "right", "Lifted up");
+        setSideValue(id, "right", "Dropped down");
+        convertResponseToJson(response); //Convert right side response to JSON format
+        rightValue = jSONResponse.getString("right"); //Get right value from right side response
+        Assert.assertEquals(rightValue, encodeInBase64("Dropped down"));
+    }
+
 }

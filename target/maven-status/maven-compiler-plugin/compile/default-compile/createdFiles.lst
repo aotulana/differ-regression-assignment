@@ -1,1 +1,4 @@
+hook\TestBase.class
+utilities\TestUtililities.class
+utilities\Endpoints.class
 utilities\ExtentReporterNG.class
