@@ -42,7 +42,7 @@ public class TestUtililities {
 
     /**
      * This utility method performs Base64 encode operation using RFC4648 encoder.
-     * This is on the assumption that the Base64 encoded data required by the endpoints should be in this format
+     * This is based on the assumption that the Base64 encoded data required by the endpoints should be in this format
      *
      * @param s
      *        String to be encoded
@@ -56,7 +56,9 @@ public class TestUtililities {
     }
 
     /**
-     * This method sets the ID, side and value for a post request for side service
+     * This method creates a valid HTTP POST request for the side service.
+     * It sets the ID, side and Base64 encoded data.
+     * It verifies the HTTP status code and Content Type of the response.
      *
      * @param id
      *        Identifies a side in the list of all sides
@@ -73,7 +75,7 @@ public class TestUtililities {
                         contentType(ContentType.JSON).
                         pathParam("id",id). //Sets ID
                         pathParam("side", side). //Sets side
-                        body("\"" + encodeInBase64(value) + "\""). //Sets encoded value
+                        body("\"" + encodeInBase64(value) + "\""). //Sets Base64 encoded value
                 when().
                         post(setSideValuePath()).
                 then().
@@ -84,6 +86,13 @@ public class TestUtililities {
                         response();
     }
 
+    /**
+     * This method creates a valid HTTP GET request to differ sides.
+     * It also verifies the HTTP status code and Content Type of the response
+     *
+     * @param id
+     *        A valid side ID
+     */
     public static void differentiateSides(long id) {
         response =
                 given().
@@ -99,8 +108,12 @@ public class TestUtililities {
                         response();
     }
 
-    //Generate unique ID using timestamp and convert to long
+    /**
+     * This method generates random long values that are used as unique side IDs.
+     * It ensures that the generated values are positive.
+     */
     public static void generateUniqueID() {
-        id = new Random().nextLong();
+        Random randomID = new Random();
+        id = randomID.nextLong() & Long.MAX_VALUE; //Positive random IDs
     }
 }

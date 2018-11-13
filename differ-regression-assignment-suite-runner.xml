@@ -6,8 +6,8 @@
 
     <test name="Differ Regression Tests" >
         <classes>
-            <class name="requests.SetSideValueTest" />
-            <class name="requests.DifferentiateTest" />
+            <class name="requests.SideServiceTest" />
+            <class name="requests.DifferServiceTest" />
         </classes>
     </test>
 </suite>

@@ -13,19 +13,25 @@ import static utilities.TestUtililities.*;
 import static utilities.Endpoints.setSideValuePath;
 
 /**
- * This class contains all tests for the "Set Side Value" endpoint
+ * This class contains all tests for the Side Service.
+ * Each test method sends an HTTP request to the side service
+ * and they run independently, not relying on result from other test methods
  *
  * @author Adebowale Otulana
  */
-public class SetSideValueTest extends TestBase {
+public class SideServiceTest extends TestBase {
 
-    //Before tests are run, the base URI is initialized
+    /**
+     * Before the tests, it initializes the base URI which will be used by each test method.
+     *
+     * @throws IOException
+     */
     @BeforeTest
     public void setBaseURI() throws IOException {
         initializeBaseURI();
     }
 
-    @Test
+    @Test //Verifies data not encoded in Base64 returns DataNotBase64Exception
     public void testNonBase64DataShouldReturnDataNotBase64Exception() {
         response =
                 given().
@@ -48,7 +54,7 @@ public class SetSideValueTest extends TestBase {
         Assert.assertEquals(errorMessage, "Data in body not Base64 formatted.");
     }
 
-    @Test
+    @Test //Verifies undefined side (e.g. up) returns SideNameNotSupportedException
     public void testUndefinedSideShouldReturnSideNameNotSupportedException() {
         response =
                 given().
@@ -71,7 +77,30 @@ public class SetSideValueTest extends TestBase {
         Assert.assertEquals(errorMessage, "This side is not supported, please use either 'left' or 'right'.");
     }
 
-    @Test
+    @Test //Verifies passing white spaces only as side returns SideNameNotSupportedException
+    public void testWhiteSpacesSideParameterShouldReturnSideNameNotSupportedException() {
+        response =
+                given().
+                        contentType(ContentType.JSON).
+                        pathParam("id",1).
+                        pathParam("side", "   "). //White spaces as side parameter
+                        body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
+                when().
+                        post(setSideValuePath()).
+                then().
+                        assertThat().
+                            statusCode(501). //Verify HTTP Status Code
+                extract().
+                        response();
+
+        convertResponseToJson(response); //Converts raw response to JSON format
+        errorCode = jSONResponse.getInt("errorCode"); //Get error code from JSON response
+        errorMessage = jSONResponse.getString("errorMessage"); //Get error message from response JSON
+        Assert.assertEquals(errorCode, Integer.valueOf(501));
+        Assert.assertEquals(errorMessage, "This side is not supported, please use either 'left' or 'right'.");
+    }
+
+    @Test //Verifies passing empty string as side returns SideNameNotSupportedException
     public void testEmptyStringSideShouldReturnSideNameNotSupportedException() {
         response =
                 given().
@@ -88,7 +117,7 @@ public class SetSideValueTest extends TestBase {
                         response();
     }
 
-    @Test
+    @Test //Verifies passing empty string as ID returns 404 - Not found
     public void testEmptyStringIDShouldReturnNotFound() {
         response =
                 given().
@@ -105,7 +134,67 @@ public class SetSideValueTest extends TestBase {
                         response();
     }
 
-    @Test
+    /**
+     * It is assumed that a string of white spaces only is not a valid ID
+     */
+    @Test //Verifies passing white spaces only as ID returns 404 - Not found
+    public void testWhiteSpacesIDShouldReturnNotFound() {
+        response =
+                given().
+                        contentType(ContentType.JSON).
+                        pathParam("id","   "). //White spaces ID parameter
+                        pathParam("side", "left").
+                        body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
+                when().
+                        post(setSideValuePath()).
+                then().
+                        assertThat().
+                            statusCode(404). //Verify HTTP Status Code
+                extract().
+                        response();
+    }
+
+    /**
+     * It is assumed that a negative value is not a valid ID
+     */
+    @Test //Verifies passing negative value as ID returns 404 - Not found
+    public void testNegativeIDShouldReturnNotFound() {
+        response =
+                given().
+                        contentType(ContentType.JSON).
+                        pathParam("id",-1). //Negative ID
+                        pathParam("side", "left").
+                        body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
+                when().
+                        post(setSideValuePath()).
+                then().
+                        assertThat().
+                            statusCode(404). //Verify HTTP Status Code
+                extract().
+                        response();
+    }
+
+    /**
+     * It is assumed that an alphanumeric value is not a valid ID
+     */
+    @Test //Verifies passing alphanumeric value as ID returns 404 - Not found
+    public void testAlphanumericIDShouldReturnNotFound() {
+        response =
+                given().
+                        contentType(ContentType.JSON).
+                        pathParam("id","ab12"). //Alphanumeric ID
+                        pathParam("side", "left").
+                        body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
+                when().
+                        post(setSideValuePath()).
+                then().
+                        assertThat().
+                            statusCode(404). //Verify HTTP Status Code
+                extract().
+                        response();
+    }
+
+    @Test //Verifies XML Content Type request returns 415 - Unsupported Media Type
     public void testXmlContentTypeShouldReturnUnsupportedMediaType() {
         response =
                 given().
@@ -122,7 +211,7 @@ public class SetSideValueTest extends TestBase {
                         response();
     }
 
-    @Test
+    @Test //Verifies Text Content Type request returns 415 - Unsupported Media Type
     public void testTextContentTypeShouldReturnUnsupportedMediaType() {
         response =
                 given().
@@ -139,7 +228,7 @@ public class SetSideValueTest extends TestBase {
                         response();
     }
 
-    @Test
+    @Test //Verifies HTML Content Type request returns 415 - Unsupported Media Type
     public void testHtmlContentTypeShouldReturnUnsupportedMediaType() {
         response =
                 given().
@@ -156,7 +245,7 @@ public class SetSideValueTest extends TestBase {
                         response();
     }
 
-    @Test
+    @Test //Verifies No Content Type request returns 415 - Unsupported Media Type
     public void testNoContentTypeShouldReturnUnsupportedMediaType() {
         response =
                 given().
@@ -173,7 +262,7 @@ public class SetSideValueTest extends TestBase {
                         response();
     }
 
-    @Test
+    @Test //Verifies PUT method on side service returns 405 - Method Not Allowed
     public void testPutMethodShouldReturnMethodNotAllowed() {
         response =
                 given().
@@ -189,11 +278,11 @@ public class SetSideValueTest extends TestBase {
                         response();
     }
 
-    @Test
-    public void testNonIntegerIDShouldReturnMethodNotAllowed() {
+    @Test //Verifies passing Alphabet value as ID returns 405 - Method Not Allowed
+    public void testAlphabetIDShouldReturnMethodNotAllowed() {
         response =
                 given().
-                        pathParam("id","invalid"). //Invalid ID
+                        pathParam("id","invalid"). //Alphabet ID
                         pathParam("side", "right").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
@@ -205,7 +294,7 @@ public class SetSideValueTest extends TestBase {
                         response();
     }
 
-    @Test
+    @Test //Verifies passing a request with to body returns 400 - Bad Request
     public void testNoBodyShouldReturnBadRequest() {
         response =
                 given().
@@ -256,7 +345,7 @@ public class SetSideValueTest extends TestBase {
         Assert.assertEquals(errorMessage, "Value in request body cannot be empty.");
     }
 
-    @Test
+    @Test //Verifies passing base64 encoded data to the left side returns the passed data
     public void testLeftSideShouldReturnAcceptedLeftSideBase64Data() {
         setSideValue(10, "left", "123456789000"); //Value entered is encoded in the method
         convertResponseToJson(response); //Convert raw response to JSON format
@@ -264,7 +353,7 @@ public class SetSideValueTest extends TestBase {
         Assert.assertEquals(leftValue, encodeInBase64("123456789000"));
     }
 
-    @Test
+    @Test //Verifies passing base64 encoded data to the right side returns the passed data
     public void testRightSideShouldReturnAcceptedRightSideBase64Data() {
         setSideValue(21, "right", "12345abcd"); //Value entered is encoded by the method
         convertResponseToJson(response); //Convert raw response to JSON format
@@ -272,7 +361,7 @@ public class SetSideValueTest extends TestBase {
         Assert.assertEquals(rightValue, encodeInBase64("12345abcd"));
     }
 
-    @Test
+    @Test //Verifies passing base64 encoded data to the left and then to right side returns the two values passed
     public void testLeftandRideSidesShouldReturnAcceptedDataForBothSides() {
         //Set the same ID for both left and right sides
         generateUniqueID();
@@ -285,7 +374,7 @@ public class SetSideValueTest extends TestBase {
         Assert.assertEquals(rightValue, encodeInBase64("formatting12345"));
     }
 
-    @Test
+    @Test //Verifies passing side value to an existing ID returns updated value for the side
     public void testSameIDOnSameSideShouldReturnUpdatedValue() {
         generateUniqueID();
         setSideValue(id, "right", "Lifted up");
@@ -294,5 +383,4 @@ public class SetSideValueTest extends TestBase {
         rightValue = jSONResponse.getString("right"); //Get right value from right side response
         Assert.assertEquals(rightValue, encodeInBase64("Dropped down"));
     }
-
 }

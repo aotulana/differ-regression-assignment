@@ -14,22 +14,23 @@ import static utilities.Endpoints.diffSidesPath;
 import static utilities.TestUtililities.*;
 
 /**
- * Created by aotulana on 11/12/2018.
+ * This class contains all tests for the Differ Service
+ *
+ * @author Adebowale Otulana
  */
-public class DifferentiateTest extends TestBase {
+public class DifferServiceTest extends TestBase {
 
-    //Before tests are run, the base URI is initialized
-    @BeforeTest
+    @BeforeTest //Before tests are run, the base URI is initialized
     public void setBaseURI() throws IOException {
         initializeBaseURI();
     }
 
-    @BeforeMethod
+    @BeforeMethod //Generates unique ID before each test method is run
     public void uniqueIDForEachMethod() {
         generateUniqueID();
     }
 
-    @Test
+    @Test //Verifies equal side values returns EQUAL when diff-ed
     public void testDifferOfEqualSidesShouldReturnEqual() {
         setSideValue(999, "left", "continuous12345");
         setSideValue(999, "right", "continuous12345");
@@ -39,7 +40,7 @@ public class DifferentiateTest extends TestBase {
         Assert.assertEquals(type, "EQUAL");
     }
 
-    @Test
+    @Test //Verifies null value on left side returns DIFFERENT_LENGTH and message to say left side has no value
     public void testDifferAgainstNullLeftSideShouldReturnDifferentLength() {
         setSideValue(id, "right", "comingoverthere");
         differentiateSides(id);
@@ -50,7 +51,7 @@ public class DifferentiateTest extends TestBase {
         Assert.assertEquals(type, "DIFFERENT_LENGTH");
     }
 
-    @Test
+    @Test //Verifies null value on right side returns DIFFERENT_LENGTH and message to say right side has no value
     public void testDifferAgainstNullRightSideShouldReturnDifferentLength() {
         setSideValue(id, "left", "comingoverthere");
         differentiateSides(id);
@@ -61,7 +62,7 @@ public class DifferentiateTest extends TestBase {
         Assert.assertEquals(type, "DIFFERENT_LENGTH");
     }
 
-    @Test
+    @Test //Verifies different side value lengths returns DIFFERENT_LENGTH when diff-ed
     public void testDifferForDifferentLengthShouldReturnDifferentLength() {
         setSideValue(id, "left", "Marvelous Things!!");
         setSideValue(id, "right", "Marvelous");
@@ -71,7 +72,7 @@ public class DifferentiateTest extends TestBase {
         Assert.assertEquals(type, "DIFFERENT_LENGTH");
     }
 
-    @Test
+    @Test //Verifies non initialized ID returns ID not found when diff-ed
     public void testDifferNotInitializedIDShouldReturnNotFound() {
         response =
                 given().
@@ -93,7 +94,7 @@ public class DifferentiateTest extends TestBase {
         Assert.assertEquals(errorMessage, "ID " + id + " not initialized.");
     }
 
-    @Test
+    @Test //Verifies different lengthy side values of same length returns the location of the different characters
     public void test1DifferForDifferentCharactersShouldReturnLocationOfCharacters() {
         setSideValue(id, "left", "Long string to test the position of different characters.");
         setSideValue(id, "right", "Long strung to test the position of different characters!");
@@ -105,7 +106,7 @@ public class DifferentiateTest extends TestBase {
         Assert.assertEquals(type, "DIFFERENT_CHARS");
     }
 
-    @Test
+    @Test //Verifies different side values of same length returns ranged location of different characters
     public void test2DifferForDifferentCharactersShouldReturnLocationOfCharacters() {
         setSideValue(id, "left", "Marvelous");
         setSideValue(id, "right", "12345abcd");
@@ -117,7 +118,7 @@ public class DifferentiateTest extends TestBase {
         Assert.assertEquals(type, "DIFFERENT_CHARS");
     }
 
-    @Test
+    @Test //Verifies DELETE method on Differ Service returns 405 - Method Not Allowed
     public void testDeleteMethodOnDifferShouldReturnMethodNotAllowed() {
         setSideValue(id, "left", "Marvelous Things!!");
         setSideValue(id, "right", "Marvelous");

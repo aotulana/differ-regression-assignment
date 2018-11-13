@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f428b7b-c101-44d4-9375-088cd0214557" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/2018-11-12T16-40-32_646-jvmRun1.dump" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/requests/SideServiceTest.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/requests/SetSideValueTest.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/requests/DifferentiateTest.java" afterPath="$PROJECT_DIR$/src/test/java/requests/DifferServiceTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/requests/SetSideValueTest.java" afterPath="$PROJECT_DIR$/src/test/java/requests/SideServiceTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/target/test-classes/requests/DifferentiateTest.class" afterPath="$PROJECT_DIR$/target/test-classes/requests/DifferServiceTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/utilities/TestUtililities.class" afterPath="$PROJECT_DIR$/target/classes/utilities/TestUtililities.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/differ-regression-assignment-suite-runner.xml" afterPath="$PROJECT_DIR$/differ-regression-assignment-suite-runner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utilities/Endpoints.java" afterPath="$PROJECT_DIR$/src/main/java/utilities/Endpoints.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utilities/TestUtililities.java" afterPath="$PROJECT_DIR$/src/main/java/utilities/TestUtililities.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/requests/DifferentiateTest.java" afterPath="$PROJECT_DIR$/src/test/java/requests/DifferentiateTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/requests/SetSideValueTest.java" afterPath="$PROJECT_DIR$/src/test/java/requests/SetSideValueTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/ExtentReportsTestNG.html" afterPath="$PROJECT_DIR$/test-output/ExtentReportsTestNG.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,11 +26,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SetSideValueTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/requests/SetSideValueTest.java">
+      <file leaf-file-name="SideServiceTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/requests/SideServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3387">
-              <caret line="233" column="7" lean-forward="true" selection-start-line="233" selection-start-column="7" selection-end-line="233" selection-end-column="7" />
+            <state relative-caret-position="3506">
+              <caret line="376" column="92" lean-forward="false" selection-start-line="376" selection-start-column="92" selection-end-line="376" selection-end-column="92" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -33,15 +38,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DifferentiateTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/requests/DifferentiateTest.java">
+      <file leaf-file-name="Endpoints.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utilities/Endpoints.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="131" column="84" lean-forward="false" selection-start-line="131" selection-start-column="84" selection-end-line="131" selection-end-column="84" />
+            <state relative-caret-position="102">
+              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DifferServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/requests/DifferServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="120" column="85" lean-forward="true" selection-start-line="120" selection-start-column="61" selection-end-line="120" selection-end-column="85" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#713#714#0" expanded="true" />
-                <element signature="e#747#748#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -50,23 +63,11 @@
       <file leaf-file-name="TestUtililities.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/utilities/TestUtililities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="69" column="23" lean-forward="false" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
+            <state relative-caret-position="477">
+              <caret line="111" column="81" lean-forward="false" selection-start-line="111" selection-start-column="81" selection-end-line="111" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3526#3527#0" expanded="true" />
-                <element signature="e#3570#3571#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Random.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/Random.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="421" column="16" lean-forward="false" selection-start-line="421" selection-start-column="16" selection-end-line="421" selection-end-column="16" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -76,16 +77,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hook/TestBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -123,14 +114,16 @@
         <option value="$PROJECT_DIR$/src/test/java/requests/SetSideValuesTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/utilities/TestUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/utilities/Endpoints.java" />
         <option value="$PROJECT_DIR$/src/main/java/hook/TestBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/utilities/ExtentReporterNG.java" />
         <option value="$PROJECT_DIR$/src/test/java/requests/DifferenceTest.java" />
         <option value="$PROJECT_DIR$/differ-regression-assignment-suite-runner.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/utilities/TestUtililities.java" />
         <option value="$PROJECT_DIR$/src/test/java/requests/DifferentiateTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/requests/SetSideValueTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/requests/DifferServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utilities/TestUtililities.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utilities/Endpoints.java" />
+        <option value="$PROJECT_DIR$/src/test/java/requests/SideServiceTest.java" />
       </list>
     </option>
   </component>
@@ -171,8 +164,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -199,18 +190,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="requests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -227,32 +206,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="differ-regression-assignment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="differ-regression-assignment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utilities" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -280,12 +233,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../differ-for-testers" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -300,7 +255,7 @@
     </option>
   </component>
   <component name="RunManager" selected="TestNG.C:/Users/aotulana/repos/differ-regression-assignment/differ-regression-assignment-suite-runner.xml">
-    <configuration default="false" name="DifferentiateTest.testDifferAgainstNullLeftSideShouldDifferentLength" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="SideServiceTest.testEmptyStringBodyShouldReturnBadRequest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="requests.*" />
@@ -312,8 +267,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="requests" />
-      <option name="MAIN_CLASS_NAME" value="requests.DifferentiateTest" />
-      <option name="METHOD_NAME" value="testDifferAgainstNullLeftSideShouldDifferentLength" />
+      <option name="MAIN_CLASS_NAME" value="requests.SideServiceTest" />
+      <option name="METHOD_NAME" value="testEmptyStringBodyShouldReturnBadRequest" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -333,7 +288,7 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="DifferentiateTest.testDifferAgainstNullRightSideShouldDifferentLength" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="SideServiceTest.testWhiteSpacesIDShouldReturnNotFound" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="requests.*" />
@@ -345,8 +300,74 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="requests" />
-      <option name="MAIN_CLASS_NAME" value="requests.DifferentiateTest" />
-      <option name="METHOD_NAME" value="testDifferAgainstNullRightSideShouldDifferentLength" />
+      <option name="MAIN_CLASS_NAME" value="requests.SideServiceTest" />
+      <option name="METHOD_NAME" value="testWhiteSpacesIDShouldReturnNotFound" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="SideServiceTest.testNegativeIDShouldReturnNotFound" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="requests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="differ-regression-assignment" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="requests" />
+      <option name="MAIN_CLASS_NAME" value="requests.SideServiceTest" />
+      <option name="METHOD_NAME" value="testNegativeIDShouldReturnNotFound" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="SideServiceTest.testAlphanumericIDShouldReturnNotFound" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="requests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="differ-regression-assignment" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="requests" />
+      <option name="MAIN_CLASS_NAME" value="requests.SideServiceTest" />
+      <option name="METHOD_NAME" value="testAlphanumericIDShouldReturnNotFound" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -377,72 +398,6 @@
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="SUITE" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="false" name="DifferentiateTest.testDifferForDifferentSidesShouldReturnLocationOfDifferentCharacters" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="requests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="differ-regression-assignment" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="requests" />
-      <option name="MAIN_CLASS_NAME" value="requests.DifferentiateTest" />
-      <option name="METHOD_NAME" value="testDifferForDifferentSidesShouldReturnLocationOfDifferentCharacters" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="false" name="SetSideValueTest.testNoBodyShouldReturnBadRequest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="requests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="differ-regression-assignment" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="requests" />
-      <option name="MAIN_CLASS_NAME" value="requests.SetSideValueTest" />
-      <option name="METHOD_NAME" value="testNoBodyShouldReturnBadRequest" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -848,19 +803,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.DifferentiateTest.testDifferAgainstNullLeftSideShouldDifferentLength" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.DifferentiateTest.testDifferAgainstNullRightSideShouldDifferentLength" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.C:/Users/aotulana/repos/differ-regression-assignment/differ-regression-assignment-suite-runner.xml" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.DifferentiateTest.testDifferForDifferentSidesShouldReturnLocationOfDifferentCharacters" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.SetSideValueTest.testNoBodyShouldReturnBadRequest" />
+      <item index="0" class="java.lang.String" itemvalue="TestNG.SideServiceTest.testEmptyStringBodyShouldReturnBadRequest" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.SideServiceTest.testWhiteSpacesIDShouldReturnNotFound" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.SideServiceTest.testNegativeIDShouldReturnNotFound" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.SideServiceTest.testAlphanumericIDShouldReturnNotFound" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.C:/Users/aotulana/repos/differ-regression-assignment/differ-regression-assignment-suite-runner.xml" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="TestNG.C:/Users/aotulana/repos/differ-regression-assignment/differ-regression-assignment-suite-runner.xml" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.SetSideValueTest.testNoBodyShouldReturnBadRequest" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.DifferentiateTest.testDifferForDifferentSidesShouldReturnLocationOfDifferentCharacters" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.DifferentiateTest.testDifferAgainstNullLeftSideShouldDifferentLength" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.DifferentiateTest.testDifferAgainstNullRightSideShouldDifferentLength" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.SideServiceTest.testEmptyStringBodyShouldReturnBadRequest" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.SideServiceTest.testAlphanumericIDShouldReturnNotFound" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.SideServiceTest.testNegativeIDShouldReturnNotFound" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.SideServiceTest.testWhiteSpacesIDShouldReturnNotFound" />
       </list>
     </recent_temporary>
   </component>
@@ -877,46 +832,48 @@
       <workItem from="1541880607579" duration="3711000" />
       <workItem from="1542005969819" duration="35212000" />
       <workItem from="1542047476272" duration="9219000" />
+      <workItem from="1542098102279" duration="13637000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="C__Users_aotulana_repos_differ-regression-assignment_differ-regression-assignment-suite-runner_xml - 2018.11.12 at 21h 14m 59s.xml">
+    <history-entry file="C__Users_aotulana_repos_differ-regression-assignment_differ-regression-assignment-suite-runner_xml - 2018.11.13 at 14h 44m 36s.xml">
       <configuration name="C:/Users/aotulana/repos/differ-regression-assignment/differ-regression-assignment-suite-runner.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_aotulana_repos_differ-regression-assignment_differ-regression-assignment-suite-runner_xml - 2018.11.12 at 21h 18m 23s.xml">
+    <history-entry file="C__Users_aotulana_repos_differ-regression-assignment_differ-regression-assignment-suite-runner_xml - 2018.11.13 at 15h 52m 45s.xml">
       <configuration name="C:/Users/aotulana/repos/differ-regression-assignment/differ-regression-assignment-suite-runner.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_aotulana_repos_differ-regression-assignment_differ-regression-assignment-suite-runner_xml - 2018.11.12 at 21h 26m 51s.xml">
+    <history-entry file="C__Users_aotulana_repos_differ-regression-assignment_differ-regression-assignment-suite-runner_xml - 2018.11.13 at 16h 25m 06s.xml">
       <configuration name="C:/Users/aotulana/repos/differ-regression-assignment/differ-regression-assignment-suite-runner.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_aotulana_repos_differ-regression-assignment_differ-regression-assignment-suite-runner_xml - 2018.11.12 at 21h 27m 24s.xml">
-      <configuration name="C:/Users/aotulana/repos/differ-regression-assignment/differ-regression-assignment-suite-runner.xml" configurationId="TestNG" />
+    <history-entry file="SideServiceTest_testAlphanumericIDShouldReturnNotFound - 2018.11.13 at 14h 26m 31s.xml">
+      <configuration name="SideServiceTest.testAlphanumericIDShouldReturnNotFound" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_aotulana_repos_differ-regression-assignment_differ-regression-assignment-suite-runner_xml - 2018.11.12 at 21h 37m 22s.xml">
-      <configuration name="C:/Users/aotulana/repos/differ-regression-assignment/differ-regression-assignment-suite-runner.xml" configurationId="TestNG" />
+    <history-entry file="SideServiceTest_testEmptyStringBodyShouldReturnBadRequest - 2018.11.13 at 14h 11m 10s.xml">
+      <configuration name="SideServiceTest.testEmptyStringBodyShouldReturnBadRequest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_aotulana_repos_differ-regression-assignment_differ-regression-assignment-suite-runner_xml - 2018.11.12 at 21h 48m 05s.xml">
-      <configuration name="C:/Users/aotulana/repos/differ-regression-assignment/differ-regression-assignment-suite-runner.xml" configurationId="TestNG" />
+    <history-entry file="SideServiceTest_testEmptyStringBodyShouldReturnBadRequest - 2018.11.13 at 14h 45m 04s.xml">
+      <configuration name="SideServiceTest.testEmptyStringBodyShouldReturnBadRequest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_aotulana_repos_differ-regression-assignment_differ-regression-assignment-suite-runner_xml - 2018.11.12 at 21h 54m 51s.xml">
-      <configuration name="C:/Users/aotulana/repos/differ-regression-assignment/differ-regression-assignment-suite-runner.xml" configurationId="TestNG" />
+    <history-entry file="SideServiceTest_testNegativeIDShouldReturnNotFound - 2018.11.13 at 14h 24m 43s.xml">
+      <configuration name="SideServiceTest.testNegativeIDShouldReturnNotFound" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="DifferentiateTest_testDifferForDifferentSidesShouldReturnLocationOfDifferentCharacters - 2018.11.12 at 21h 01m 30s.xml">
-      <configuration name="DifferentiateTest.testDifferForDifferentSidesShouldReturnLocationOfDifferentCharacters" configurationId="TestNG" />
+    <history-entry file="SideServiceTest_testWhiteSpacesIDShouldReturnNotFound - 2018.11.13 at 14h 15m 29s.xml">
+      <configuration name="SideServiceTest.testWhiteSpacesIDShouldReturnNotFound" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="DifferentiateTest_testDifferForDifferentSidesShouldReturnLocationOfDifferentCharacters - 2018.11.12 at 21h 02m 06s.xml">
-      <configuration name="DifferentiateTest.testDifferForDifferentSidesShouldReturnLocationOfDifferentCharacters" configurationId="TestNG" />
+    <history-entry file="SideServiceTest_testWhiteSpacesSideParameterShouldReturnSideNameNotSupportedException - 2018.11.13 at 14h 06m 59s.xml">
+      <configuration name="SideServiceTest.testWhiteSpacesSideParameterShouldReturnSideNameNotSupportedException" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SetSideValueTest_testNoBodyShouldReturnBadRequest - 2018.11.12 at 21h 50m 09s.xml">
-      <configuration name="SetSideValueTest.testNoBodyShouldReturnBadRequest" configurationId="TestNG" />
+    <history-entry file="SideServiceTest_testWhiteSpacesSideShouldReturnSideNameNotSupportedException - 2018.11.13 at 14h 01m 53s.xml">
+      <configuration name="SideServiceTest.testWhiteSpacesSideShouldReturnSideNameNotSupportedException" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48142000" />
+    <option name="totallyTimeSpent" value="61779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -928,13 +885,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.213125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -946,7 +904,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -964,6 +921,60 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/java/requests/SideServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/requests/DifferServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2006">
+          <caret line="131" column="84" lean-forward="false" selection-start-line="131" selection-start-column="84" selection-end-line="131" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/TestUtililities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="69" column="23" lean-forward="false" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7157">
+          <caret line="421" column="16" lean-forward="false" selection-start-line="421" selection-start-column="16" selection-end-line="421" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/environment.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hook/TestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utilities/Endpoints.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -972,7 +983,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/requests/SetSideValueTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/requests/SideServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
@@ -986,9 +997,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -998,8 +1006,6 @@
           <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3526#3527#0" expanded="true" />
-            <element signature="e#3570#3571#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1106,20 +1112,17 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="102">
             <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/requests/DifferentiateTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/requests/DifferServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1154,8 +1157,6 @@
           <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3526#3527#0" expanded="true" />
-            <element signature="e#3570#3571#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1165,7 +1166,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="102">
             <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1194,26 +1194,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/environment.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/Base64.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-935">
           <caret line="84" column="7" lean-forward="true" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hook/TestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1299,41 +1283,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/Endpoints.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/Random.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="421" column="16" lean-forward="false" selection-start-line="421" selection-start-column="16" selection-end-line="421" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/TestUtililities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="69" column="23" lean-forward="false" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3526#3527#0" expanded="true" />
-            <element signature="e#3570#3571#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utilities/ExtentReporterNG.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1345,22 +1298,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/requests/DifferentiateTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hook/TestBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="131" column="84" lean-forward="false" selection-start-line="131" selection-start-column="84" selection-end-line="131" selection-end-column="84" />
+        <state relative-caret-position="238">
+          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/environment.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="421" column="16" lean-forward="false" selection-start-line="421" selection-start-column="16" selection-end-line="421" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/TestUtililities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="111" column="81" lean-forward="false" selection-start-line="111" selection-start-column="81" selection-end-line="111" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/requests/SetSideValueTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/requests/DifferServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3387">
-          <caret line="233" column="7" lean-forward="true" selection-start-line="233" selection-start-column="7" selection-end-line="233" selection-end-column="7" />
+        <state relative-caret-position="327">
+          <caret line="120" column="85" lean-forward="true" selection-start-line="120" selection-start-column="61" selection-end-line="120" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/Endpoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/io/IOException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-166">
+          <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/requests/SideServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3506">
+          <caret line="376" column="92" lean-forward="false" selection-start-line="376" selection-start-column="92" selection-end-line="376" selection-end-column="92" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
