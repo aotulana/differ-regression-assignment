@@ -10,7 +10,7 @@ import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
 import static utilities.TestUtililities.*;
-import static utilities.Endpoints.setSideValuePath;
+import static utilities.Endpoints.sidePath;
 
 /**
  * This class contains all tests for the Side Service.
@@ -32,7 +32,7 @@ public class SideServiceTest extends TestBase {
     }
 
     @Test
-    public void testNonBase64DataShouldReturnDataNotBase64Exception() {
+    public void when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception() {
         //Send non Base64 encoded data
         response =
                 given().
@@ -41,7 +41,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "left").
                         body("\"abujfdbfjawsasd\""). //Data not base64 encoded
                 when().
-                        post(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
                             statusCode(415). //Verify HTTP Status Code
@@ -65,7 +65,7 @@ public class SideServiceTest extends TestBase {
     }
 
     @Test
-    public void testUndefinedSideShouldReturnSideNameNotSupportedException() {
+    public void when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException() {
         //Send undefined side (e.g. up)
         response =
                 given().
@@ -74,7 +74,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "up"). //Undefined side
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
                             statusCode(501). //Verify HTTP Status Code
@@ -98,7 +98,7 @@ public class SideServiceTest extends TestBase {
     }
 
     @Test
-    public void testWhiteSpacesSideParameterShouldReturnSideNameNotSupportedException() {
+    public void when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException() {
         //Send white spaces as side
         response =
                 given().
@@ -107,7 +107,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "   "). //White spaces as side parameter
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
                             statusCode(501). //Verify HTTP Status Code
@@ -131,7 +131,7 @@ public class SideServiceTest extends TestBase {
     }
 
     @Test
-    public void testEmptyStringSideShouldReturnSideNameNotSupportedException() {
+    public void when_EmptyStringIsPassedAsSide_Expect_SideNameNotSupportedException() {
         //Send empty string as side
         response =
                 given().
@@ -140,7 +140,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", ""). //Empty String side parameter
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
                             statusCode(405). //Verify HTTP Status Code
@@ -149,7 +149,7 @@ public class SideServiceTest extends TestBase {
     }
 
     @Test
-    public void testEmptyStringIDShouldReturnNotFound() {
+    public void when_EmptyStringIsEnteredAsID_Expect_404NotFound() {
         //Send empty string as ID
         response =
                 given().
@@ -158,7 +158,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "left").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
                             statusCode(404). //Verify HTTP Status Code
@@ -170,7 +170,7 @@ public class SideServiceTest extends TestBase {
      * It is assumed that a string of white spaces only is not a valid ID
      */
     @Test
-    public void testWhiteSpacesIDShouldReturnNotFound() {
+    public void when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound() {
         //Send white spaces as ID
         response =
                 given().
@@ -179,7 +179,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "left").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
                             statusCode(404). //Verify HTTP Status Code
@@ -190,8 +190,8 @@ public class SideServiceTest extends TestBase {
     /**
      * It is assumed that a negative value is not a valid ID
      */
-    @Test //Verifies passing negative value as ID returns 404 - Not found
-    public void testNegativeIDShouldReturnNotFound() {
+    @Test
+    public void when_NegativeValueIsEnteredAsID_Expect_404NotFound() {
         //Send negative value as ID
         response =
                 given().
@@ -200,7 +200,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "left").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
                             statusCode(404). //Verify HTTP Status Code
@@ -212,7 +212,7 @@ public class SideServiceTest extends TestBase {
      * It is assumed that an alphanumeric value is not a valid ID
      */
     @Test
-    public void testAlphanumericIDShouldReturnNotFound() {
+    public void when_AlphanumericValueIsEnteredAsID_Expect_404NotFound() {
         //Send alphanumeric value as ID
         response =
                 given().
@@ -221,7 +221,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "left").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
                             statusCode(404). //Verify HTTP Status Code
@@ -230,7 +230,7 @@ public class SideServiceTest extends TestBase {
     }
 
     @Test
-    public void testXmlContentTypeShouldReturnUnsupportedMediaType() {
+    public void when_SideRequestContentTypeIsXml_Expect_415UnsupportedMediaType() {
         //Send XML Content Type
         response =
                 given().
@@ -239,7 +239,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "right").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
                             statusCode(415). //Verify HTTP Status Code
@@ -248,7 +248,7 @@ public class SideServiceTest extends TestBase {
     }
 
     @Test
-    public void testTextContentTypeShouldReturnUnsupportedMediaType() {
+    public void when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType() {
         //Send Text Content Type
         response =
                 given().
@@ -257,7 +257,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "right").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
                             statusCode(415). //Verify HTTP Status Code
@@ -266,7 +266,7 @@ public class SideServiceTest extends TestBase {
     }
 
     @Test
-    public void testHtmlContentTypeShouldReturnUnsupportedMediaType() {
+    public void when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType() {
         //Send HTML Content Type
         response =
                 given().
@@ -275,7 +275,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "right").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
                             statusCode(415). //Verify HTTP Status Code
@@ -284,7 +284,7 @@ public class SideServiceTest extends TestBase {
     }
 
     @Test
-    public void testNoContentTypeShouldReturnUnsupportedMediaType() {
+    public void when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType() {
         //Send No Content Type
         response =
                 given().
@@ -293,7 +293,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "right").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
                             statusCode(415). //Verify HTTP Status Code
@@ -302,15 +302,15 @@ public class SideServiceTest extends TestBase {
     }
 
     @Test
-    public void testPutMethodShouldReturnMethodNotAllowed() {
-        //Send PUT method
+    public void when_SideRequestMethodIsPUT_Expect_405MethodNotAllowed() {
+        //Send PUT request
         response =
                 given().
                         pathParam("id",19).
                         pathParam("side", "left").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        put(setSideValuePath()). //PUT method instead of POST
+                        put(sidePath()). //PUT method instead of POST
                 then().
                         assertThat().
                             statusCode(405). //Verify HTTP Status Code
@@ -319,7 +319,7 @@ public class SideServiceTest extends TestBase {
     }
 
     @Test
-    public void testAlphabetIDShouldReturnMethodNotAllowed() {
+    public void when_AlphabetOnlyIsEnteredAsID_Expect_415UnsupportedMediaType() {
         //Send alphabets as ID
         response =
                 given().
@@ -327,16 +327,16 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "right").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        put(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
-                            statusCode(405). //Verify HTTP Status Code
+                            statusCode(415). //Verify HTTP Status Code
                 extract().
                         response();
     }
 
     @Test
-    public void testNoBodyShouldReturnBadRequest() {
+    public void when_BodyIsNotPassedInSideRequest_Expect_400BadRequest() {
         //Do not include body in request
         response =
                 given().
@@ -345,7 +345,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "right").
                         //No Body
                 when().
-                        post(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
                             statusCode(400). //Verify HTTP Status Code
@@ -373,7 +373,7 @@ public class SideServiceTest extends TestBase {
      * It is assumed that empty string in the body of the request should return a bad request
      */
     @Test
-    public void testEmptyStringBodyShouldReturnBadRequest() {
+    public void when_EmptyStringIsPassedAsBody_Expect_400BadRequest() {
         //Send empty string as the body
         response =
                 given().
@@ -382,7 +382,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "right").
                         body("\"\""). //Empty string
                 when().
-                        post(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
                             statusCode(400). //Verify HTTP Status Code
@@ -407,7 +407,7 @@ public class SideServiceTest extends TestBase {
     }
 
     @Test
-    public void testLeftSideShouldReturnAcceptedLeftSideBase64Data() {
+    public void when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data() {
         //Set ID, side and non base64 encoded value
         //Value is encoded by the method
         setSideValue(10, "left", "123456789000");
@@ -423,7 +423,7 @@ public class SideServiceTest extends TestBase {
     }
 
     @Test
-    public void testRightSideShouldReturnAcceptedRightSideBase64Data() {
+    public void when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data() {
         //Set ID, side and non base64 encoded value
         //Value is encoded by the method
         setSideValue(21, "right", "12345abcd");
@@ -439,7 +439,7 @@ public class SideServiceTest extends TestBase {
     }
 
     @Test
-    public void testLeftandRideSidesShouldReturnAcceptedDataForBothSides() {
+    public void when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight() {
         //Generate ID
         generateID();
 
@@ -468,7 +468,7 @@ public class SideServiceTest extends TestBase {
     }
 
     @Test
-    public void testSameIDOnSameSideShouldReturnUpdatedValue() {
+    public void when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData() {
         //Generate ID
         generateID();
 

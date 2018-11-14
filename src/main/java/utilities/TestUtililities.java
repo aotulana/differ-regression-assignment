@@ -9,7 +9,7 @@ import java.util.Random;
 
 import static io.restassured.RestAssured.given;
 import static utilities.Endpoints.diffSidesPath;
-import static utilities.Endpoints.setSideValuePath;
+import static utilities.Endpoints.sidePath;
 
 /**
  * This class contains static utility variables
@@ -78,7 +78,7 @@ public class TestUtililities {
                         pathParam("side", side). //Sets side
                         body("\"" + encodeInBase64(value) + "\""). //Sets Base64 encoded value
                 when().
-                        post(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
                             statusCode(200). //Verify HTTP Status Code from response

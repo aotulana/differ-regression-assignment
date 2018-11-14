@@ -15,7 +15,7 @@ public class Endpoints {
      *
      * @return Side Service path
      */
-    public static String setSideValuePath() {
+    public static String sidePath() {
         path = "/diffassign/v1/diff/{id}/{side}";
         return path;
     }

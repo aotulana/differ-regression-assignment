@@ -41,7 +41,7 @@ public class DifferServiceTest extends TestBase {
     }
 
     @Test
-    public void testDifferOfEqualSidesShouldReturnEqual() {
+    public void when_EqualSidesAreDiffed_Expect_Equal() {
         //Set ID, side and value for the left side
         setSideValue(999, "left", "continuous12345");
 
@@ -62,7 +62,7 @@ public class DifferServiceTest extends TestBase {
     }
 
     @Test
-    public void testDifferAgainstNullLeftSideShouldReturnDifferentLength() {
+    public void when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue() {
         //Set ID, side and value for right side
         setSideValue(id, "right", "comingoverthere");
 
@@ -86,7 +86,7 @@ public class DifferServiceTest extends TestBase {
     }
 
     @Test
-    public void testDifferAgainstNullRightSideShouldReturnDifferentLength() {
+    public void when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue() {
         //Set ID, side and value for left side
         setSideValue(id, "left", "comingoverthere");
 
@@ -110,7 +110,7 @@ public class DifferServiceTest extends TestBase {
     }
 
     @Test
-    public void testDifferForDifferentLengthShouldReturnDifferentLength() {
+    public void when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength() {
         //Set ID, side and value for left side
         setSideValue(id, "left", "Marvelous Things!!");
 
@@ -131,7 +131,7 @@ public class DifferServiceTest extends TestBase {
     }
 
     @Test
-    public void testDifferForIDNotInitializedShouldReturnNotFound() {
+    public void when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized() {
         //Diff the sides without setting sides
         response =
                 given().
@@ -163,7 +163,7 @@ public class DifferServiceTest extends TestBase {
     }
 
     @Test
-    public void test1DifferForDifferentCharactersShouldReturnLocationOfCharacters() {
+    public void when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters() {
         //Set ID, side and value for left side
         setSideValue(id, "left", "Long string to test the position of different characters.");
 
@@ -190,7 +190,7 @@ public class DifferServiceTest extends TestBase {
     }
 
     @Test
-    public void test2DifferForDifferentCharactersShouldReturnLocationOfCharacters() {
+    public void when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters() {
         //Set ID, side and value for left side
         setSideValue(id, "left", "Marvelous");
 
@@ -217,7 +217,7 @@ public class DifferServiceTest extends TestBase {
     }
 
     @Test
-    public void testDeleteMethodOnDifferShouldReturnMethodNotAllowed() {
+    public void when_DiffRequestIsDelete_Expect_405MethodNotAllowed() {
         //Set ID, side and value for left side
         setSideValue(id, "left", "Marvelous Things!!");
 
