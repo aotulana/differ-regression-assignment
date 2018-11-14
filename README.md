@@ -1,4 +1,4 @@
-# differ-regression-assignment
+# differ-regression-test-suite-assignment
 Regression Test Suite for the **differ-for-testers** assignment
 
 ## The Setup

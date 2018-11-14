@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f428b7b-c101-44d4-9375-088cd0214557" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utilities/Endpoints.java" afterPath="$PROJECT_DIR$/src/main/java/utilities/Endpoints.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utilities/TestUtililities.java" afterPath="$PROJECT_DIR$/src/main/java/utilities/TestUtililities.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/requests/DifferServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/requests/DifferServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/requests/SideServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/requests/SideServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/ExtentReportsTestNG.html" afterPath="$PROJECT_DIR$/test-output/ExtentReportsTestNG.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DifferServiceTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DifferServiceTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/requests/DifferServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
+            <state relative-caret-position="684">
               <caret line="232" column="63" lean-forward="true" selection-start-line="232" selection-start-column="63" selection-end-line="232" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -83,6 +78,19 @@
             <state relative-caret-position="238">
               <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -139,10 +147,10 @@
         <option value="$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/IReporter.class" />
         <option value="$PROJECT_DIR$/src/main/java/utilities/ExtentReporterNG.java" />
         <option value="$PROJECT_DIR$/src/main/java/utilities/TestUtililities.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/utilities/Endpoints.java" />
         <option value="$PROJECT_DIR$/src/test/java/requests/SideServiceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/requests/DifferServiceTest.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -880,7 +888,7 @@
       <workItem from="1542098102279" duration="13637000" />
       <workItem from="1542150739252" duration="2405000" />
       <workItem from="1542178001343" duration="5595000" />
-      <workItem from="1542202907400" duration="6474000" />
+      <workItem from="1542202907400" duration="6716000" />
     </task>
     <servers />
   </component>
@@ -917,7 +925,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76253000" />
+    <option name="totallyTimeSpent" value="76495000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1307,17 +1315,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="238">
-            <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hook/TestBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1346,11 +1343,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/requests/DifferServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
+        <state relative-caret-position="684">
           <caret line="232" column="63" lean-forward="true" selection-start-line="232" selection-start-column="63" selection-end-line="232" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
