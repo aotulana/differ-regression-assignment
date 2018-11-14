@@ -31,7 +31,7 @@ public class SideServiceTest extends TestBase {
         initializeBaseURI();
     }
 
-    @Test //Verifies data not encoded in Base64 returns DataNotBase64Exception
+    @Test
     public void testNonBase64DataShouldReturnDataNotBase64Exception() {
         response =
                 given().
@@ -54,7 +54,7 @@ public class SideServiceTest extends TestBase {
         Assert.assertEquals(errorMessage, "Data in body not Base64 formatted.");
     }
 
-    @Test //Verifies undefined side (e.g. up) returns SideNameNotSupportedException
+    @Test
     public void testUndefinedSideShouldReturnSideNameNotSupportedException() {
         response =
                 given().
@@ -77,7 +77,7 @@ public class SideServiceTest extends TestBase {
         Assert.assertEquals(errorMessage, "This side is not supported, please use either 'left' or 'right'.");
     }
 
-    @Test //Verifies passing white spaces only as side returns SideNameNotSupportedException
+    @Test
     public void testWhiteSpacesSideParameterShouldReturnSideNameNotSupportedException() {
         response =
                 given().
@@ -100,7 +100,7 @@ public class SideServiceTest extends TestBase {
         Assert.assertEquals(errorMessage, "This side is not supported, please use either 'left' or 'right'.");
     }
 
-    @Test //Verifies passing empty string as side returns SideNameNotSupportedException
+    @Test
     public void testEmptyStringSideShouldReturnSideNameNotSupportedException() {
         response =
                 given().
@@ -117,7 +117,7 @@ public class SideServiceTest extends TestBase {
                         response();
     }
 
-    @Test //Verifies passing empty string as ID returns 404 - Not found
+    @Test
     public void testEmptyStringIDShouldReturnNotFound() {
         response =
                 given().
@@ -137,7 +137,7 @@ public class SideServiceTest extends TestBase {
     /**
      * It is assumed that a string of white spaces only is not a valid ID
      */
-    @Test //Verifies passing white spaces only as ID returns 404 - Not found
+    @Test
     public void testWhiteSpacesIDShouldReturnNotFound() {
         response =
                 given().
@@ -177,7 +177,7 @@ public class SideServiceTest extends TestBase {
     /**
      * It is assumed that an alphanumeric value is not a valid ID
      */
-    @Test //Verifies passing alphanumeric value as ID returns 404 - Not found
+    @Test
     public void testAlphanumericIDShouldReturnNotFound() {
         response =
                 given().
@@ -194,7 +194,7 @@ public class SideServiceTest extends TestBase {
                         response();
     }
 
-    @Test //Verifies XML Content Type request returns 415 - Unsupported Media Type
+    @Test
     public void testXmlContentTypeShouldReturnUnsupportedMediaType() {
         response =
                 given().
@@ -211,7 +211,7 @@ public class SideServiceTest extends TestBase {
                         response();
     }
 
-    @Test //Verifies Text Content Type request returns 415 - Unsupported Media Type
+    @Test
     public void testTextContentTypeShouldReturnUnsupportedMediaType() {
         response =
                 given().
@@ -228,7 +228,7 @@ public class SideServiceTest extends TestBase {
                         response();
     }
 
-    @Test //Verifies HTML Content Type request returns 415 - Unsupported Media Type
+    @Test
     public void testHtmlContentTypeShouldReturnUnsupportedMediaType() {
         response =
                 given().
@@ -245,7 +245,7 @@ public class SideServiceTest extends TestBase {
                         response();
     }
 
-    @Test //Verifies No Content Type request returns 415 - Unsupported Media Type
+    @Test
     public void testNoContentTypeShouldReturnUnsupportedMediaType() {
         response =
                 given().
@@ -262,7 +262,7 @@ public class SideServiceTest extends TestBase {
                         response();
     }
 
-    @Test //Verifies PUT method on side service returns 405 - Method Not Allowed
+    @Test
     public void testPutMethodShouldReturnMethodNotAllowed() {
         response =
                 given().
@@ -278,7 +278,7 @@ public class SideServiceTest extends TestBase {
                         response();
     }
 
-    @Test //Verifies passing Alphabet value as ID returns 405 - Method Not Allowed
+    @Test
     public void testAlphabetIDShouldReturnMethodNotAllowed() {
         response =
                 given().
@@ -294,7 +294,7 @@ public class SideServiceTest extends TestBase {
                         response();
     }
 
-    @Test //Verifies passing a request with to body returns 400 - Bad Request
+    @Test
     public void testNoBodyShouldReturnBadRequest() {
         response =
                 given().
@@ -345,7 +345,7 @@ public class SideServiceTest extends TestBase {
         Assert.assertEquals(errorMessage, "Value in request body cannot be empty.");
     }
 
-    @Test //Verifies passing base64 encoded data to the left side returns the passed data
+    @Test
     public void testLeftSideShouldReturnAcceptedLeftSideBase64Data() {
         setSideValue(10, "left", "123456789000"); //Value entered is encoded in the method
         convertResponseToJson(response); //Convert raw response to JSON format
@@ -353,7 +353,7 @@ public class SideServiceTest extends TestBase {
         Assert.assertEquals(leftValue, encodeInBase64("123456789000"));
     }
 
-    @Test //Verifies passing base64 encoded data to the right side returns the passed data
+    @Test
     public void testRightSideShouldReturnAcceptedRightSideBase64Data() {
         setSideValue(21, "right", "12345abcd"); //Value entered is encoded by the method
         convertResponseToJson(response); //Convert raw response to JSON format
@@ -361,7 +361,7 @@ public class SideServiceTest extends TestBase {
         Assert.assertEquals(rightValue, encodeInBase64("12345abcd"));
     }
 
-    @Test //Verifies passing base64 encoded data to the left and then to right side returns the two values passed
+    @Test
     public void testLeftandRideSidesShouldReturnAcceptedDataForBothSides() {
         //Set the same ID for both left and right sides
         generateUniqueID();
@@ -374,7 +374,7 @@ public class SideServiceTest extends TestBase {
         Assert.assertEquals(rightValue, encodeInBase64("formatting12345"));
     }
 
-    @Test //Verifies passing side value to an existing ID returns updated value for the side
+    @Test
     public void testSameIDOnSameSideShouldReturnUpdatedValue() {
         generateUniqueID();
         setSideValue(id, "right", "Lifted up");

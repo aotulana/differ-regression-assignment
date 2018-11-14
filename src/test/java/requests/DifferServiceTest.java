@@ -20,59 +20,116 @@ import static utilities.TestUtililities.*;
  */
 public class DifferServiceTest extends TestBase {
 
-    @BeforeTest //Before tests are run, the base URI is initialized
+    /**
+     * Before the tests, it initializes the base URI which will be used by each test method.
+     *
+     * @throws IOException
+     */
+    @BeforeTest
     public void setBaseURI() throws IOException {
         initializeBaseURI();
     }
 
-    @BeforeMethod //Generates unique ID before each test method is run
+    /**
+     * Generates unique ID before each test method is run
+     * The generated ID is always positive
+     */
+    @BeforeMethod
     public void uniqueIDForEachMethod() {
         generateUniqueID();
     }
 
-    @Test //Verifies equal side values returns EQUAL when diff-ed
+    @Test
     public void testDifferOfEqualSidesShouldReturnEqual() {
+        //Set ID, side and value for the left side
         setSideValue(999, "left", "continuous12345");
+
+        //Set ID, side and value for the left side
         setSideValue(999, "right", "continuous12345");
+
+        //Diff the sides
         differentiateSides(999);
-        convertResponseToJson(response); //Convert raw response to JSON format
+
+        //Convert raw response to JSON format
+        convertResponseToJson(response);
+
+        //Get type from the JSON response
         type = jSONResponse.getString("type");
+
+        //Verify that the type is EQUAL
         Assert.assertEquals(type, "EQUAL");
     }
 
-    @Test //Verifies null value on left side returns DIFFERENT_LENGTH and message to say left side has no value
+    @Test
     public void testDifferAgainstNullLeftSideShouldReturnDifferentLength() {
+        //Set ID, side and value for right side
         setSideValue(id, "right", "comingoverthere");
-        differentiateSides(id);
-        convertResponseToJson(response); //Convert raw response to JSON format
-        detail = jSONResponse.getString("detail");
-        type = jSONResponse.getString("type");
-        Assert.assertEquals(detail, "Left side contains no value.");
-        Assert.assertEquals(type, "DIFFERENT_LENGTH");
-    }
 
-    @Test //Verifies null value on right side returns DIFFERENT_LENGTH and message to say right side has no value
-    public void testDifferAgainstNullRightSideShouldReturnDifferentLength() {
-        setSideValue(id, "left", "comingoverthere");
+        //Diff the sides
         differentiateSides(id);
-        convertResponseToJson(response); //Convert raw response to JSON format
-        detail = jSONResponse.getString("detail");
-        type = jSONResponse.getString("type");
-        Assert.assertEquals(detail, "Right side contains no value.");
-        Assert.assertEquals(type, "DIFFERENT_LENGTH");
-    }
 
-    @Test //Verifies different side value lengths returns DIFFERENT_LENGTH when diff-ed
-    public void testDifferForDifferentLengthShouldReturnDifferentLength() {
-        setSideValue(id, "left", "Marvelous Things!!");
-        setSideValue(id, "right", "Marvelous");
-        differentiateSides(id);
+        //Convert RESTAssured raw response to JSON format
         convertResponseToJson(response);
+
+        //Get detail from the JSON response
+        detail = jSONResponse.getString("detail");
+
+        //Get type from the JSON response
         type = jSONResponse.getString("type");
+
+        //Verify that the detail is 'Left side contains no value.'
+        Assert.assertEquals(detail, "Left side contains no value.");
+
+        //Verify that the type is DIFFERENT_LENGTH
         Assert.assertEquals(type, "DIFFERENT_LENGTH");
     }
 
-    @Test //Verifies non initialized ID returns ID not found when diff-ed
+    @Test
+    public void testDifferAgainstNullRightSideShouldReturnDifferentLength() {
+        //Set ID, side and value for left side
+        setSideValue(id, "left", "comingoverthere");
+
+        //Diff the sides
+        differentiateSides(id);
+
+        //Convert RESTAssured raw response to JSON format
+        convertResponseToJson(response);
+
+        //Get detail from the JSON response
+        detail = jSONResponse.getString("detail");
+
+        //Get type from the JSON response
+        type = jSONResponse.getString("type");
+
+        //Verify that the detail is 'Right side contains no value.'
+        Assert.assertEquals(detail, "Right side contains no value.");
+
+        //Verify that the type is DIFFERENT_LENGTH
+        Assert.assertEquals(type, "DIFFERENT_LENGTH");
+    }
+
+    @Test
+    public void testDifferForDifferentLengthShouldReturnDifferentLength() {
+        //Set ID, side and value for left side
+        setSideValue(id, "left", "Marvelous Things!!");
+
+        //Set ID, side and value for right side
+        setSideValue(id, "right", "Marvelous");
+
+        //Diff the sides
+        differentiateSides(id);
+
+        //Convert RESTAssured raw response to JSON format
+        convertResponseToJson(response);
+
+        //Get type from the JSON response
+        type = jSONResponse.getString("type");
+
+        //Verify that the type is DIFFERENT_LENGTH
+        Assert.assertEquals(type, "DIFFERENT_LENGTH");
+    }
+
+    @Test
     public void testDifferNotInitializedIDShouldReturnNotFound() {
         response =
                 given().
@@ -94,7 +151,7 @@ public class DifferServiceTest extends TestBase {
         Assert.assertEquals(errorMessage, "ID " + id + " not initialized.");
     }
 
-    @Test //Verifies different lengthy side values of same length returns the location of the different characters
+    @Test
     public void test1DifferForDifferentCharactersShouldReturnLocationOfCharacters() {
         setSideValue(id, "left", "Long string to test the position of different characters.");
         setSideValue(id, "right", "Long strung to test the position of different characters!");
@@ -106,19 +163,19 @@ public class DifferServiceTest extends TestBase {
         Assert.assertEquals(type, "DIFFERENT_CHARS");
     }
 
-    @Test //Verifies different side values of same length returns ranged location of different characters
+    @Test
     public void test2DifferForDifferentCharactersShouldReturnLocationOfCharacters() {
         setSideValue(id, "left", "Marvelous");
         setSideValue(id, "right", "12345abcd");
         differentiateSides(id);
-        convertResponseToJson(response); //Convert raw response to JSON format
-        detail = jSONResponse.getString("detail");
+        convertResponseToJson(response); //Convert raw RESTAssured response to JSON format
+        detail = jSONResponse.getString("detail"); //Get detail key in the JSON response
         type = jSONResponse.getString("type");
         Assert.assertEquals(detail, "Values are different on char(s) [0-5] [7-11].");
         Assert.assertEquals(type, "DIFFERENT_CHARS");
     }
 
-    @Test //Verifies DELETE method on Differ Service returns 405 - Method Not Allowed
+    @Test
     public void testDeleteMethodOnDifferShouldReturnMethodNotAllowed() {
         setSideValue(id, "left", "Marvelous Things!!");
         setSideValue(id, "right", "Marvelous");
