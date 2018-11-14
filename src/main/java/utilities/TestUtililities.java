@@ -12,9 +12,10 @@ import static utilities.Endpoints.diffSidesPath;
 import static utilities.Endpoints.setSideValuePath;
 
 /**
- * Created by Adebowale on 10/11/2018.
+ * This class contains static utility variables
+ * and methods that are reused across the project
  *
- * This class contains static utility variables and methods that are reused across the project
+ * @author Adebowale Otulana
  */
 public class TestUtililities {
 
@@ -112,7 +113,7 @@ public class TestUtililities {
      * This method generates random long values that are used as unique side IDs.
      * It ensures that the generated values are positive.
      */
-    public static void generateUniqueID() {
+    public static void generateID() {
         Random randomID = new Random();
         id = randomID.nextLong() & Long.MAX_VALUE; //Positive random IDs
     }

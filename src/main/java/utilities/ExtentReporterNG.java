@@ -12,6 +12,13 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+/**
+ *
+ * This class implements the IReporter interface
+ * to listen to the TestNG tests
+ * and generates a test report in HTML format
+ *
+ */
 public class ExtentReporterNG implements IReporter {
     private ExtentReports extent;
 

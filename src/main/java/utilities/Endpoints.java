@@ -1,10 +1,10 @@
 package utilities;
 
 /**
- * Created by aotulana on 11/12/2018.
- *
  * The class defines the endpoint paths.
  * A method returns a path for specific endpoint.
+ *
+ * @author Adebowale Otulana
  */
 public class Endpoints {
 
