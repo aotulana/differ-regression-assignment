@@ -8,8 +8,11 @@ Regression Test Suite for the **differ-for-testers** assignment
 - **differ-for-tester** application must be running
 
 ## Running the Test Suite
-From the project root folder, run `mvn clean test`
+If the **differ-for-tester** service is running on default `localhost:8081`, skip Step 1.
+1. Open the environment property file `<project_root_folder>\src\main\resources\environment.properties`,
+update the value of the`HOST` key with the appropriate HOST
+2. From the project root folder, run `mvn clean test`
 
 ## Viewing Test Report
-1. Go to test report location: <project_root_folder>\test-output
-2. Open _ExtentReportsTestNG.html_ in a web browser
+1. Go to test report location: `<project_root_folder>\test-output`
+2. Open `ExtentReportsTestNG.html` in a web browser
