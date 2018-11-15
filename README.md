@@ -5,7 +5,7 @@ Regression Test Suite for the **differ-for-testers** assignment
 - JAVA 8+ jdk must be [installed](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  
 - MAVEN must be [installed](https://maven.apache.org/download.cgi) 
 - Web browser must be installed
-- **differ-for-tester** application must be running
+- **differ-for-tester** service must be running
 
 ## Running the Test Suite
 If the **differ-for-tester** service is running on default `localhost:8081`, skip Step 1.
