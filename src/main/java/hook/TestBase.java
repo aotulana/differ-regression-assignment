@@ -26,6 +26,9 @@ public class TestBase {
 
         //Set base URI
         RestAssured.baseURI = environment.getProperty("HOST");
+
+        //Set base path
+        RestAssured.basePath = "/diffassign/v1/diff";
     }
 
 }
