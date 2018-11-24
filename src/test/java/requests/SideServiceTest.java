@@ -416,14 +416,18 @@ public class SideServiceTest extends TestBase {
         //Value is encoded by the method
         setSideValue(10, "left", "123456789000");
 
-        //Convert RESTAssured raw response to JSON format
+        ResponseBody body = response.getBody();
+        LeftSideSuccessResponse responseBody = body.as(LeftSideSuccessResponse.class);
+        Assert.assertEquals(responseBody.left, encodeInBase64("123456789000"));
+
+        /*//Convert RESTAssured raw response to JSON format
         convertResponseToJson(response);
 
         //Get left value from response
         leftValue = jSONResponse.getString("left");
 
         //Verify that the left value is base64 encoded equivalence of '123456789000'
-        Assert.assertEquals(leftValue, encodeInBase64("123456789000"));
+        Assert.assertEquals(leftValue, encodeInBase64("123456789000"));*/
     }
 
     @Test
@@ -432,14 +436,18 @@ public class SideServiceTest extends TestBase {
         //Value is encoded by the method
         setSideValue(21, "right", "12345abcd");
 
-        //Convert RESTAssured raw response to JSON format
+        ResponseBody body = response.getBody();
+        RightSideSuccessResponse responseBody = body.as(RightSideSuccessResponse.class);
+        Assert.assertEquals(responseBody.right, encodeInBase64("12345abcd"));
+
+        /*//Convert RESTAssured raw response to JSON format
         convertResponseToJson(response);
 
         //Get right value from response
         rightValue = jSONResponse.getString("right"); //Get right value from response
 
         //Verify that the right value is base64 encoded equivalence of '12345abcd'
-        Assert.assertEquals(rightValue, encodeInBase64("12345abcd"));
+        Assert.assertEquals(rightValue, encodeInBase64("12345abcd"));*/
     }
 
     @Test
@@ -455,8 +463,13 @@ public class SideServiceTest extends TestBase {
         //Value is encoded by the method
         setSideValue(id, "right", "formatting12345");
 
+        ResponseBody body = response.getBody();
+        LeftAndRightSideSuccessResponse responseBody = body.as(LeftAndRightSideSuccessResponse.class);
+        Assert.assertEquals(responseBody.left, encodeInBase64("adebowale"));
+        Assert.assertEquals(responseBody.right, encodeInBase64("formatting12345"));
 
-        //Convert RESTAssured raw response from right side to JSON format
+
+        /*//Convert RESTAssured raw response from right side to JSON format
         convertResponseToJson(response);
 
         //Get left value from the right side response
@@ -469,7 +482,7 @@ public class SideServiceTest extends TestBase {
         Assert.assertEquals(leftValue, encodeInBase64("adebowale"));
 
         //Verify that the right value is base64 encoded equivalence of 'formatting12345'
-        Assert.assertEquals(rightValue, encodeInBase64("formatting12345"));
+        Assert.assertEquals(rightValue, encodeInBase64("formatting12345"));*/
     }
 
     @Test
