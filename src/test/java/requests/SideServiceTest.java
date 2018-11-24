@@ -2,9 +2,13 @@ package requests;
 
 import hook.TestBase;
 import io.restassured.http.ContentType;
+import io.restassured.response.ResponseBody;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import responseModels.LeftAndRightSideSuccessResponse;
+import responseModels.LeftSideSuccessResponse;
+import responseModels.RightSideSuccessResponse;
 
 import java.io.IOException;
 
@@ -348,17 +352,25 @@ public class SideServiceTest extends TestBase {
     @Test
     public void testLeftSideShouldReturnAcceptedLeftSideBase64Data() {
         setSideValue(10, "left", "123456789000"); //Value entered is encoded in the method
-        convertResponseToJson(response); //Convert raw response to JSON format
+        ResponseBody body = response.getBody();
+        LeftSideSuccessResponse responseBody = body.as(LeftSideSuccessResponse.class);
+        Assert.assertEquals(responseBody.left, encodeInBase64("123456789000"));
+
+        /*convertResponseToJson(response); //Convert raw response to JSON format
         leftValue = jSONResponse.getString("left"); //Get left value from response
-        Assert.assertEquals(leftValue, encodeInBase64("123456789000"));
+        Assert.assertEquals(leftValue, encodeInBase64("123456789000"));*/
     }
 
     @Test
     public void testRightSideShouldReturnAcceptedRightSideBase64Data() {
         setSideValue(21, "right", "12345abcd"); //Value entered is encoded by the method
-        convertResponseToJson(response); //Convert raw response to JSON format
+        ResponseBody body = response.getBody();
+        RightSideSuccessResponse responseBody = body.as(RightSideSuccessResponse.class);
+        Assert.assertEquals(responseBody.right, encodeInBase64("12345abcd"));
+
+        /*convertResponseToJson(response); //Convert raw response to JSON format
         rightValue = jSONResponse.getString("right"); //Get right value from response
-        Assert.assertEquals(rightValue, encodeInBase64("12345abcd"));
+        Assert.assertEquals(rightValue, encodeInBase64("12345abcd"));*/
     }
 
     @Test
@@ -367,11 +379,17 @@ public class SideServiceTest extends TestBase {
         generateUniqueID();
         setSideValue(id, "left", "adebowale");
         setSideValue(id, "right", "formatting12345");
-        convertResponseToJson(response); //Convert right side response to JSON format
+        ResponseBody body = response.getBody();
+        LeftAndRightSideSuccessResponse responseBody = body.as(LeftAndRightSideSuccessResponse.class);
+        Assert.assertEquals(responseBody.left, encodeInBase64("adebowale"));
+        Assert.assertEquals(responseBody.right, encodeInBase64("formatting12345"));
+
+
+        /*convertResponseToJson(response); //Convert right side response to JSON format
         leftValue = jSONResponse.getString("left"); //Get left value from right side response
         rightValue = jSONResponse.getString("right"); //Get right value from right side response
         Assert.assertEquals(leftValue, encodeInBase64("adebowale"));
-        Assert.assertEquals(rightValue, encodeInBase64("formatting12345"));
+        Assert.assertEquals(rightValue, encodeInBase64("formatting12345"));*/
     }
 
     @Test
