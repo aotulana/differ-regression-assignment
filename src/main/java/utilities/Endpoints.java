@@ -1,10 +1,10 @@
 package utilities;
 
 /**
- * Created by aotulana on 11/12/2018.
- *
  * The class defines the endpoint paths.
  * A method returns a path for specific endpoint.
+ *
+ * @author Adebowale Otulana
  */
 public class Endpoints {
 
@@ -15,8 +15,8 @@ public class Endpoints {
      *
      * @return Side Service path
      */
-    public static String setSideValuePath() {
-        path = "/diffassign/v1/diff/{id}/{side}";
+    public static String sidePath() {
+        path = "/{id}/{side}";
         return path;
     }
 
@@ -26,7 +26,7 @@ public class Endpoints {
      * @return Differ Service path
      */
     public static String diffSidesPath() {
-        path = "/diffassign/v1/diff/{id}";
+        path = "/{id}";
         return path;
     }
 }

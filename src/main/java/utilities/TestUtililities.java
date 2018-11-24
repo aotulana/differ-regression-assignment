@@ -9,12 +9,13 @@ import java.util.Random;
 
 import static io.restassured.RestAssured.given;
 import static utilities.Endpoints.diffSidesPath;
-import static utilities.Endpoints.setSideValuePath;
+import static utilities.Endpoints.sidePath;
 
 /**
- * Created by Adebowale on 10/11/2018.
+ * This class contains static utility variables
+ * and methods that are reused across the project
  *
- * This class contains static utility variables and methods that are reused across the project
+ * @author Adebowale Otulana
  */
 public class TestUtililities {
 
@@ -77,7 +78,7 @@ public class TestUtililities {
                         pathParam("side", side). //Sets side
                         body("\"" + encodeInBase64(value) + "\""). //Sets Base64 encoded value
                 when().
-                        post(setSideValuePath()).
+                        post(sidePath()).
                 then().
                         assertThat().
                             statusCode(200). //Verify HTTP Status Code from response
@@ -112,7 +113,7 @@ public class TestUtililities {
      * This method generates random long values that are used as unique side IDs.
      * It ensures that the generated values are positive.
      */
-    public static void generateUniqueID() {
+    public static void generateID() {
         Random randomID = new Random();
         id = randomID.nextLong() & Long.MAX_VALUE; //Positive random IDs
     }
