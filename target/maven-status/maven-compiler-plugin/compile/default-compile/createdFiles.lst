@@ -1,4 +1,7 @@
 hook\TestBase.class
+responseModels\LeftSideSuccessResponse.class
 utilities\TestUtililities.class
+responseModels\LeftAndRightSideSuccessResponse.class
+responseModels\RightSideSuccessResponse.class
 utilities\Endpoints.class
 utilities\ExtentReporterNG.class

@@ -1,10 +1,14 @@
 package hook;
 
 import io.restassured.RestAssured;
+import org.testng.annotations.Listeners;
+import utilities.ExtentReporterNG;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+
+@Listeners(ExtentReporterNG.class)
 
 /**
  * @author Adebowale Otulana
@@ -25,7 +29,10 @@ public class TestBase {
         environment.load(environmentFile);
 
         //Set base URI
-        RestAssured.baseURI = environment.getProperty("HOST");
+        //RestAssured.baseURI = environment.getProperty("HOST");
+        RestAssured.baseURI = System.getProperty("server.host");
+        String port = System.getProperty("server.port");
+        RestAssured.port = Integer.valueOf(port);
 
         //Set base path
         RestAssured.basePath = "/diffassign/v1/diff";
