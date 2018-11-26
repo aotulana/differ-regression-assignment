@@ -5,5 +5,5 @@ package utilities;
  */
 public interface Endpoints {
     String POST_SIDE = "/{id}/{side}";
-    String GET_DIFFER = "/{id}";
+    String GET_DIFF = "/{id}";
 }

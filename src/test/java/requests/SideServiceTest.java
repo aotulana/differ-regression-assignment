@@ -11,7 +11,6 @@ import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
 import static utilities.TestUtililities.*;
-import static utilities.Endpoint.sidePath;
 
 /**
  * This class contains all tests for the Side Service.
@@ -311,7 +310,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "left").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        put(sidePath()). //PUT method instead of POST
+                        put(Endpoints.POST_SIDE). //PUT method instead of POST
                 then().
                         assertThat().
                             statusCode(405). //Verify HTTP Status Code

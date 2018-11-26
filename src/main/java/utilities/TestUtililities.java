@@ -8,8 +8,6 @@ import java.util.Base64;
 import java.util.Random;
 
 import static io.restassured.RestAssured.given;
-import static utilities.Endpoint.diffSidesPath;
-import static utilities.Endpoint.sidePath;
 
 /**
  * This class contains static utility variables
@@ -100,7 +98,7 @@ public class TestUtililities {
                         contentType(ContentType.JSON).
                         pathParam("id",id). //Sets ID
                 when().
-                        get(diffSidesPath()).
+                        get(Endpoints.GET_DIFF).
                 then().
                         assertThat().
                             statusCode(200). //Verify HTTP Status Code from response

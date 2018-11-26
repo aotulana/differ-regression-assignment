@@ -6,11 +6,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import utilities.Endpoints;
 
 import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
-import static utilities.Endpoint.diffSidesPath;
 import static utilities.TestUtililities.*;
 
 /**
@@ -138,7 +138,7 @@ public class DifferServiceTest extends TestBase {
                         contentType(ContentType.JSON).
                         pathParam("id",id). //Sets ID
                 when().
-                        get(diffSidesPath()).
+                        get(Endpoints.GET_DIFF).
                 then().
                         assertThat().
                             statusCode(404). //Verify HTTP Status Code from response
@@ -230,7 +230,7 @@ public class DifferServiceTest extends TestBase {
                         contentType(ContentType.JSON).
                         pathParam("id",id). //Sets ID
                 when().
-                        delete(diffSidesPath()).//DELETE method
+                        delete(Endpoints.GET_DIFF).//DELETE method
                 then().
                         assertThat().
                             statusCode(405). //Verify HTTP Status Code from response
