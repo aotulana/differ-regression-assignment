@@ -41,7 +41,8 @@ public class TestUtililities {
 
     /**
      * This utility method performs Base64 encode operation using RFC4648 encoder.
-     * This is based on the assumption that the Base64 encoded data required by the endpoints should be in this format
+     * This is based on the assumption that the Base64 encoded data required by the
+     * endpoints should be in this format.
      *
      * @param s
      *        String to be encoded
@@ -102,7 +103,8 @@ public class TestUtililities {
                 then().
                         assertThat().
                             statusCode(200). //Verify HTTP Status Code from response
-                            contentType(ContentType.JSON). //Verify Content Type of response
+                            contentType(ContentType.JSON).//Verify Content Type of response
+                        log().all().
                 extract().
                         response();
     }
