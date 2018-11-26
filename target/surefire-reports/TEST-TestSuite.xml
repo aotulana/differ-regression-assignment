@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="1.583" tests="38" errors="0" skipped="37" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="4.539" tests="28" errors="0" skipped="0" failures="4">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_192\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\aotulana\AppData\Local\Temp\surefire2441689071974727796\surefirebooter7970207325409151307.jar C:\Users\aotulana\AppData\Local\Temp\surefire2441689071974727796 2018-11-26T18-56-18_326-jvmRun1 surefire4151905017193430101tmp surefire_03409976226533690067tmp"/>
+    <property name="sun.java.command" value="C:\Users\aotulana\AppData\Local\Temp\surefire768133713605081529\surefirebooter4979942512387934146.jar C:\Users\aotulana\AppData\Local\Temp\surefire768133713605081529 2018-11-26T19-38-33_045-jvmRun1 surefire7012745115273918687tmp surefire_01609350778892594133tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\aotulana\repos\differ-regression-assignment\target\test-classes;C:\Users\aotulana\repos\differ-regression-assignment\target\classes;C:\Users\aotulana\.m2\repository\io\rest-assured\rest-assured\3.1.0\rest-assured-3.1.0.jar;C:\Users\aotulana\.m2\repository\org\codehaus\groovy\groovy\2.4.12\groovy-2.4.12.jar;C:\Users\aotulana\.m2\repository\org\codehaus\groovy\groovy-xml\2.4.12\groovy-xml-2.4.12.jar;C:\Users\aotulana\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\Users\aotulana\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar;C:\Users\aotulana\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\aotulana\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;C:\Users\aotulana\.m2\repository\org\apache\httpcomponents\httpmime\4.5.1\httpmime-4.5.1.jar;C:\Users\aotulana\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\aotulana\.m2\repository\org\hamcrest\hamcrest-library\1.3\hamcrest-library-1.3.jar;C:\Users\aotulana\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\aotulana\.m2\repository\io\rest-assured\json-path\3.1.0\json-path-3.1.0.jar;C:\Users\aotulana\.m2\repository\org\codehaus\groovy\groovy-json\2.4.12\groovy-json-2.4.12.jar;C:\Users\aotulana\.m2\repository\io\rest-assured\rest-assured-common\3.1.0\rest-assured-common-3.1.0.jar;C:\Users\aotulana\.m2\repository\io\rest-assured\xml-path\3.1.0\xml-path-3.1.0.jar;C:\Users\aotulana\.m2\repository\org\apache\commons\commons-lang3\3.4\commons-lang3-3.4.jar;C:\Users\aotulana\.m2\repository\javax\xml\bind\jaxb-api\2.2.12\jaxb-api-2.2.12.jar;C:\Users\aotulana\.m2\repository\org\testng\testng\6.14.3\testng-6.14.3.jar;C:\Users\aotulana\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\aotulana\.m2\repository\org\apache-extras\beanshell\bsh\2.0b6\bsh-2.0b6.jar;C:\Users\aotulana\.m2\repository\com\aventstack\extentreports\3.1.5\extentreports-3.1.5.jar;C:\Users\aotulana\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar;C:\Users\aotulana\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar;C:\Users\aotulana\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar;C:\Users\aotulana\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar;C:\Users\aotulana\.m2\repository\org\jsoup\jsoup\1.9.2\jsoup-1.9.2.jar;C:\Users\aotulana\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar;C:\Users\aotulana\.m2\repository\com\relevantcodes\extentreports\2.41.2\extentreports-2.41.2.jar;C:\Users\aotulana\.m2\repository\org\xerial\sqlite-jdbc\3.8.11.1\sqlite-jdbc-3.8.11.1.jar;C:\Users\aotulana\.m2\repository\org\apache\maven\surefire\surefire-testng-utils\2.22.0\surefire-testng-utils-2.22.0.jar;C:\Users\aotulana\.m2\repository\org\apache\maven\surefire\surefire-grouper\2.22.0\surefire-grouper-2.22.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\aotulana"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\aotulana\AppData\Local\Temp\surefire2441689071974727796\surefirebooter7970207325409151307.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\aotulana\AppData\Local\Temp\surefire768133713605081529\surefirebooter4979942512387934146.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_192\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_192\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_192\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_192\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_192\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_192\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_192\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_192\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -42,11 +42,12 @@
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_192\jre\lib\endorsed"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="Cp1252"/>
+    <property name="server.port" value="8081"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="localRepository" value="C:\Users\aotulana\.m2\repository"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\aotulana\AppData\Local\Temp\"/>
-    <property name="idea.version" value="2017.1.6"/>
+    <property name="server.host" value="http://localhost"/>
     <property name="java.version" value="1.8.0_192"/>
     <property name="user.dir" value="C:\Users\aotulana\repos\differ-regression-assignment"/>
     <property name="os.arch" value="amd64"/>
@@ -61,120 +62,60 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="setBaseURI" classname="requests.DifferServiceTest" time="0.759">
-    <failure type="java.lang.NumberFormatException:">java.lang.NumberFormatException: null
-	at requests.DifferServiceTest.setBaseURI(DifferServiceTest.java:31)
-</failure>
+  <testcase name="when_AlphabetOnlyIsEnteredAsID_Expect_415UnsupportedMediaType" classname="requests.SideServiceTest" time="1.379"/>
+  <testcase name="when_AlphanumericValueIsEnteredAsID_Expect_404NotFound" classname="requests.SideServiceTest" time="0.02"/>
+  <testcase name="when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception" classname="requests.SideServiceTest" time="0.667"/>
+  <testcase name="when_BodyIsNotPassedInSideRequest_Expect_400BadRequest" classname="requests.SideServiceTest" time="0.042"/>
+  <testcase name="when_EmptyStringIsEnteredAsID_Expect_404NotFound" classname="requests.SideServiceTest" time="0.017"/>
+  <testcase name="when_EmptyStringIsPassedAsBody_Expect_400BadRequest" classname="requests.SideServiceTest" time="0.062">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at requests.SideServiceTest.when_EmptyStringIsPassedAsBody_Expect_400BadRequest(SideServiceTest.java:388)
+]]></failure>
   </testcase>
-  <testcase name="setBaseURI" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
+  <testcase name="when_EmptyStringIsPassedAsSide_Expect_SideNameNotSupportedException" classname="requests.SideServiceTest" time="0.021"/>
+  <testcase name="when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight" classname="requests.SideServiceTest" time="0.076"/>
+  <testcase name="when_NegativeValueIsEnteredAsID_Expect_404NotFound" classname="requests.SideServiceTest" time="0.014">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;404&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at requests.SideServiceTest.when_NegativeValueIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:206)
+]]></failure>
   </testcase>
-  <testcase name="when_AlphabetOnlyIsEnteredAsID_Expect_415UnsupportedMediaType" classname="requests.SideServiceTest" time="0">
-    <skipped/>
+  <testcase name="when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound" classname="requests.SideServiceTest" time="0.014">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;404&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at requests.SideServiceTest.when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:185)
+]]></failure>
   </testcase>
-  <testcase name="when_AlphanumericValueIsEnteredAsID_Expect_404NotFound" classname="requests.SideServiceTest" time="0">
-    <skipped/>
+  <testcase name="when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException" classname="requests.SideServiceTest" time="0.035"/>
+  <testcase name="when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData" classname="requests.SideServiceTest" time="0.034"/>
+  <testcase name="when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType" classname="requests.SideServiceTest" time="0.015"/>
+  <testcase name="when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType" classname="requests.SideServiceTest" time="0.023"/>
+  <testcase name="when_SideRequestContentTypeIsXml_Expect_415UnsupportedMediaType" classname="requests.SideServiceTest" time="0.015"/>
+  <testcase name="when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType" classname="requests.SideServiceTest" time="0.009"/>
+  <testcase name="when_SideRequestMethodIsPUT_Expect_405MethodNotAllowed" classname="requests.SideServiceTest" time="0.02"/>
+  <testcase name="when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException" classname="requests.SideServiceTest" time="0.026"/>
+  <testcase name="when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data" classname="requests.SideServiceTest" time="0.02"/>
+  <testcase name="when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data" classname="requests.SideServiceTest" time="0.016"/>
+  <testcase name="when_DiffRequestIsDelete_Expect_405MethodNotAllowed" classname="requests.DifferServiceTest" time="0.05"/>
+  <testcase name="when_EqualSidesAreDiffed_Expect_Equal" classname="requests.DifferServiceTest" time="0.131"/>
+  <testcase name="when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized" classname="requests.DifferServiceTest" time="0.03"/>
+  <testcase name="when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue" classname="requests.DifferServiceTest" time="0.055"/>
+  <testcase name="when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue" classname="requests.DifferServiceTest" time="0.017">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;204&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <204>.
+
+	at requests.DifferServiceTest.when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(DifferServiceTest.java:94)
+]]></failure>
   </testcase>
-  <testcase name="when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_BodyIsNotPassedInSideRequest_Expect_400BadRequest" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_EmptyStringIsEnteredAsID_Expect_404NotFound" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_EmptyStringIsPassedAsBody_Expect_400BadRequest" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_EmptyStringIsPassedAsSide_Expect_SideNameNotSupportedException" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_NegativeValueIsEnteredAsID_Expect_404NotFound" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_SideRequestContentTypeIsXml_Expect_415UnsupportedMediaType" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_SideRequestMethodIsPUT_Expect_405MethodNotAllowed" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data" classname="requests.SideServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="uniqueIDForEachMethod" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="uniqueIDForEachMethod" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="uniqueIDForEachMethod" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="uniqueIDForEachMethod" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="uniqueIDForEachMethod" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="uniqueIDForEachMethod" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="uniqueIDForEachMethod" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="uniqueIDForEachMethod" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_DiffRequestIsDelete_Expect_405MethodNotAllowed" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_EqualSidesAreDiffed_Expect_Equal" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters" classname="requests.DifferServiceTest" time="0">
-    <skipped/>
-  </testcase>
+  <testcase name="when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength" classname="requests.DifferServiceTest" time="0.033"/>
+  <testcase name="when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters" classname="requests.DifferServiceTest" time="0.041"/>
+  <testcase name="when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters" classname="requests.DifferServiceTest" time="0.079"/>
 </testsuite>

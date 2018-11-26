@@ -1,8 +1,13 @@
 package requests;
 
 import hook.TestBase;
+import io.restassured.RestAssured;
+import io.restassured.config.RestAssuredConfig;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import utilities.Endpoints;
@@ -29,6 +34,11 @@ public class SideServiceTest extends TestBase {
     @BeforeTest
     public void setBaseURI() throws IOException {
         initializeBaseURI();
+    }
+
+    @BeforeMethod
+    public static void beforeTest() {
+
     }
 
     @Test

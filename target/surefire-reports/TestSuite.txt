@@ -1,8 +1,32 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 38, Failures: 1, Errors: 0, Skipped: 37, Time elapsed: 1.583 s <<< FAILURE! - in TestSuite
-setBaseURI(requests.DifferServiceTest)  Time elapsed: 0.759 s  <<< FAILURE!
-java.lang.NumberFormatException: null
-	at requests.DifferServiceTest.setBaseURI(DifferServiceTest.java:31)
+Tests run: 28, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 4.539 s <<< FAILURE! - in TestSuite
+when_EmptyStringIsPassedAsBody_Expect_400BadRequest(requests.SideServiceTest)  Time elapsed: 0.062 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at requests.SideServiceTest.when_EmptyStringIsPassedAsBody_Expect_400BadRequest(SideServiceTest.java:388)
+
+when_NegativeValueIsEnteredAsID_Expect_404NotFound(requests.SideServiceTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at requests.SideServiceTest.when_NegativeValueIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:206)
+
+when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(requests.SideServiceTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at requests.SideServiceTest.when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:185)
+
+when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(requests.DifferServiceTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <204>.
+
+	at requests.DifferServiceTest.when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(DifferServiceTest.java:94)
 
