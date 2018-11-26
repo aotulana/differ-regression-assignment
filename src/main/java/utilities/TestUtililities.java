@@ -78,7 +78,7 @@ public class TestUtililities {
                         pathParam("side", side). //Sets side
                         body("\"" + encodeInBase64(value) + "\""). //Sets Base64 encoded value
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(200). //Verify HTTP Status Code from response
