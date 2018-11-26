@@ -8,8 +8,8 @@ import java.util.Base64;
 import java.util.Random;
 
 import static io.restassured.RestAssured.given;
-import static utilities.Endpoints.diffSidesPath;
-import static utilities.Endpoints.sidePath;
+import static utilities.Endpoint.diffSidesPath;
+import static utilities.Endpoint.sidePath;
 
 /**
  * This class contains static utility variables

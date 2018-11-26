@@ -5,12 +5,13 @@ import io.restassured.http.ContentType;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import utilities.Endpoints;
 
 import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
 import static utilities.TestUtililities.*;
-import static utilities.Endpoints.sidePath;
+import static utilities.Endpoint.sidePath;
 
 /**
  * This class contains all tests for the Side Service.
@@ -41,7 +42,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "left").
                         body("\"abujfdbfjawsasd\""). //Data not base64 encoded
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(415). //Verify HTTP Status Code
@@ -74,7 +75,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "up"). //Undefined side
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(501). //Verify HTTP Status Code
@@ -107,7 +108,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "   "). //White spaces as side parameter
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(501). //Verify HTTP Status Code
@@ -140,7 +141,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", ""). //Empty String side parameter
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(405). //Verify HTTP Status Code
@@ -158,7 +159,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "left").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(404). //Verify HTTP Status Code
@@ -179,7 +180,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "left").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(404). //Verify HTTP Status Code
@@ -200,7 +201,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "left").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(404). //Verify HTTP Status Code
@@ -221,7 +222,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "left").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(404). //Verify HTTP Status Code
@@ -239,7 +240,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "right").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(415). //Verify HTTP Status Code
@@ -257,7 +258,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "right").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(415). //Verify HTTP Status Code
@@ -275,7 +276,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "right").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(415). //Verify HTTP Status Code
@@ -293,7 +294,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "right").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(415). //Verify HTTP Status Code
@@ -310,7 +311,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "left").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        put(sidePath()). //PUT method instead of POST
+                        put(Endpoints.POST_SIDE). //PUT method instead of POST
                 then().
                         assertThat().
                             statusCode(405). //Verify HTTP Status Code
@@ -327,7 +328,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "right").
                         body("\"" + encodeInBase64("abujfdbfjawsasd") + "\"").
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(415). //Verify HTTP Status Code
@@ -345,7 +346,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "right").
                         //No Body
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(400). //Verify HTTP Status Code
@@ -382,7 +383,7 @@ public class SideServiceTest extends TestBase {
                         pathParam("side", "right").
                         body("\"\""). //Empty string
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(400). //Verify HTTP Status Code

@@ -1,32 +1,9 @@
 package utilities;
 
 /**
- * The class defines the endpoint paths.
- * A method returns a path for specific endpoint.
- *
- * @author Adebowale Otulana
+ * Created by aotulana on 11/26/2018.
  */
-public class Endpoints {
-
-    private static String path;
-
-    /**
-     * Initializes the path for side service
-     *
-     * @return Side Service path
-     */
-    public static String sidePath() {
-        path = "/{id}/{side}";
-        return path;
-    }
-
-    /**
-     * Initializes the path for differ service
-     *
-     * @return Differ Service path
-     */
-    public static String diffSidesPath() {
-        path = "/{id}";
-        return path;
-    }
+public interface Endpoints {
+    String POST_SIDE = "/{id}/{side}";
+    String GET_DIFFER = "/{id}";
 }

@@ -1,10 +1,7 @@
 package requests;
 
 import hook.TestBase;
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
@@ -13,7 +10,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
-import static utilities.Endpoints.diffSidesPath;
+import static utilities.Endpoint.diffSidesPath;
 import static utilities.TestUtililities.*;
 
 /**
