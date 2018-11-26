@@ -1,7 +1,7 @@
 package utilities;
 
 /**
- * Created by aotulana on 11/26/2018.
+ * @author Adebowale Otulana
  */
 public interface Endpoints {
     String POST_SIDE = "/{id}/{side}";
