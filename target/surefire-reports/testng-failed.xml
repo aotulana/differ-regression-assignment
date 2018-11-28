@@ -6,14 +6,21 @@
   </listeners>
   <test thread-count="5" verbose="0" name="Differ Regression Tests(failed)">
     <classes>
-      <class name="requests.DifferentiateTest">
+      <class name="requests.DifferServiceTest">
         <methods>
-          <include name="testDifferAgainstNullRightSideShouldDifferentLength"/>
-          <include name="testDifferAgainstNullLeftSideShouldDifferentLength"/>
-          <include name="testDifferNotInitializedIDShouldReturnNotFound"/>
+          <include name="uniqueIDForEachMethod"/>
           <include name="setBaseURI"/>
+          <include name="when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue"/>
         </methods>
-      </class> <!-- requests.DifferentiateTest -->
+      </class> <!-- requests.DifferServiceTest -->
+      <class name="requests.SideServiceTest">
+        <methods>
+          <include name="when_EmptyStringIsPassedAsBody_Expect_400BadRequest"/>
+          <include name="when_NegativeValueIsEnteredAsID_Expect_404NotFound"/>
+          <include name="setBaseURI"/>
+          <include name="when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound"/>
+        </methods>
+      </class> <!-- requests.SideServiceTest -->
     </classes>
   </test> <!-- Differ Regression Tests(failed) -->
 </suite> <!-- Failed suite [Differ Regression Test Suite] -->

@@ -8,8 +8,6 @@ import java.util.Base64;
 import java.util.Random;
 
 import static io.restassured.RestAssured.given;
-import static utilities.Endpoints.diffSidesPath;
-import static utilities.Endpoints.sidePath;
 
 /**
  * This class contains static utility variables
@@ -43,7 +41,8 @@ public class TestUtililities {
 
     /**
      * This utility method performs Base64 encode operation using RFC4648 encoder.
-     * This is based on the assumption that the Base64 encoded data required by the endpoints should be in this format
+     * This is based on the assumption that the Base64 encoded data required by the
+     * endpoints should be in this format.
      *
      * @param s
      *        String to be encoded
@@ -78,7 +77,7 @@ public class TestUtililities {
                         pathParam("side", side). //Sets side
                         body("\"" + encodeInBase64(value) + "\""). //Sets Base64 encoded value
                 when().
-                        post(sidePath()).
+                        post(Endpoints.POST_SIDE).
                 then().
                         assertThat().
                             statusCode(200). //Verify HTTP Status Code from response
@@ -100,11 +99,12 @@ public class TestUtililities {
                         contentType(ContentType.JSON).
                         pathParam("id",id). //Sets ID
                 when().
-                        get(diffSidesPath()).
+                        get(Endpoints.GET_DIFF).
                 then().
                         assertThat().
                             statusCode(200). //Verify HTTP Status Code from response
-                            contentType(ContentType.JSON). //Verify Content Type of response
+                            contentType(ContentType.JSON).//Verify Content Type of response
+                        log().all().
                 extract().
                         response();
     }
