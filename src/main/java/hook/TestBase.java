@@ -22,15 +22,19 @@ public class TestBase {
 
     public void initializeBaseURI() throws IOException {
 
-        //Read file from location within project and get the defined HOST
+        /*//Read file from location within project and get the defined HOST
         environment = new Properties();
         FileInputStream environmentFile = new FileInputStream(System.getProperty("user.dir")
                 + "/src/main/resources/environment.properties"); //Location of the property file
         environment.load(environmentFile);
 
         //Set base URI
-        //RestAssured.baseURI = environment.getProperty("HOST");
+        //RestAssured.baseURI = environment.getProperty("HOST");*/
+
+        //Set base URI
         RestAssured.baseURI = System.getProperty("server.host");
+
+        //Set base port
         String port = System.getProperty("server.port");
         RestAssured.port = Integer.valueOf(port);
 

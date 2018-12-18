@@ -15,6 +15,7 @@ import utilities.Endpoints;
 import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.responseSpecification;
 import static utilities.TestUtililities.*;
 
 /**
@@ -25,6 +26,9 @@ import static utilities.TestUtililities.*;
  * @author Adebowale Otulana
  */
 public class SideServiceTest extends TestBase {
+
+    private RequestSpecification requestSpecification;
+    private Response response;
 
     /**
      * Before the tests, it initializes the base URI which will be used by each test method.
@@ -37,7 +41,8 @@ public class SideServiceTest extends TestBase {
     }
 
     @BeforeMethod
-    public static void beforeTest() {
+    public void beforeTest() {
+        requestSpecification = given();
 
     }
 
