@@ -1,29 +1,47 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 28, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 4.539 s <<< FAILURE! - in TestSuite
-when_EmptyStringIsPassedAsBody_Expect_400BadRequest(requests.SideServiceTest)  Time elapsed: 0.062 s  <<< FAILURE!
+Tests run: 28, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 3.959 s <<< FAILURE! - in TestSuite
+when_EmptyStringIsPassedAsBody_Expect_400BadRequest(requests.SideServiceTest)  Time elapsed: 0.036 s  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <400> but was <200>.
 
-	at requests.SideServiceTest.when_EmptyStringIsPassedAsBody_Expect_400BadRequest(SideServiceTest.java:388)
+	at requests.SideServiceTest.when_EmptyStringIsPassedAsBody_Expect_400BadRequest(SideServiceTest.java:403)
 
-when_NegativeValueIsEnteredAsID_Expect_404NotFound(requests.SideServiceTest)  Time elapsed: 0.014 s  <<< FAILURE!
+when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight(requests.SideServiceTest)  Time elapsed: 0.036 s  <<< FAILURE!
+io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+	at requests.SideServiceTest.when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight(SideServiceTest.java:473)
+Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
+	at requests.SideServiceTest.when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight(SideServiceTest.java:473)
+
+when_NegativeValueIsEnteredAsID_Expect_404NotFound(requests.SideServiceTest)  Time elapsed: 0.008 s  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <404> but was <200>.
 
-	at requests.SideServiceTest.when_NegativeValueIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:206)
+	at requests.SideServiceTest.when_NegativeValueIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:221)
 
-when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(requests.SideServiceTest)  Time elapsed: 0.014 s  <<< FAILURE!
+when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(requests.SideServiceTest)  Time elapsed: 0.015 s  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <404> but was <200>.
 
-	at requests.SideServiceTest.when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:185)
+	at requests.SideServiceTest.when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:200)
 
-when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(requests.DifferServiceTest)  Time elapsed: 0.017 s  <<< FAILURE!
+when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData(requests.SideServiceTest)  Time elapsed: 0.04 s  <<< FAILURE!
+java.lang.AssertionError: expected [RHJvcHBlZCBkb3du] but found [null]
+	at requests.SideServiceTest.when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData(SideServiceTest.java:505)
+
+when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data(requests.SideServiceTest)  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: expected [MTIzNDU2Nzg5MDAw] but found [null]
+	at requests.SideServiceTest.when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data(SideServiceTest.java:437)
+
+when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data(requests.SideServiceTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: expected [MTIzNDVhYmNk] but found [null]
+	at requests.SideServiceTest.when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data(SideServiceTest.java:453)
+
+when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(requests.DifferServiceTest)  Time elapsed: 0 s  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <204>.

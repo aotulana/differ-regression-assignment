@@ -6,6 +6,19 @@
   </listeners>
   <test thread-count="5" verbose="0" name="Differ Regression Tests(failed)">
     <classes>
+      <class name="requests.SideServiceTest">
+        <methods>
+          <include name="when_EmptyStringIsPassedAsBody_Expect_400BadRequest"/>
+          <include name="when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data"/>
+          <include name="when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight"/>
+          <include name="when_NegativeValueIsEnteredAsID_Expect_404NotFound"/>
+          <include name="setBaseURI"/>
+          <include name="when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data"/>
+          <include name="beforeTest"/>
+          <include name="when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound"/>
+          <include name="when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData"/>
+        </methods>
+      </class> <!-- requests.SideServiceTest -->
       <class name="requests.DifferServiceTest">
         <methods>
           <include name="uniqueIDForEachMethod"/>
@@ -13,14 +26,6 @@
           <include name="when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue"/>
         </methods>
       </class> <!-- requests.DifferServiceTest -->
-      <class name="requests.SideServiceTest">
-        <methods>
-          <include name="when_EmptyStringIsPassedAsBody_Expect_400BadRequest"/>
-          <include name="when_NegativeValueIsEnteredAsID_Expect_404NotFound"/>
-          <include name="setBaseURI"/>
-          <include name="when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound"/>
-        </methods>
-      </class> <!-- requests.SideServiceTest -->
     </classes>
   </test> <!-- Differ Regression Tests(failed) -->
 </suite> <!-- Failed suite [Differ Regression Test Suite] -->

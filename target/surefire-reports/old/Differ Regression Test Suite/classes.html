@@ -11,11 +11,11 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength</td>
+<td>when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue</td>
+<td>when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
@@ -81,11 +81,11 @@
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>when_NegativeValueIsEnteredAsID_Expect_404NotFound</td>
+<td>when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception</td>
+<td>when_NegativeValueIsEnteredAsID_Expect_404NotFound</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
@@ -113,7 +113,7 @@
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType</td>
+<td>when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
@@ -121,7 +121,7 @@
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException</td>
+<td>when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
@@ -137,11 +137,11 @@
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType</td>
+<td>when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType</td>
+<td>when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -149,6 +149,10 @@
 <tr>
 <td align='center' colspan='3'>@BeforeMethod</td>
 </tr>
+<tr>
+<td>&nbsp;</td>
+<td>beforeTest</td>
+<td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@AfterMethod</td>
 </tr>
