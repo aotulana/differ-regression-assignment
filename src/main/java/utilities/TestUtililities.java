@@ -25,19 +25,6 @@ public class TestUtililities {
     public static long id;
     public static String detail;
     public static String type;
-    public static JsonPath jSONResponse;
-
-    /**
-     * This method does the conversion of RESTAssured response to JSON format
-     * in order to be able to read and verify the keys and values
-     *
-     * @return  A JsonPath equivalence of the RESTAssured response
-     */
-    public static void convertResponseToJson(Response r)
-    {
-        String response = r.asString();
-        jSONResponse = new JsonPath(response);
-    }
 
     /**
      * This utility method performs Base64 encode operation using RFC4648 encoder.

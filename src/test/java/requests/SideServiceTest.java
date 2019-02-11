@@ -1,8 +1,6 @@
 package requests;
 
 import hook.TestBase;
-import io.restassured.RestAssured;
-import io.restassured.config.RestAssuredConfig;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -15,7 +13,6 @@ import utilities.Endpoints;
 import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.responseSpecification;
 import static utilities.TestUtililities.*;
 
 /**
@@ -64,7 +61,7 @@ public class SideServiceTest extends TestBase {
                         response();
 
         //Convert RESTAssured raw response to JSON format
-        convertResponseToJson(response);
+        getResponseBody(response);
 
         //Get errorCode from the JSON response
         errorCode = jSONResponse.getInt("errorCode");
@@ -97,7 +94,7 @@ public class SideServiceTest extends TestBase {
                         response();
 
         //Convert RESTAssured raw response to JSON format
-        convertResponseToJson(response);
+        getResponseBody(response);
 
         //Get errorCode from the JSON response
         errorCode = jSONResponse.getInt("errorCode");
@@ -130,7 +127,7 @@ public class SideServiceTest extends TestBase {
                         response();
 
         //Convert RESTAssured raw response to JSON format
-        convertResponseToJson(response);
+        getResponseBody(response);
 
         //Get errorCode from the JSON response
         errorCode = jSONResponse.getInt("errorCode");
@@ -369,7 +366,7 @@ public class SideServiceTest extends TestBase {
                         response();
 
         //Convert RESTAssured raw response to JSON format
-        convertResponseToJson(response);
+        getResponseBody(response);
 
         //Get errorCode from the JSON response
         errorCode = jSONResponse.getInt("errorCode");
@@ -406,7 +403,7 @@ public class SideServiceTest extends TestBase {
                         response();
 
         //Convert RESTAssured raw response to JSON format
-        convertResponseToJson(response);
+        getResponseBody(response);
 
         //Get errorCode from the JSON response
         errorCode = jSONResponse.getInt("errorCode");
@@ -428,7 +425,7 @@ public class SideServiceTest extends TestBase {
         setSideValue(10, "left", "123456789000");
 
         //Convert RESTAssured raw response to JSON format
-        convertResponseToJson(response);
+        getResponseBody(response);
 
         //Get left value from response
         leftValue = jSONResponse.getString("left");
@@ -444,7 +441,7 @@ public class SideServiceTest extends TestBase {
         setSideValue(21, "right", "12345abcd");
 
         //Convert RESTAssured raw response to JSON format
-        convertResponseToJson(response);
+        getResponseBody(response);
 
         //Get right value from response
         rightValue = jSONResponse.getString("right"); //Get right value from response
@@ -467,7 +464,7 @@ public class SideServiceTest extends TestBase {
         setSideValue(id, "right", "formatting12345");
 
         //Convert RESTAssured raw response from right side to JSON format
-        convertResponseToJson(response);
+        getResponseBody(response);
 
         //Get left value from the right side response
         leftValue = jSONResponse.getString("left");
@@ -496,7 +493,7 @@ public class SideServiceTest extends TestBase {
         setSideValue(id, "right", "Dropped down");
 
         //Convert RESTAssured raw response from the updated right side to JSON format
-        convertResponseToJson(response);
+        getResponseBody(response);
 
         //Get right value from the updated right side response
         rightValue = jSONResponse.getString("right");

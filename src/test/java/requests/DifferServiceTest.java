@@ -2,10 +2,13 @@ package requests;
 
 import hook.TestBase;
 import io.restassured.http.ContentType;
+import io.restassured.response.ResponseBody;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import responseModels.EqualDiffSuccessResponse;
+import responseModels.UnequalDiffSuccessResponse;
 import utilities.Endpoints;
 
 import java.io.IOException;
@@ -51,14 +54,12 @@ public class DifferServiceTest extends TestBase {
         //Diff the sides
         differentiateSides(999);
 
-        //Convert raw response to JSON format
-        convertResponseToJson(response);
-
-        //Get type from the JSON response
-        type = jSONResponse.getString("type");
+        //Get response body
+        ResponseBody body = response.getBody();
+        EqualDiffSuccessResponse responseBody = body.as(EqualDiffSuccessResponse.class);
 
         //Verify that the type is EQUAL
-        Assert.assertEquals(type, "EQUAL");
+        Assert.assertEquals(responseBody.type, "EQUAL");
     }
 
     @Test
@@ -69,20 +70,15 @@ public class DifferServiceTest extends TestBase {
         //Diff the sides
         differentiateSides(id);
 
-        //Convert RESTAssured raw response to JSON format
-        convertResponseToJson(response);
-
-        //Get detail from the JSON response
-        detail = jSONResponse.getString("detail");
-
-        //Get type from the JSON response
-        type = jSONResponse.getString("type");
+        //Get response body
+        ResponseBody body = response.getBody();
+        UnequalDiffSuccessResponse responseBody = body.as(UnequalDiffSuccessResponse.class);
 
         //Verify that the detail is 'Left side contains no value.'
-        Assert.assertEquals(detail, "Left side contains no value.");
+        Assert.assertEquals(responseBody.detail, "Left side contains no value.");
 
         //Verify that the type is DIFFERENT_LENGTH
-        Assert.assertEquals(type, "DIFFERENT_LENGTH");
+        Assert.assertEquals(responseBody.type, "DIFFERENT_LENGTH");
     }
 
     @Test
@@ -94,7 +90,7 @@ public class DifferServiceTest extends TestBase {
         differentiateSides(id);
 
         //Convert RESTAssured raw response to JSON format
-        convertResponseToJson(response);
+        getResponseBody(response);
 
         //Get detail from the JSON response
         detail = jSONResponse.getString("detail");
@@ -121,7 +117,7 @@ public class DifferServiceTest extends TestBase {
         differentiateSides(id);
 
         //Convert RESTAssured raw response to JSON format
-        convertResponseToJson(response);
+        getResponseBody(response);
 
         //Get type from the JSON response
         type = jSONResponse.getString("type");
@@ -147,7 +143,7 @@ public class DifferServiceTest extends TestBase {
                         response();
 
         //Convert RESTAssured raw response to JSON format
-        convertResponseToJson(response);
+        getResponseBody(response);
 
         //Get errorCode from the JSON response
         errorCode = jSONResponse.getInt("errorCode");
@@ -174,7 +170,7 @@ public class DifferServiceTest extends TestBase {
         differentiateSides(id);
 
         //Convert RESTAssured raw response to JSON format
-        convertResponseToJson(response);
+        getResponseBody(response);
 
         //Get detail from the JSON response
         detail = jSONResponse.getString("detail");
@@ -201,7 +197,7 @@ public class DifferServiceTest extends TestBase {
         differentiateSides(id);
 
         //Convert RESTAssured raw response to JSON format
-        convertResponseToJson(response);
+        getResponseBody(response);
 
         //Get detail from the JSON response
         detail = jSONResponse.getString("detail");

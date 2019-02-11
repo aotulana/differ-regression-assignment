@@ -6,4 +6,3 @@ package responseModels;
 public class RightSideSuccessResponse {
     public String right;
 }
-
