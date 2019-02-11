@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import responseModels.DiffErrorResponse;
 import responseModels.EqualDiffSuccessResponse;
 import responseModels.UnequalDiffSuccessResponse;
 import utilities.Endpoints;
@@ -89,20 +90,15 @@ public class DifferServiceTest extends TestBase {
         //Diff the sides
         differentiateSides(id);
 
-        //Convert RESTAssured raw response to JSON format
-        getResponseBody(response);
-
-        //Get detail from the JSON response
-        detail = jSONResponse.getString("detail");
-
-        //Get type from the JSON response
-        type = jSONResponse.getString("type");
+        //Get response body
+        ResponseBody body = response.getBody();
+        UnequalDiffSuccessResponse responseBody = body.as(UnequalDiffSuccessResponse.class);
 
         //Verify that the detail is 'Right side contains no value.'
-        Assert.assertEquals(detail, "Right side contains no value.");
+        Assert.assertEquals(responseBody.detail, "Right side contains no value.");
 
         //Verify that the type is DIFFERENT_LENGTH
-        Assert.assertEquals(type, "DIFFERENT_LENGTH");
+        Assert.assertEquals(responseBody.type, "DIFFERENT_LENGTH");
     }
 
     @Test
@@ -116,14 +112,12 @@ public class DifferServiceTest extends TestBase {
         //Diff the sides
         differentiateSides(id);
 
-        //Convert RESTAssured raw response to JSON format
-        getResponseBody(response);
-
-        //Get type from the JSON response
-        type = jSONResponse.getString("type");
+        //Get response body
+        ResponseBody body = response.getBody();
+        UnequalDiffSuccessResponse responseBody = body.as(UnequalDiffSuccessResponse.class);
 
         //Verify that the type is DIFFERENT_LENGTH
-        Assert.assertEquals(type, "DIFFERENT_LENGTH");
+        Assert.assertEquals(responseBody.type, "DIFFERENT_LENGTH");
     }
 
     @Test
@@ -142,20 +136,15 @@ public class DifferServiceTest extends TestBase {
                 extract().
                         response();
 
-        //Convert RESTAssured raw response to JSON format
-        getResponseBody(response);
-
-        //Get errorCode from the JSON response
-        errorCode = jSONResponse.getInt("errorCode");
-
-        //Get errorMessage from the JSON response
-        errorMessage = jSONResponse.getString("errorMessage");
+        //Get response body
+        ResponseBody body = response.getBody();
+        DiffErrorResponse responseBody = body.as(DiffErrorResponse.class);
 
         //Verify that the errorCode is 404
-        Assert.assertEquals(errorCode, Integer.valueOf(404));
+        Assert.assertEquals(responseBody.errorCode, Integer.valueOf(404));
 
         //Verify that the errorMessage is 'ID <id> not initialized.'
-        Assert.assertEquals(errorMessage, "ID " + id + " not initialized.");
+        Assert.assertEquals(responseBody.errorMessage, "ID " + id + " not initialized.");
     }
 
     @Test
@@ -169,20 +158,15 @@ public class DifferServiceTest extends TestBase {
         //Diff the sides
         differentiateSides(id);
 
-        //Convert RESTAssured raw response to JSON format
-        getResponseBody(response);
-
-        //Get detail from the JSON response
-        detail = jSONResponse.getString("detail");
-
-        //Get type from the JSON response
-        type = jSONResponse.getString("type");
+        //Get response body
+        ResponseBody body = response.getBody();
+        UnequalDiffSuccessResponse responseBody = body.as(UnequalDiffSuccessResponse.class);
 
         //Verify that the detail is 'Values are different on char(s) [11] [75].'
-        Assert.assertEquals(detail, "Values are different on char(s) [11] [75].");
+        Assert.assertEquals(responseBody.detail, "Values are different on char(s) [11] [75].");
 
         //Verify that the type is DIFFERENT_CHARS
-        Assert.assertEquals(type, "DIFFERENT_CHARS");
+        Assert.assertEquals(responseBody.type, "DIFFERENT_CHARS");
     }
 
     @Test
@@ -196,20 +180,15 @@ public class DifferServiceTest extends TestBase {
         //Diff the sides
         differentiateSides(id);
 
-        //Convert RESTAssured raw response to JSON format
-        getResponseBody(response);
-
-        //Get detail from the JSON response
-        detail = jSONResponse.getString("detail");
-
-        //Get type from the JSON response
-        type = jSONResponse.getString("type");
+        //Get response body
+        ResponseBody body = response.getBody();
+        UnequalDiffSuccessResponse responseBody = body.as(UnequalDiffSuccessResponse.class);
 
         //Verify that the detail is 'Values are different on char(s) [0-5] [7-11].'
-        Assert.assertEquals(detail, "Values are different on char(s) [0-5] [7-11].");
+        Assert.assertEquals(responseBody.detail, "Values are different on char(s) [0-5] [7-11].");
 
         //Verify that the type is DIFFERENT_CHARS
-        Assert.assertEquals(type, "DIFFERENT_CHARS");
+        Assert.assertEquals(responseBody.type, "DIFFERENT_CHARS");
     }
 
     @Test
