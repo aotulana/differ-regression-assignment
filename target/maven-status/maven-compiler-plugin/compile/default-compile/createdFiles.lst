@@ -1,7 +1,10 @@
 hook\TestBase.class
 responseModels\LeftSideSuccessResponse.class
 utilities\TestUtililities.class
+responseModels\ErrorResponse.class
+responseModels\EqualDiffSuccessResponse.class
 responseModels\LeftAndRightSideSuccessResponse.class
 responseModels\RightSideSuccessResponse.class
 utilities\Endpoints.class
 utilities\ExtentReporterNG.class
+responseModels\UnequalDiffSuccessResponse.class

@@ -17,14 +17,8 @@ import static io.restassured.RestAssured.given;
  */
 public class TestUtililities {
 
-    public static Response response;
-    public static Integer errorCode;
-    public static String errorMessage;
-    public static String leftValue;
-    public static String rightValue;
     public static long id;
-    public static String detail;
-    public static String type;
+    public static Response response;
 
     /**
      * This utility method performs Base64 encode operation using RFC4648 encoder.

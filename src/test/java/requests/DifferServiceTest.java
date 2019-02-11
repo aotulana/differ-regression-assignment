@@ -2,12 +2,14 @@ package requests;
 
 import hook.TestBase;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
+import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import responseModels.DiffErrorResponse;
+import responseModels.ErrorResponse;
 import responseModels.EqualDiffSuccessResponse;
 import responseModels.UnequalDiffSuccessResponse;
 import utilities.Endpoints;
@@ -23,6 +25,8 @@ import static utilities.TestUtililities.*;
  * @author Adebowale Otulana
  */
 public class DifferServiceTest extends TestBase {
+
+    private RequestSpecification requestSpecification;
 
     /**
      * Before the tests, it initializes the base URI
@@ -40,8 +44,9 @@ public class DifferServiceTest extends TestBase {
      * The generated ID is always positive
      */
     @BeforeMethod
-    public void uniqueIDForEachMethod() {
+    public void beforeMethod() {
         generateID();
+        requestSpecification = given();
     }
 
     @Test
@@ -138,7 +143,7 @@ public class DifferServiceTest extends TestBase {
 
         //Get response body
         ResponseBody body = response.getBody();
-        DiffErrorResponse responseBody = body.as(DiffErrorResponse.class);
+        ErrorResponse responseBody = body.as(ErrorResponse.class);
 
         //Verify that the errorCode is 404
         Assert.assertEquals(responseBody.errorCode, Integer.valueOf(404));

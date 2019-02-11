@@ -3,12 +3,15 @@ package requests;
 import hook.TestBase;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import responseModels.*;
 import utilities.Endpoints;
+import utilities.TestUtililities;
 
 import java.io.IOException;
 
@@ -38,9 +41,8 @@ public class SideServiceTest extends TestBase {
     }
 
     @BeforeMethod
-    public void beforeTest() {
+    public void beforeMethod() {
         requestSpecification = given();
-
     }
 
     @Test
@@ -60,20 +62,15 @@ public class SideServiceTest extends TestBase {
                 extract().
                         response();
 
-        //Convert RESTAssured raw response to JSON format
-        getResponseBody(response);
-
-        //Get errorCode from the JSON response
-        errorCode = jSONResponse.getInt("errorCode");
-
-        //Get errorMessage from the JSON response
-        errorMessage = jSONResponse.getString("errorMessage");
+        //Get response body
+        ResponseBody body = response.getBody();
+        ErrorResponse responseBody = body.as(ErrorResponse.class);
 
         //Verify that the errorCode is 415
-        Assert.assertEquals(errorCode, Integer.valueOf(415));
+        Assert.assertEquals(responseBody.errorCode, Integer.valueOf(415));
 
         //Verify that the errorMessage is 'Data in body not Base64 formatted.'
-        Assert.assertEquals(errorMessage, "Data in body not Base64 formatted.");
+        Assert.assertEquals(responseBody.errorMessage, "Data in body not Base64 formatted.");
     }
 
     @Test
@@ -93,20 +90,15 @@ public class SideServiceTest extends TestBase {
                 extract().
                         response();
 
-        //Convert RESTAssured raw response to JSON format
-        getResponseBody(response);
-
-        //Get errorCode from the JSON response
-        errorCode = jSONResponse.getInt("errorCode");
-
-        //Get errorMessage from the JSON response
-        errorMessage = jSONResponse.getString("errorMessage");
+        //Get response body
+        ResponseBody body = response.getBody();
+        ErrorResponse responseBody = body.as(ErrorResponse.class);
 
         //Verify that the errorCode is 501
-        Assert.assertEquals(errorCode, Integer.valueOf(501));
+        Assert.assertEquals(responseBody.errorCode, Integer.valueOf(501));
 
         //Verify that the errorMessage is 'This side is not supported, please use either 'left' or 'right'.'
-        Assert.assertEquals(errorMessage, "This side is not supported, please use either 'left' or 'right'.");
+        Assert.assertEquals(responseBody.errorMessage, "This side is not supported, please use either 'left' or 'right'.");
     }
 
     @Test
@@ -126,20 +118,15 @@ public class SideServiceTest extends TestBase {
                 extract().
                         response();
 
-        //Convert RESTAssured raw response to JSON format
-        getResponseBody(response);
-
-        //Get errorCode from the JSON response
-        errorCode = jSONResponse.getInt("errorCode");
-
-        //Get errorMessage from the JSON response
-        errorMessage = jSONResponse.getString("errorMessage");
+        //Get response body
+        ResponseBody body = response.getBody();
+        ErrorResponse responseBody = body.as(ErrorResponse.class);
 
         //Verify that the errorCode is 501
-        Assert.assertEquals(errorCode, Integer.valueOf(501));
+        Assert.assertEquals(responseBody.errorCode, Integer.valueOf(501));
 
         //Verify that the errorMessage is 'This side is not supported, please use either 'left' or 'right'.'
-        Assert.assertEquals(errorMessage, "This side is not supported, please use either 'left' or 'right'.");
+        Assert.assertEquals(responseBody.errorMessage, "This side is not supported, please use either 'left' or 'right'.");
     }
 
     @Test
@@ -365,20 +352,15 @@ public class SideServiceTest extends TestBase {
                 extract().
                         response();
 
-        //Convert RESTAssured raw response to JSON format
-        getResponseBody(response);
-
-        //Get errorCode from the JSON response
-        errorCode = jSONResponse.getInt("errorCode");
-
-        //Get errorMessage from the JSON response
-        errorMessage = jSONResponse.getString("errorMessage");
+        //Get response body
+        ResponseBody body = response.getBody();
+        ErrorResponse responseBody = body.as(ErrorResponse.class);
 
         //Verify that the errorCode is 400
-        Assert.assertEquals(errorCode, Integer.valueOf(400));
+        Assert.assertEquals(responseBody.errorCode, Integer.valueOf(400));
 
         //Verify that the errorMessage is 'Value in request body cannot be empty.'
-        Assert.assertEquals(errorMessage, "Value in request body cannot be empty.");
+        Assert.assertEquals(responseBody.errorMessage, "Value in request body cannot be empty.");
     }
 
     /**
@@ -402,20 +384,15 @@ public class SideServiceTest extends TestBase {
                 extract().
                         response();
 
-        //Convert RESTAssured raw response to JSON format
-        getResponseBody(response);
-
-        //Get errorCode from the JSON response
-        errorCode = jSONResponse.getInt("errorCode");
-
-        //Get errorMessage from the JSON response
-        errorMessage = jSONResponse.getString("errorMessage");
+        //Get response body
+        ResponseBody body = response.getBody();
+        ErrorResponse responseBody = body.as(ErrorResponse.class);
 
         //Verify that the errorCode is 400
-        Assert.assertEquals(errorCode, Integer.valueOf(400));
+        Assert.assertEquals(responseBody.errorCode, Integer.valueOf(400));
 
         //Verify that the errorMessage is 'Value in request body cannot be empty.'
-        Assert.assertEquals(errorMessage, "Value in request body cannot be empty.");
+        Assert.assertEquals(responseBody.errorMessage, "Value in request body cannot be empty.");
     }
 
     @Test
@@ -424,14 +401,12 @@ public class SideServiceTest extends TestBase {
         //Value is encoded by the method
         setSideValue(10, "left", "123456789000");
 
-        //Convert RESTAssured raw response to JSON format
-        getResponseBody(response);
-
-        //Get left value from response
-        leftValue = jSONResponse.getString("left");
+        //Get response body
+        ResponseBody body = response.getBody();
+        LeftSideSuccessResponse responseBody = body.as(LeftSideSuccessResponse.class);
 
         //Verify that the left value is base64 encoded equivalence of '123456789000'
-        Assert.assertEquals(leftValue, encodeInBase64("123456789000"));
+        Assert.assertEquals(responseBody.left, encodeInBase64("123456789000"));
     }
 
     @Test
@@ -440,14 +415,12 @@ public class SideServiceTest extends TestBase {
         //Value is encoded by the method
         setSideValue(21, "right", "12345abcd");
 
-        //Convert RESTAssured raw response to JSON format
-        getResponseBody(response);
-
-        //Get right value from response
-        rightValue = jSONResponse.getString("right"); //Get right value from response
+        //Get response body
+        ResponseBody body = response.getBody();
+        RightSideSuccessResponse responseBody = body.as(RightSideSuccessResponse.class);
 
         //Verify that the right value is base64 encoded equivalence of '12345abcd'
-        Assert.assertEquals(rightValue, encodeInBase64("12345abcd"));
+        Assert.assertEquals(responseBody.right, encodeInBase64("12345abcd"));
     }
 
     @Test
@@ -463,20 +436,15 @@ public class SideServiceTest extends TestBase {
         //Value is encoded by the method
         setSideValue(id, "right", "formatting12345");
 
-        //Convert RESTAssured raw response from right side to JSON format
-        getResponseBody(response);
-
-        //Get left value from the right side response
-        leftValue = jSONResponse.getString("left");
-
-        //Get right value from the right side response
-        rightValue = jSONResponse.getString("right");
+        //Get response body
+        ResponseBody body = response.getBody();
+        LeftAndRightSideSuccessResponse responseBody = body.as(LeftAndRightSideSuccessResponse.class);
 
         //Verify that the left value is base64 encoded equivalence of 'adebowale'
-        Assert.assertEquals(leftValue, encodeInBase64("adebowale"));
+        Assert.assertEquals(responseBody.left, encodeInBase64("adebowale"));
 
         //Verify that the right value is base64 encoded equivalence of 'formatting12345'
-        Assert.assertEquals(rightValue, encodeInBase64("formatting12345"));
+        Assert.assertEquals(responseBody.right, encodeInBase64("formatting12345"));
     }
 
     @Test
@@ -492,13 +460,11 @@ public class SideServiceTest extends TestBase {
         //Value is encoded by the method
         setSideValue(id, "right", "Dropped down");
 
-        //Convert RESTAssured raw response from the updated right side to JSON format
-        getResponseBody(response);
-
-        //Get right value from the updated right side response
-        rightValue = jSONResponse.getString("right");
+        //Get response body
+        ResponseBody body = response.getBody();
+        RightSideSuccessResponse responseBody = body.as(RightSideSuccessResponse.class);
 
         //Verify that the updated right value is base64 encoded equivalence of 'Dropped down'
-        Assert.assertEquals(rightValue, encodeInBase64("Dropped down"));
+        Assert.assertEquals(responseBody.right, encodeInBase64("Dropped down"));
     }
 }
