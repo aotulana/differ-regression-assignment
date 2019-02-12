@@ -33,11 +33,13 @@ public class TestBase {
         //RestAssured.baseURI = environment.getProperty("HOST");*/
 
         //Set base URI
-        RestAssured.baseURI = System.getProperty("server.host");
+        //RestAssured.baseURI = System.getProperty("server.host");
+        RestAssured.baseURI = "http://localhost";
 
         //Set base port
         String port = System.getProperty("server.port");
-        RestAssured.port = Integer.valueOf(port);
+        //RestAssured.port = Integer.valueOf(port);
+        RestAssured.port = 8081;
 
         //Set base path
         RestAssured.basePath = "/diffassign/v1/diff";

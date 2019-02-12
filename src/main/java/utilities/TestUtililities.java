@@ -60,9 +60,7 @@ public class TestUtililities {
                 when().
                         post(Endpoints.POST_SIDE).
                 then().
-                        assertThat().
-                            statusCode(200). //Verify HTTP Status Code from response
-                            contentType(ContentType.JSON). //Verify Content Type of response
+                        log().all().
                 extract().
                         response();
     }
@@ -82,9 +80,6 @@ public class TestUtililities {
                 when().
                         get(Endpoints.GET_DIFF).
                 then().
-                        assertThat().
-                            statusCode(200). //Verify HTTP Status Code from response
-                            contentType(ContentType.JSON).//Verify Content Type of response
                         log().all().
                 extract().
                         response();

@@ -1,98 +1,34 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 28, Failures: 18, Errors: 0, Skipped: 0, Time elapsed: 4.153 s <<< FAILURE! - in TestSuite
-when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception(requests.SideServiceTest)  Time elapsed: 0.085 s  <<< FAILURE!
-java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at requests.SideServiceTest.when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception(SideServiceTest.java:67)
-
-when_BodyIsNotPassedInSideRequest_Expect_400BadRequest(requests.SideServiceTest)  Time elapsed: 0.123 s  <<< FAILURE!
-java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at requests.SideServiceTest.when_BodyIsNotPassedInSideRequest_Expect_400BadRequest(SideServiceTest.java:357)
-
-when_EmptyStringIsPassedAsBody_Expect_400BadRequest(requests.SideServiceTest)  Time elapsed: 0.022 s  <<< FAILURE!
+Tests run: 28, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 3.678 s <<< FAILURE! - in TestSuite
+when_EmptyStringIsPassedAsBody_Expect_400BadRequest(requests.SideServiceTest)  Time elapsed: 0.047 s  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <400> but was <200>.
 
-	at requests.SideServiceTest.when_EmptyStringIsPassedAsBody_Expect_400BadRequest(SideServiceTest.java:382)
+	at requests.SideServiceTest.when_EmptyStringIsPassedAsBody_Expect_400BadRequest(SideServiceTest.java:379)
 
-when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight(requests.SideServiceTest)  Time elapsed: 0.066 s  <<< FAILURE!
-java.lang.IllegalStateException: 
-Cannot parse content to class responseModels.LeftAndRightSideSuccessResponse because no content-type was present in the response and no default parser has been set.
-You can specify a default parser using e.g.:
-RestAssured.defaultParser = Parser.JSON;
-
-or you can specify an explicit ObjectMapper using as(class responseModels.LeftAndRightSideSuccessResponse, <ObjectMapper>);
-	at requests.SideServiceTest.when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight(SideServiceTest.java:441)
-
-when_NegativeValueIsEnteredAsID_Expect_404NotFound(requests.SideServiceTest)  Time elapsed: 0.016 s  <<< FAILURE!
+when_NegativeValueIsEnteredAsID_Expect_404NotFound(requests.SideServiceTest)  Time elapsed: 0 s  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <404> but was <200>.
 
-	at requests.SideServiceTest.when_NegativeValueIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:205)
+	at requests.SideServiceTest.when_NegativeValueIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:202)
 
-when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(requests.SideServiceTest)  Time elapsed: 0.038 s  <<< FAILURE!
+when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(requests.SideServiceTest)  Time elapsed: 0.031 s  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <404> but was <200>.
 
-	at requests.SideServiceTest.when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:184)
+	at requests.SideServiceTest.when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:181)
 
-when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException(requests.SideServiceTest)  Time elapsed: 0.06 s  <<< FAILURE!
-java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at requests.SideServiceTest.when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException(SideServiceTest.java:123)
-
-when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData(requests.SideServiceTest)  Time elapsed: 0.061 s  <<< FAILURE!
-java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at requests.SideServiceTest.when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData(SideServiceTest.java:465)
-
-when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException(requests.SideServiceTest)  Time elapsed: 0 s  <<< FAILURE!
-java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at requests.SideServiceTest.when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException(SideServiceTest.java:95)
-
-when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data(requests.SideServiceTest)  Time elapsed: 0.031 s  <<< FAILURE!
-java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at requests.SideServiceTest.when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data(SideServiceTest.java:406)
-
-when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data(requests.SideServiceTest)  Time elapsed: 0.022 s  <<< FAILURE!
-java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at requests.SideServiceTest.when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data(SideServiceTest.java:420)
-
-when_EqualSidesAreDiffed_Expect_Equal(requests.DifferServiceTest)  Time elapsed: 0.107 s  <<< FAILURE!
+when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(requests.DifferServiceTest)  Time elapsed: 0 s  <<< FAILURE!
 java.lang.IllegalStateException: 
-Cannot parse content to class responseModels.EqualDiffSuccessResponse because no content-type was present in the response and no default parser has been set.
+Cannot parse content to class responseModels.UnequalDiffSuccessResponse because no content-type was present in the response and no default parser has been set.
 You can specify a default parser using e.g.:
 RestAssured.defaultParser = Parser.JSON;
 
-or you can specify an explicit ObjectMapper using as(class responseModels.EqualDiffSuccessResponse, <ObjectMapper>);
-	at requests.DifferServiceTest.when_EqualSidesAreDiffed_Expect_Equal(DifferServiceTest.java:66)
-
-when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized(requests.DifferServiceTest)  Time elapsed: 0.038 s  <<< FAILURE!
-java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at requests.DifferServiceTest.when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized(DifferServiceTest.java:147)
-
-when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue(requests.DifferServiceTest)  Time elapsed: 0.083 s  <<< FAILURE!
-java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at requests.DifferServiceTest.when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue(DifferServiceTest.java:82)
-
-when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(requests.DifferServiceTest)  Time elapsed: 0.048 s  <<< FAILURE!
-java.lang.AssertionError: 
-1 expectation failed.
-Expected status code <200> but was <204>.
-
-	at requests.DifferServiceTest.when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(DifferServiceTest.java:97)
-
-when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength(requests.DifferServiceTest)  Time elapsed: 0.15 s  <<< FAILURE!
-java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at requests.DifferServiceTest.when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength(DifferServiceTest.java:123)
-
-when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters(requests.DifferServiceTest)  Time elapsed: 0.092 s  <<< FAILURE!
-java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at requests.DifferServiceTest.when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters(DifferServiceTest.java:169)
-
-when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters(requests.DifferServiceTest)  Time elapsed: 0.184 s  <<< FAILURE!
-java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at requests.DifferServiceTest.when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters(DifferServiceTest.java:191)
+or you can specify an explicit ObjectMapper using as(class responseModels.UnequalDiffSuccessResponse, <ObjectMapper>);
+	at requests.DifferServiceTest.when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(DifferServiceTest.java:99)
 

@@ -2,7 +2,6 @@ package requests;
 
 import hook.TestBase;
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
@@ -11,7 +10,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import responseModels.*;
 import utilities.Endpoints;
-import utilities.TestUtililities;
 
 import java.io.IOException;
 
@@ -28,7 +26,6 @@ import static utilities.TestUtililities.*;
 public class SideServiceTest extends TestBase {
 
     private RequestSpecification requestSpecification;
-    private Response response;
 
     /**
      * Before the tests, it initializes the base URI which will be used by each test method.
@@ -67,7 +64,7 @@ public class SideServiceTest extends TestBase {
         ErrorResponse responseBody = body.as(ErrorResponse.class);
 
         //Verify that the errorCode is 415
-        Assert.assertEquals(responseBody.errorCode, Integer.valueOf(415));
+        Assert.assertEquals(responseBody.errorCode, "415");
 
         //Verify that the errorMessage is 'Data in body not Base64 formatted.'
         Assert.assertEquals(responseBody.errorMessage, "Data in body not Base64 formatted.");
@@ -95,7 +92,7 @@ public class SideServiceTest extends TestBase {
         ErrorResponse responseBody = body.as(ErrorResponse.class);
 
         //Verify that the errorCode is 501
-        Assert.assertEquals(responseBody.errorCode, Integer.valueOf(501));
+        Assert.assertEquals(responseBody.errorCode, "501");
 
         //Verify that the errorMessage is 'This side is not supported, please use either 'left' or 'right'.'
         Assert.assertEquals(responseBody.errorMessage, "This side is not supported, please use either 'left' or 'right'.");
@@ -123,7 +120,7 @@ public class SideServiceTest extends TestBase {
         ErrorResponse responseBody = body.as(ErrorResponse.class);
 
         //Verify that the errorCode is 501
-        Assert.assertEquals(responseBody.errorCode, Integer.valueOf(501));
+        Assert.assertEquals(responseBody.errorCode, "501");
 
         //Verify that the errorMessage is 'This side is not supported, please use either 'left' or 'right'.'
         Assert.assertEquals(responseBody.errorMessage, "This side is not supported, please use either 'left' or 'right'.");
@@ -357,7 +354,7 @@ public class SideServiceTest extends TestBase {
         ErrorResponse responseBody = body.as(ErrorResponse.class);
 
         //Verify that the errorCode is 400
-        Assert.assertEquals(responseBody.errorCode, Integer.valueOf(400));
+        Assert.assertEquals(responseBody.errorCode, "400");
 
         //Verify that the errorMessage is 'Value in request body cannot be empty.'
         Assert.assertEquals(responseBody.errorMessage, "Value in request body cannot be empty.");
@@ -389,7 +386,7 @@ public class SideServiceTest extends TestBase {
         ErrorResponse responseBody = body.as(ErrorResponse.class);
 
         //Verify that the errorCode is 400
-        Assert.assertEquals(responseBody.errorCode, Integer.valueOf(400));
+        Assert.assertEquals(responseBody.errorCode, "400");
 
         //Verify that the errorMessage is 'Value in request body cannot be empty.'
         Assert.assertEquals(responseBody.errorMessage, "Value in request body cannot be empty.");

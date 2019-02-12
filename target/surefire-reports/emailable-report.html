@@ -9,16 +9,18 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Differ Regression Test Suite</th></tr>
-<tr><td><a href="#t0">Differ Regression Tests</a></td><td class="num">10</td><td class="num">0</td><td class="num attn">18</td><td class="num">2,902</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Differ Regression Tests</a></td><td class="num">24</td><td class="num">0</td><td class="num attn">4</td><td class="num">2,520</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Differ Regression Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Differ Regression Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="7">requests.DifferServiceTest</td><td><a href="#m0">when_EqualSidesAreDiffed_Expect_Equal</a></td><td rowspan="1">1549904937666</td><td rowspan="1">105</td></tr><tr class="failedeven"><td><a href="#m1">when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized</a></td><td rowspan="1">1549904937773</td><td rowspan="1">38</td></tr><tr class="failedeven"><td><a href="#m2">when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue</a></td><td rowspan="1">1549904937811</td><td rowspan="1">71</td></tr><tr class="failedeven"><td><a href="#m3">when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue</a></td><td rowspan="1">1549904937882</td><td rowspan="1">60</td></tr><tr class="failedeven"><td><a href="#m4">when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength</a></td><td rowspan="1">1549904937942</td><td rowspan="1">135</td></tr><tr class="failedeven"><td><a href="#m5">when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters</a></td><td rowspan="1">1549904938078</td><td rowspan="1">106</td></tr><tr class="failedeven"><td><a href="#m6">when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters</a></td><td rowspan="1">1549904938184</td><td rowspan="1">185</td></tr><tr class="failedodd"><td rowspan="11">requests.SideServiceTest</td><td><a href="#m7">when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception</a></td><td rowspan="1">1549904936876</td><td rowspan="1">74</td></tr><tr class="failedodd"><td><a href="#m8">when_BodyIsNotPassedInSideRequest_Expect_400BadRequest</a></td><td rowspan="1">1549904936958</td><td rowspan="1">126</td></tr><tr class="failedodd"><td><a href="#m9">when_EmptyStringIsPassedAsBody_Expect_400BadRequest</a></td><td rowspan="1">1549904937110</td><td rowspan="1">22</td></tr><tr class="failedodd"><td><a href="#m10">when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight</a></td><td rowspan="1">1549904937146</td><td rowspan="1">66</td></tr><tr class="failedodd"><td><a href="#m11">when_NegativeValueIsEnteredAsID_Expect_404NotFound</a></td><td rowspan="1">1549904937212</td><td rowspan="1">16</td></tr><tr class="failedodd"><td><a href="#m12">when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound</a></td><td rowspan="1">1549904937228</td><td rowspan="1">38</td></tr><tr class="failedodd"><td><a href="#m13">when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException</a></td><td rowspan="1">1549904937266</td><td rowspan="1">59</td></tr><tr class="failedodd"><td><a href="#m14">when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData</a></td><td rowspan="1">1549904937326</td><td rowspan="1">61</td></tr><tr class="failedodd"><td><a href="#m15">when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException</a></td><td rowspan="1">1549904937497</td><td rowspan="1">0</td></tr><tr class="failedodd"><td><a href="#m16">when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data</a></td><td rowspan="1">1549904937497</td><td rowspan="1">31</td></tr><tr class="failedodd"><td><a href="#m17">when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data</a></td><td rowspan="1">1549904937528</td><td rowspan="1">22</td></tr><tr><th colspan="4">Differ Regression Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">requests.DifferServiceTest</td><td><a href="#m18">when_DiffRequestIsDelete_Expect_405MethodNotAllowed</a></td><td rowspan="1">1549904937550</td><td rowspan="1">116</td></tr><tr class="passedodd"><td rowspan="9">requests.SideServiceTest</td><td><a href="#m19">when_AlphabetOnlyIsEnteredAsID_Expect_415UnsupportedMediaType</a></td><td rowspan="1">1549904935890</td><td rowspan="1">957</td></tr><tr class="passedodd"><td><a href="#m20">when_AlphanumericValueIsEnteredAsID_Expect_404NotFound</a></td><td rowspan="1">1549904936847</td><td rowspan="1">28</td></tr><tr class="passedodd"><td><a href="#m21">when_EmptyStringIsEnteredAsID_Expect_404NotFound</a></td><td rowspan="1">1549904937085</td><td rowspan="1">23</td></tr><tr class="passedodd"><td><a href="#m22">when_EmptyStringIsPassedAsSide_Expect_SideNameNotSupportedException</a></td><td rowspan="1">1549904937132</td><td rowspan="1">13</td></tr><tr class="passedodd"><td><a href="#m23">when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType</a></td><td rowspan="1">1549904937388</td><td rowspan="1">1</td></tr><tr class="passedodd"><td><a href="#m24">when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType</a></td><td rowspan="1">1549904937389</td><td rowspan="1">32</td></tr><tr class="passedodd"><td><a href="#m25">when_SideRequestContentTypeIsXml_Expect_415UnsupportedMediaType</a></td><td rowspan="1">1549904937436</td><td rowspan="1">14</td></tr><tr class="passedodd"><td><a href="#m26">when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType</a></td><td rowspan="1">1549904937450</td><td rowspan="1">16</td></tr><tr class="passedodd"><td><a href="#m27">when_SideRequestMethodIsPUT_Expect_405MethodNotAllowed</a></td><td rowspan="1">1549904937481</td><td rowspan="1">16</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Differ Regression Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Differ Regression Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">requests.DifferServiceTest</td><td><a href="#m0">when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue</a></td><td rowspan="1">1549961969898</td><td rowspan="1">15</td></tr><tr class="failedodd"><td rowspan="3">requests.SideServiceTest</td><td><a href="#m1">when_EmptyStringIsPassedAsBody_Expect_400BadRequest</a></td><td rowspan="1">1549961969335</td><td rowspan="1">32</td></tr><tr class="failedodd"><td><a href="#m2">when_NegativeValueIsEnteredAsID_Expect_404NotFound</a></td><td rowspan="1">1549961969460</td><td rowspan="1">16</td></tr><tr class="failedodd"><td><a href="#m3">when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound</a></td><td rowspan="1">1549961969476</td><td rowspan="1">47</td></tr><tr><th colspan="4">Differ Regression Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">requests.DifferServiceTest</td><td><a href="#m4">when_DiffRequestIsDelete_Expect_405MethodNotAllowed</a></td><td rowspan="1">1549961969726</td><td rowspan="1">62</td></tr><tr class="passedeven"><td><a href="#m5">when_EqualSidesAreDiffed_Expect_Equal</a></td><td rowspan="1">1549961969804</td><td rowspan="1">31</td></tr><tr class="passedeven"><td><a href="#m6">when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized</a></td><td rowspan="1">1549961969835</td><td rowspan="1">31</td></tr><tr class="passedeven"><td><a href="#m7">when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue</a></td><td rowspan="1">1549961969866</td><td rowspan="1">32</td></tr><tr class="passedeven"><td><a href="#m8">when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength</a></td><td rowspan="1">1549961969913</td><td rowspan="1">32</td></tr><tr class="passedeven"><td><a href="#m9">when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters</a></td><td rowspan="1">1549961969945</td><td rowspan="1">31</td></tr><tr class="passedeven"><td><a href="#m10">when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters</a></td><td rowspan="1">1549961969976</td><td rowspan="1">47</td></tr><tr class="passedodd"><td rowspan="17">requests.SideServiceTest</td><td><a href="#m11">when_AlphabetOnlyIsEnteredAsID_Expect_415UnsupportedMediaType</a></td><td rowspan="1">1549961967941</td><td rowspan="1">960</td></tr><tr class="passedodd"><td><a href="#m12">when_AlphanumericValueIsEnteredAsID_Expect_404NotFound</a></td><td rowspan="1">1549961968901</td><td rowspan="1">16</td></tr><tr class="passedodd"><td><a href="#m13">when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception</a></td><td rowspan="1">1549961968932</td><td rowspan="1">356</td></tr><tr class="passedodd"><td><a href="#m14">when_BodyIsNotPassedInSideRequest_Expect_400BadRequest</a></td><td rowspan="1">1549961969288</td><td rowspan="1">32</td></tr><tr class="passedodd"><td><a href="#m15">when_EmptyStringIsEnteredAsID_Expect_404NotFound</a></td><td rowspan="1">1549961969320</td><td rowspan="1">15</td></tr><tr class="passedodd"><td><a href="#m16">when_EmptyStringIsPassedAsSide_Expect_SideNameNotSupportedException</a></td><td rowspan="1">1549961969367</td><td rowspan="1">15</td></tr><tr class="passedodd"><td><a href="#m17">when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight</a></td><td rowspan="1">1549961969382</td><td rowspan="1">78</td></tr><tr class="passedodd"><td><a href="#m18">when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException</a></td><td rowspan="1">1549961969523</td><td rowspan="1">15</td></tr><tr class="passedodd"><td><a href="#m19">when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData</a></td><td rowspan="1">1549961969538</td><td rowspan="1">32</td></tr><tr class="passedodd"><td><a href="#m20">when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType</a></td><td rowspan="1">1549961969570</td><td rowspan="1">15</td></tr><tr class="passedodd"><td><a href="#m21">when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType</a></td><td rowspan="1">1549961969585</td><td rowspan="1">31</td></tr><tr class="passedodd"><td><a href="#m22">when_SideRequestContentTypeIsXml_Expect_415UnsupportedMediaType</a></td><td rowspan="1">1549961969616</td><td rowspan="1">16</td></tr><tr class="passedodd"><td><a href="#m23">when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType</a></td><td rowspan="1">1549961969632</td><td rowspan="1">16</td></tr><tr class="passedodd"><td><a href="#m24">when_SideRequestMethodIsPUT_Expect_405MethodNotAllowed</a></td><td rowspan="1">1549961969648</td><td rowspan="1">31</td></tr><tr class="passedodd"><td><a href="#m25">when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException</a></td><td rowspan="1">1549961969679</td><td rowspan="1">16</td></tr><tr class="passedodd"><td><a href="#m26">when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data</a></td><td rowspan="1">1549961969695</td><td rowspan="1">15</td></tr><tr class="passedodd"><td><a href="#m27">when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data</a></td><td rowspan="1">1549961969710</td><td rowspan="1">16</td></tr></tbody>
 </table>
-<h2>Differ Regression Tests</h2><h3 id="m0">requests.DifferServiceTest#when_EqualSidesAreDiffed_Expect_Equal</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: Cannot parse content to class responseModels.EqualDiffSuccessResponse because no content-type was present in the response and no default parser has been set.
+<h2>Differ Regression Tests</h2><h3 id="m0">requests.DifferServiceTest#when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: Cannot parse content to class responseModels.UnequalDiffSuccessResponse because no content-type was present in the response and no default parser has been set.
 You can specify a default parser using e.g.:
 RestAssured.defaultParser = Parser.JSON;
 
-or you can specify an explicit ObjectMapper using as(class responseModels.EqualDiffSuccessResponse, &lt;ObjectMapper&gt;);
+or you can specify an explicit ObjectMapper using as(class responseModels.UnequalDiffSuccessResponse, &lt;ObjectMapper&gt;);
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:238)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
 	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl$_as_closure3.doCall(RestAssuredResponseOptionsGroovyImpl.groovy:220)
 	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl$_as_closure3.doCall(RestAssuredResponseOptionsGroovyImpl.groovy)
@@ -26,6 +28,8 @@ or you can specify an explicit ObjectMapper using as(class responseModels.EqualD
 	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:264)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1034)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:41)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
 	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.findContentType(RestAssuredResponseOptionsGroovyImpl.groovy:483)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
@@ -33,94 +37,9 @@ or you can specify an explicit ObjectMapper using as(class responseModels.EqualD
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:169)
 	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:219)
 	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:165)
-	at requests.DifferServiceTest.when_EqualSidesAreDiffed_Expect_Equal(DifferServiceTest.java:66)
+	at requests.DifferServiceTest.when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(DifferServiceTest.java:99)
 ... Removed 44 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">requests.DifferServiceTest#when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:63)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:223)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:165)
-	at requests.DifferServiceTest.when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized(DifferServiceTest.java:147)
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">requests.DifferServiceTest#when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:63)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:223)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:165)
-	at requests.DifferServiceTest.when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue(DifferServiceTest.java:82)
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">requests.DifferServiceTest#when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;200&gt; but was &lt;204&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:483)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:655)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:169)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:123)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:131)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
-	at utilities.TestUtililities.differentiateSides(TestUtililities.java:90)
-	at requests.DifferServiceTest.when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(DifferServiceTest.java:97)
-... Removed 38 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">requests.DifferServiceTest#when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:63)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:223)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:165)
-	at requests.DifferServiceTest.when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength(DifferServiceTest.java:123)
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">requests.DifferServiceTest#when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:63)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:223)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:165)
-	at requests.DifferServiceTest.when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters(DifferServiceTest.java:169)
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">requests.DifferServiceTest#when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:63)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:223)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:165)
-	at requests.DifferServiceTest.when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters(DifferServiceTest.java:191)
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">requests.SideServiceTest#when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:238)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:63)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:223)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:165)
-	at requests.SideServiceTest.when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception(SideServiceTest.java:67)
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">requests.SideServiceTest#when_BodyIsNotPassedInSideRequest_Expect_400BadRequest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:63)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:223)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:165)
-	at requests.SideServiceTest.when_BodyIsNotPassedInSideRequest_Expect_400BadRequest(SideServiceTest.java:357)
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">requests.SideServiceTest#when_EmptyStringIsPassedAsBody_Expect_400BadRequest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
+<h3 id="m1">requests.SideServiceTest#when_EmptyStringIsPassedAsBody_Expect_400BadRequest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
 Expected status code &lt;400&gt; but was &lt;200&gt;.
 
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
@@ -137,35 +56,9 @@ Expected status code &lt;400&gt; but was &lt;200&gt;.
 	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:131)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
-	at requests.SideServiceTest.when_EmptyStringIsPassedAsBody_Expect_400BadRequest(SideServiceTest.java:382)
+	at requests.SideServiceTest.when_EmptyStringIsPassedAsBody_Expect_400BadRequest(SideServiceTest.java:379)
 ... Removed 39 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">requests.SideServiceTest#when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: Cannot parse content to class responseModels.LeftAndRightSideSuccessResponse because no content-type was present in the response and no default parser has been set.
-You can specify a default parser using e.g.:
-RestAssured.defaultParser = Parser.JSON;
-
-or you can specify an explicit ObjectMapper using as(class responseModels.LeftAndRightSideSuccessResponse, &lt;ObjectMapper&gt;);
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:238)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl$_as_closure3.doCall(RestAssuredResponseOptionsGroovyImpl.groovy:220)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl$_as_closure3.doCall(RestAssuredResponseOptionsGroovyImpl.groovy)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:264)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1034)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:41)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.findContentType(RestAssuredResponseOptionsGroovyImpl.groovy:483)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:169)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:219)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:165)
-	at requests.SideServiceTest.when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight(SideServiceTest.java:441)
-... Removed 44 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">requests.SideServiceTest#when_NegativeValueIsEnteredAsID_Expect_404NotFound</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
+<h3 id="m2">requests.SideServiceTest#when_NegativeValueIsEnteredAsID_Expect_404NotFound</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
 Expected status code &lt;404&gt; but was &lt;200&gt;.
 
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
@@ -180,9 +73,9 @@ Expected status code &lt;404&gt; but was &lt;200&gt;.
 	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:131)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
-	at requests.SideServiceTest.when_NegativeValueIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:205)
+	at requests.SideServiceTest.when_NegativeValueIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:202)
 ... Removed 39 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">requests.SideServiceTest#when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
+<h3 id="m3">requests.SideServiceTest#when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
 Expected status code &lt;404&gt; but was &lt;200&gt;.
 
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
@@ -197,62 +90,31 @@ Expected status code &lt;404&gt; but was &lt;200&gt;.
 	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:131)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
-	at requests.SideServiceTest.when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:184)
+	at requests.SideServiceTest.when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:181)
 ... Removed 39 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">requests.SideServiceTest#when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:63)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:223)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:165)
-	at requests.SideServiceTest.when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException(SideServiceTest.java:123)
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m14">requests.SideServiceTest#when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:63)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:223)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:165)
-	at requests.SideServiceTest.when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData(SideServiceTest.java:465)
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m15">requests.SideServiceTest#when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:63)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:223)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:165)
-	at requests.SideServiceTest.when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException(SideServiceTest.java:95)
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m16">requests.SideServiceTest#when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:63)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:223)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:165)
-	at requests.SideServiceTest.when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data(SideServiceTest.java:406)
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m17">requests.SideServiceTest#when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson (Databind) or Gson in the classpath.
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:63)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:223)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:165)
-	at requests.SideServiceTest.when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data(SideServiceTest.java:420)
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m18">requests.DifferServiceTest#when_DiffRequestIsDelete_Expect_405MethodNotAllowed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m19">requests.SideServiceTest#when_AlphabetOnlyIsEnteredAsID_Expect_415UnsupportedMediaType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m20">requests.SideServiceTest#when_AlphanumericValueIsEnteredAsID_Expect_404NotFound</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m21">requests.SideServiceTest#when_EmptyStringIsEnteredAsID_Expect_404NotFound</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m22">requests.SideServiceTest#when_EmptyStringIsPassedAsSide_Expect_SideNameNotSupportedException</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m23">requests.SideServiceTest#when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m24">requests.SideServiceTest#when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m25">requests.SideServiceTest#when_SideRequestContentTypeIsXml_Expect_415UnsupportedMediaType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m26">requests.SideServiceTest#when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m27">requests.SideServiceTest#when_SideRequestMethodIsPUT_Expect_405MethodNotAllowed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">requests.DifferServiceTest#when_DiffRequestIsDelete_Expect_405MethodNotAllowed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">requests.DifferServiceTest#when_EqualSidesAreDiffed_Expect_Equal</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">requests.DifferServiceTest#when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">requests.DifferServiceTest#when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">requests.DifferServiceTest#when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">requests.DifferServiceTest#when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">requests.DifferServiceTest#when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">requests.SideServiceTest#when_AlphabetOnlyIsEnteredAsID_Expect_415UnsupportedMediaType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">requests.SideServiceTest#when_AlphanumericValueIsEnteredAsID_Expect_404NotFound</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">requests.SideServiceTest#when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">requests.SideServiceTest#when_BodyIsNotPassedInSideRequest_Expect_400BadRequest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">requests.SideServiceTest#when_EmptyStringIsEnteredAsID_Expect_404NotFound</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">requests.SideServiceTest#when_EmptyStringIsPassedAsSide_Expect_SideNameNotSupportedException</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">requests.SideServiceTest#when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">requests.SideServiceTest#when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">requests.SideServiceTest#when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">requests.SideServiceTest#when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">requests.SideServiceTest#when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">requests.SideServiceTest#when_SideRequestContentTypeIsXml_Expect_415UnsupportedMediaType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">requests.SideServiceTest#when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m24">requests.SideServiceTest#when_SideRequestMethodIsPUT_Expect_405MethodNotAllowed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m25">requests.SideServiceTest#when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m26">requests.SideServiceTest#when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m27">requests.SideServiceTest#when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

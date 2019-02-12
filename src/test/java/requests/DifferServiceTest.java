@@ -2,7 +2,6 @@ package requests;
 
 import hook.TestBase;
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
@@ -146,7 +145,7 @@ public class DifferServiceTest extends TestBase {
         ErrorResponse responseBody = body.as(ErrorResponse.class);
 
         //Verify that the errorCode is 404
-        Assert.assertEquals(responseBody.errorCode, Integer.valueOf(404));
+        Assert.assertEquals(responseBody.errorCode, "404");
 
         //Verify that the errorMessage is 'ID <id> not initialized.'
         Assert.assertEquals(responseBody.errorMessage, "ID " + id + " not initialized.");
