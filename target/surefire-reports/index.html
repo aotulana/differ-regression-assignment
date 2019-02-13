@@ -264,91 +264,6 @@
           <div class="suite-Differ_Regression_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">requests.SideServiceTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="when_EmptyStringIsPassedAsBody_Expect_400BadRequest">
-                  </a> <!-- when_EmptyStringIsPassedAsBody_Expect_400BadRequest -->
-                  <span class="method-name">when_EmptyStringIsPassedAsBody_Expect_400BadRequest</span>
-                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;400&gt; but was &lt;200&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:238)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:483)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:655)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:169)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:123)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:131)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
-	at requests.SideServiceTest.when_EmptyStringIsPassedAsBody_Expect_400BadRequest(SideServiceTest.java:379)
-... Removed 39 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="when_NegativeValueIsEnteredAsID_Expect_404NotFound">
-                  </a> <!-- when_NegativeValueIsEnteredAsID_Expect_404NotFound -->
-                  <span class="method-name">when_NegativeValueIsEnteredAsID_Expect_404NotFound</span>
-                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;404&gt; but was &lt;200&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:483)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:655)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:169)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:123)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:131)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
-	at requests.SideServiceTest.when_NegativeValueIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:202)
-... Removed 39 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound">
-                  </a> <!-- when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound -->
-                  <span class="method-name">when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound</span>
-                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;404&gt; but was &lt;200&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:483)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:655)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:169)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:123)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:131)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
-	at requests.SideServiceTest.when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:181)
-... Removed 39 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Differ_Regression_Test_Suite-class-failed -->
-          <div class="suite-Differ_Regression_Test_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
               <span class="class-name">requests.DifferServiceTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -381,8 +296,93 @@ or you can specify an explicit ObjectMapper using as(class responseModels.Unequa
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:169)
 	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:219)
 	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:165)
-	at requests.DifferServiceTest.when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(DifferServiceTest.java:99)
+	at requests.DifferServiceTest.when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(DifferServiceTest.java:85)
 ... Removed 44 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Differ_Regression_Test_Suite-class-failed -->
+          <div class="suite-Differ_Regression_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">requests.SideServiceTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="when_EmptyStringIsPassedAsBody_Expect_400BadRequest">
+                  </a> <!-- when_EmptyStringIsPassedAsBody_Expect_400BadRequest -->
+                  <span class="method-name">when_EmptyStringIsPassedAsBody_Expect_400BadRequest</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;200&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:238)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:483)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:655)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:169)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:123)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:131)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
+	at requests.SideServiceTest.when_EmptyStringIsPassedAsBody_Expect_400BadRequest(SideServiceTest.java:366)
+... Removed 39 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="when_NegativeValueIsEnteredAsID_Expect_404NotFound">
+                  </a> <!-- when_NegativeValueIsEnteredAsID_Expect_404NotFound -->
+                  <span class="method-name">when_NegativeValueIsEnteredAsID_Expect_404NotFound</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;404&gt; but was &lt;200&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:483)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:655)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:169)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:123)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:131)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
+	at requests.SideServiceTest.when_NegativeValueIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:189)
+... Removed 39 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound">
+                  </a> <!-- when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound -->
+                  <span class="method-name">when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;404&gt; but was &lt;200&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:483)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:655)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:169)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:123)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:131)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
+	at requests.SideServiceTest.when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:168)
+... Removed 39 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -630,122 +630,122 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(28);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'when_AlphabetOnlyIsEnteredAsID_Expect_415UnsupportedMediaType')
+data.setCell(0, 1, 'when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight')
 data.setCell(0, 2, 'requests.SideServiceTest')
-data.setCell(0, 3, 960);
+data.setCell(0, 3, 1273);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception')
+data.setCell(1, 1, 'when_AlphabetOnlyIsEnteredAsID_Expect_415UnsupportedMediaType')
 data.setCell(1, 2, 'requests.SideServiceTest')
-data.setCell(1, 3, 356);
+data.setCell(1, 3, 938);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight')
+data.setCell(2, 1, 'when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception')
 data.setCell(2, 2, 'requests.SideServiceTest')
-data.setCell(2, 3, 78);
+data.setCell(2, 3, 391);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'when_DiffRequestIsDelete_Expect_405MethodNotAllowed')
 data.setCell(3, 2, 'requests.DifferServiceTest')
-data.setCell(3, 3, 62);
+data.setCell(3, 3, 47);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters')
 data.setCell(4, 2, 'requests.DifferServiceTest')
-data.setCell(4, 3, 47);
+data.setCell(4, 3, 41);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound')
-data.setCell(5, 2, 'requests.SideServiceTest')
-data.setCell(5, 3, 47);
+data.setCell(5, 1, 'when_EqualSidesAreDiffed_Expect_Equal')
+data.setCell(5, 2, 'requests.DifferServiceTest')
+data.setCell(5, 3, 38);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'when_BodyIsNotPassedInSideRequest_Expect_400BadRequest')
-data.setCell(6, 2, 'requests.SideServiceTest')
-data.setCell(6, 3, 32);
+data.setCell(6, 1, 'when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength')
+data.setCell(6, 2, 'requests.DifferServiceTest')
+data.setCell(6, 3, 36);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData')
-data.setCell(7, 2, 'requests.SideServiceTest')
-data.setCell(7, 3, 32);
+data.setCell(7, 1, 'when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue')
+data.setCell(7, 2, 'requests.DifferServiceTest')
+data.setCell(7, 3, 35);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue')
+data.setCell(8, 1, 'when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue')
 data.setCell(8, 2, 'requests.DifferServiceTest')
-data.setCell(8, 3, 32);
+data.setCell(8, 3, 34);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength')
-data.setCell(9, 2, 'requests.DifferServiceTest')
+data.setCell(9, 1, 'when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData')
+data.setCell(9, 2, 'requests.SideServiceTest')
 data.setCell(9, 3, 32);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'when_EmptyStringIsPassedAsBody_Expect_400BadRequest')
-data.setCell(10, 2, 'requests.SideServiceTest')
+data.setCell(10, 1, 'when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters')
+data.setCell(10, 2, 'requests.DifferServiceTest')
 data.setCell(10, 3, 32);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters')
-data.setCell(11, 2, 'requests.DifferServiceTest')
-data.setCell(11, 3, 31);
+data.setCell(11, 1, 'when_EmptyStringIsPassedAsBody_Expect_400BadRequest')
+data.setCell(11, 2, 'requests.SideServiceTest')
+data.setCell(11, 3, 27);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'when_EqualSidesAreDiffed_Expect_Equal')
-data.setCell(12, 2, 'requests.DifferServiceTest')
-data.setCell(12, 3, 31);
+data.setCell(12, 1, 'when_BodyIsNotPassedInSideRequest_Expect_400BadRequest')
+data.setCell(12, 2, 'requests.SideServiceTest')
+data.setCell(12, 3, 26);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'when_SideRequestMethodIsPUT_Expect_405MethodNotAllowed')
+data.setCell(13, 1, 'when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType')
 data.setCell(13, 2, 'requests.SideServiceTest')
-data.setCell(13, 3, 31);
+data.setCell(13, 3, 23);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType')
+data.setCell(14, 1, 'when_AlphanumericValueIsEnteredAsID_Expect_404NotFound')
 data.setCell(14, 2, 'requests.SideServiceTest')
-data.setCell(14, 3, 31);
+data.setCell(14, 3, 20);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized')
-data.setCell(15, 2, 'requests.DifferServiceTest')
-data.setCell(15, 3, 31);
+data.setCell(15, 1, 'when_SideRequestMethodIsPUT_Expect_405MethodNotAllowed')
+data.setCell(15, 2, 'requests.SideServiceTest')
+data.setCell(15, 3, 19);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType')
+data.setCell(16, 1, 'when_NegativeValueIsEnteredAsID_Expect_404NotFound')
 data.setCell(16, 2, 'requests.SideServiceTest')
 data.setCell(16, 3, 16);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'when_SideRequestContentTypeIsXml_Expect_415UnsupportedMediaType')
+data.setCell(17, 1, 'when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data')
 data.setCell(17, 2, 'requests.SideServiceTest')
-data.setCell(17, 3, 16);
+data.setCell(17, 3, 15);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data')
+data.setCell(18, 1, 'when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType')
 data.setCell(18, 2, 'requests.SideServiceTest')
-data.setCell(18, 3, 16);
+data.setCell(18, 3, 15);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'when_AlphanumericValueIsEnteredAsID_Expect_404NotFound')
+data.setCell(19, 1, 'when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data')
 data.setCell(19, 2, 'requests.SideServiceTest')
-data.setCell(19, 3, 16);
+data.setCell(19, 3, 14);
 data.setCell(20, 0, 20)
 data.setCell(20, 1, 'when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException')
 data.setCell(20, 2, 'requests.SideServiceTest')
-data.setCell(20, 3, 16);
+data.setCell(20, 3, 14);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'when_NegativeValueIsEnteredAsID_Expect_404NotFound')
+data.setCell(21, 1, 'when_EmptyStringIsPassedAsSide_Expect_SideNameNotSupportedException')
 data.setCell(21, 2, 'requests.SideServiceTest')
-data.setCell(21, 3, 16);
+data.setCell(21, 3, 14);
 data.setCell(22, 0, 22)
 data.setCell(22, 1, 'when_EmptyStringIsEnteredAsID_Expect_404NotFound')
 data.setCell(22, 2, 'requests.SideServiceTest')
-data.setCell(22, 3, 15);
+data.setCell(22, 3, 14);
 data.setCell(23, 0, 23)
 data.setCell(23, 1, 'when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException')
 data.setCell(23, 2, 'requests.SideServiceTest')
-data.setCell(23, 3, 15);
+data.setCell(23, 3, 14);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType')
-data.setCell(24, 2, 'requests.SideServiceTest')
-data.setCell(24, 3, 15);
+data.setCell(24, 1, 'when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized')
+data.setCell(24, 2, 'requests.DifferServiceTest')
+data.setCell(24, 3, 13);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'when_EmptyStringIsPassedAsSide_Expect_SideNameNotSupportedException')
+data.setCell(25, 1, 'when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType')
 data.setCell(25, 2, 'requests.SideServiceTest')
-data.setCell(25, 3, 15);
+data.setCell(25, 3, 12);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data')
+data.setCell(26, 1, 'when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound')
 data.setCell(26, 2, 'requests.SideServiceTest')
-data.setCell(26, 3, 15);
+data.setCell(26, 3, 12);
 data.setCell(27, 0, 27)
-data.setCell(27, 1, 'when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue')
-data.setCell(27, 2, 'requests.DifferServiceTest')
-data.setCell(27, 3, 15);
+data.setCell(27, 1, 'when_SideRequestContentTypeIsXml_Expect_415UnsupportedMediaType')
+data.setCell(27, 2, 'requests.SideServiceTest')
+data.setCell(27, 3, 11);
 window.suiteTableData['Differ_Regression_Test_Suite']= { tableData: data, tableDiv: 'times-div-Differ_Regression_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Differ_Regression_Test_Suite">
               </div> <!-- times-div-Differ_Regression_Test_Suite -->
             </div> <!-- times-div -->
@@ -760,9 +760,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Differ_Regression_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">requests.DifferServiceTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initializeBaseURI</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Differ_Regression_Test_Suite" class="panel">
@@ -771,21 +778,14 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">requests.DifferServiceTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setBaseURI</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">requests.SideServiceTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setBaseURI</span>
-                <span class="method-start">313 ms</span>
-              </div> <!-- configuration-test before -->
+              <div class="configuration-suite before">
+                <span class="method-name">initializeBaseURI</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">328 ms</span>
+                <span class="method-start">329 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_AlphabetOnlyIsEnteredAsID_Expect_415UnsupportedMediaType</span>
@@ -793,53 +793,53 @@ return data;
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">1398 ms</span>
+                <span class="method-start">1377 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_AlphanumericValueIsEnteredAsID_Expect_404NotFound</span>
-                <span class="method-start">1398 ms</span>
+                <span class="method-start">1378 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">1429 ms</span>
+                <span class="method-start">1398 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception</span>
-                <span class="method-start">1429 ms</span>
+                <span class="method-start">1399 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">1785 ms</span>
+                <span class="method-start">1790 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_BodyIsNotPassedInSideRequest_Expect_400BadRequest</span>
-                <span class="method-start">1785 ms</span>
+                <span class="method-start">1790 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">1817 ms</span>
+                <span class="method-start">1816 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_EmptyStringIsEnteredAsID_Expect_404NotFound</span>
-                <span class="method-start">1817 ms</span>
+                <span class="method-start">1816 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">1832 ms</span>
+                <span class="method-start">1830 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">when_EmptyStringIsPassedAsBody_Expect_400BadRequest</span>
-                <span class="method-start">1832 ms</span>
+                <span class="method-start">1831 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">1864 ms</span>
+                <span class="method-start">1865 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_EmptyStringIsPassedAsSide_Expect_SideNameNotSupportedException</span>
-                <span class="method-start">1864 ms</span>
+                <span class="method-start">1865 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
@@ -847,176 +847,176 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight</span>
-                <span class="method-start">1879 ms</span>
+                <span class="method-start">1881 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">1957 ms</span>
+                <span class="method-start">3155 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">when_NegativeValueIsEnteredAsID_Expect_404NotFound</span>
-                <span class="method-start">1957 ms</span>
+                <span class="method-start">3155 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">1973 ms</span>
+                <span class="method-start">3171 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound</span>
-                <span class="method-start">1973 ms</span>
+                <span class="method-start">3172 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2020 ms</span>
+                <span class="method-start">3184 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException</span>
-                <span class="method-start">2020 ms</span>
+                <span class="method-start">3185 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2035 ms</span>
+                <span class="method-start">3199 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData</span>
-                <span class="method-start">2035 ms</span>
+                <span class="method-start">3199 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2067 ms</span>
+                <span class="method-start">3231 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType</span>
-                <span class="method-start">2067 ms</span>
+                <span class="method-start">3231 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2082 ms</span>
+                <span class="method-start">3246 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType</span>
-                <span class="method-start">2082 ms</span>
+                <span class="method-start">3247 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2113 ms</span>
+                <span class="method-start">3270 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_SideRequestContentTypeIsXml_Expect_415UnsupportedMediaType</span>
-                <span class="method-start">2113 ms</span>
+                <span class="method-start">3271 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2129 ms</span>
+                <span class="method-start">3283 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType</span>
-                <span class="method-start">2129 ms</span>
+                <span class="method-start">3283 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2145 ms</span>
+                <span class="method-start">3295 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_SideRequestMethodIsPUT_Expect_405MethodNotAllowed</span>
-                <span class="method-start">2145 ms</span>
+                <span class="method-start">3296 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2176 ms</span>
+                <span class="method-start">3316 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException</span>
-                <span class="method-start">2176 ms</span>
+                <span class="method-start">3316 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2192 ms</span>
+                <span class="method-start">3330 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data</span>
-                <span class="method-start">2192 ms</span>
+                <span class="method-start">3330 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2207 ms</span>
+                <span class="method-start">3345 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data</span>
-                <span class="method-start">2207 ms</span>
+                <span class="method-start">3345 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">requests.DifferServiceTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2223 ms</span>
+                <span class="method-start">3361 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_DiffRequestIsDelete_Expect_405MethodNotAllowed</span>
-                <span class="method-start">2223 ms</span>
+                <span class="method-start">3361 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2285 ms</span>
+                <span class="method-start">3408 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_EqualSidesAreDiffed_Expect_Equal</span>
-                <span class="method-start">2301 ms</span>
+                <span class="method-start">3409 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2332 ms</span>
+                <span class="method-start">3448 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized</span>
-                <span class="method-start">2332 ms</span>
+                <span class="method-start">3448 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2363 ms</span>
+                <span class="method-start">3462 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue</span>
-                <span class="method-start">2363 ms</span>
+                <span class="method-start">3462 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2395 ms</span>
+                <span class="method-start">3497 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue</span>
-                <span class="method-start">2395 ms</span>
+                <span class="method-start">3498 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2410 ms</span>
+                <span class="method-start">3533 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength</span>
-                <span class="method-start">2410 ms</span>
+                <span class="method-start">3533 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2442 ms</span>
+                <span class="method-start">3570 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters</span>
-                <span class="method-start">2442 ms</span>
+                <span class="method-start">3570 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2473 ms</span>
+                <span class="method-start">3602 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters</span>
-                <span class="method-start">2473 ms</span>
+                <span class="method-start">3603 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -2,6 +2,7 @@ package hook;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import utilities.ExtentReporterNG;
 
@@ -21,6 +22,13 @@ public class TestBase {
      **/
     public static Properties environment;
 
+    /**
+     * Before the test suite, it initializes the base URI
+     * which will be used by all test methods.
+     *
+     * @throws IOException
+     */
+    @BeforeSuite (alwaysRun = true)
     public void initializeBaseURI() throws IOException {
 
         /*//Read file from location within project and get the defined HOST

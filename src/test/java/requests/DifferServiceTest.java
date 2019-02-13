@@ -6,14 +6,11 @@ import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import responseModels.ErrorResponse;
 import responseModels.EqualDiffSuccessResponse;
 import responseModels.UnequalDiffSuccessResponse;
 import utilities.Endpoints;
-
-import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
 import static utilities.TestUtililities.*;
@@ -28,24 +25,13 @@ public class DifferServiceTest extends TestBase {
     private RequestSpecification requestSpecification;
 
     /**
-     * Before the tests, it initializes the base URI
-     * which will be used by each test method.
-     *
-     * @throws IOException
-     */
-    @BeforeTest
-    public void setBaseURI() throws IOException {
-        initializeBaseURI();
-    }
-
-    /**
      * Generates unique ID before each test method is run
      * The generated ID is always positive
      */
     @BeforeMethod
     public void beforeMethod() {
         generateID();
-        requestSpecification = given();
+        requestSpecification = given().contentType(ContentType.JSON);
     }
 
     @Test

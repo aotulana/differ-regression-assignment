@@ -1,57 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="4" ignored="0" total="28" passed="24">
+<testng-results skipped="0" failed="4" ignored="1" total="29" passed="24">
   <reporter-output>
   </reporter-output>
-  <suite name="Differ Regression Test Suite" duration-ms="2520" started-at="2019-02-12T08:59:27Z" finished-at="2019-02-12T08:59:30Z">
+  <suite name="Differ Regression Test Suite" duration-ms="3328" started-at="2019-02-12T10:58:30Z" finished-at="2019-02-12T10:58:34Z">
     <groups>
     </groups>
-    <test name="Differ Regression Tests" duration-ms="2520" started-at="2019-02-12T08:59:27Z" finished-at="2019-02-12T08:59:30Z">
+    <test name="Differ Regression Tests" duration-ms="3328" started-at="2019-02-12T10:58:30Z" finished-at="2019-02-12T10:58:34Z">
       <class name="requests.DifferServiceTest">
-        <test-method status="PASS" signature="setBaseURI()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="setBaseURI" is-config="true" duration-ms="313" started-at="2019-02-12T08:59:27Z" finished-at="2019-02-12T08:59:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBaseURI -->
-        <test-method status="PASS" signature="setBaseURI()[pri:0, instance:requests.SideServiceTest@614c5515]" name="setBaseURI" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:27Z" finished-at="2019-02-12T08:59:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBaseURI -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_DiffRequestIsDelete_Expect_405MethodNotAllowed()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="when_DiffRequestIsDelete_Expect_405MethodNotAllowed" duration-ms="62" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="when_DiffRequestIsDelete_Expect_405MethodNotAllowed()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="when_DiffRequestIsDelete_Expect_405MethodNotAllowed" duration-ms="47" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_DiffRequestIsDelete_Expect_405MethodNotAllowed -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="beforeMethod" is-config="true" duration-ms="16" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_EqualSidesAreDiffed_Expect_Equal()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="when_EqualSidesAreDiffed_Expect_Equal" duration-ms="31" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="when_EqualSidesAreDiffed_Expect_Equal()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="when_EqualSidesAreDiffed_Expect_Equal" duration-ms="38" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_EqualSidesAreDiffed_Expect_Equal -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized" duration-ms="31" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized" duration-ms="13" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_IDThatIsNotInitializedIsDiffed_Expect_IDNotInitialized -->
-        <test-method status="PASS" signature="when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue" duration-ms="32" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue" duration-ms="35" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_SidesAreDiffedAndLeftSideIsNull_Expect_DifferentLengthAndLeftHasNoValue -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue" duration-ms="15" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="FAIL" signature="when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue" duration-ms="34" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <exception class="java.lang.IllegalStateException">
             <message>
               <![CDATA[Cannot parse content to class responseModels.UnequalDiffSuccessResponse because no content-type was present in the response and no default parser has been set.
@@ -100,7 +92,7 @@ at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaM
 at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:169)
 at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:219)
 at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:165)
-at requests.DifferServiceTest.when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(DifferServiceTest.java:99)
+at requests.DifferServiceTest.when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(DifferServiceTest.java:85)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -136,77 +128,81 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue -->
-        <test-method status="PASS" signature="when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength" duration-ms="32" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength" duration-ms="36" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_SidesOfDifferentLengthsAreDiffed_Expect_DifferentLength -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T10:58:34Z" finished-at="2019-02-12T10:58:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters" duration-ms="31" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters" duration-ms="32" started-at="2019-02-12T10:58:34Z" finished-at="2019-02-12T10:58:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_SidesOfSameLengthButDifferentCharactersAreDiffed_Expect_PositionOfDifferentCharacters -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-02-12T10:58:34Z" finished-at="2019-02-12T10:58:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters" duration-ms="47" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:30Z">
+        <test-method status="PASS" signature="when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters" duration-ms="41" started-at="2019-02-12T10:58:34Z" finished-at="2019-02-12T10:58:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_SidesOfSameLengthButDifferentSuccessiveCharactersAreDiffed_Expect_RangedPositionOfDifferentCharacters -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.DifferServiceTest@77b52d12]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
       </class> <!-- requests.DifferServiceTest -->
       <class name="requests.SideServiceTest">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="110" started-at="2019-02-12T08:59:27Z" finished-at="2019-02-12T08:59:27Z">
+        <test-method status="PASS" signature="initializeBaseURI()[pri:0, instance:requests.SideServiceTest@614c5515]" name="initializeBaseURI" is-config="true" duration-ms="316" started-at="2019-02-12T10:58:30Z" finished-at="2019-02-12T10:58:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBaseURI -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="109" started-at="2019-02-12T10:58:30Z" finished-at="2019-02-12T10:58:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_AlphabetOnlyIsEnteredAsID_Expect_415UnsupportedMediaType()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_AlphabetOnlyIsEnteredAsID_Expect_415UnsupportedMediaType" duration-ms="960" started-at="2019-02-12T08:59:27Z" finished-at="2019-02-12T08:59:28Z">
+        <test-method status="PASS" signature="when_AlphabetOnlyIsEnteredAsID_Expect_415UnsupportedMediaType()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_AlphabetOnlyIsEnteredAsID_Expect_415UnsupportedMediaType" duration-ms="938" started-at="2019-02-12T10:58:30Z" finished-at="2019-02-12T10:58:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_AlphabetOnlyIsEnteredAsID_Expect_415UnsupportedMediaType -->
-        <test-method status="PASS" signature="when_AlphanumericValueIsEnteredAsID_Expect_404NotFound()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_AlphanumericValueIsEnteredAsID_Expect_404NotFound" duration-ms="16" started-at="2019-02-12T08:59:28Z" finished-at="2019-02-12T08:59:28Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-02-12T10:58:31Z" finished-at="2019-02-12T10:58:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="when_AlphanumericValueIsEnteredAsID_Expect_404NotFound()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_AlphanumericValueIsEnteredAsID_Expect_404NotFound" duration-ms="20" started-at="2019-02-12T10:58:31Z" finished-at="2019-02-12T10:58:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_AlphanumericValueIsEnteredAsID_Expect_404NotFound -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:28Z" finished-at="2019-02-12T08:59:28Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-02-12T10:58:31Z" finished-at="2019-02-12T10:58:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception" duration-ms="356" started-at="2019-02-12T08:59:28Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception" duration-ms="391" started-at="2019-02-12T10:58:31Z" finished-at="2019-02-12T10:58:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_BodyDataIsNotBase64Encoded_Expect_DataNotBase64Exception -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:28Z" finished-at="2019-02-12T08:59:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_BodyIsNotPassedInSideRequest_Expect_400BadRequest()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_BodyIsNotPassedInSideRequest_Expect_400BadRequest" duration-ms="32" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="when_BodyIsNotPassedInSideRequest_Expect_400BadRequest()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_BodyIsNotPassedInSideRequest_Expect_400BadRequest" duration-ms="26" started-at="2019-02-12T10:58:32Z" finished-at="2019-02-12T10:58:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_BodyIsNotPassedInSideRequest_Expect_400BadRequest -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T10:58:32Z" finished-at="2019-02-12T10:58:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_EmptyStringIsEnteredAsID_Expect_404NotFound()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_EmptyStringIsEnteredAsID_Expect_404NotFound" duration-ms="15" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="when_EmptyStringIsEnteredAsID_Expect_404NotFound()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_EmptyStringIsEnteredAsID_Expect_404NotFound" duration-ms="14" started-at="2019-02-12T10:58:32Z" finished-at="2019-02-12T10:58:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_EmptyStringIsEnteredAsID_Expect_404NotFound -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T10:58:32Z" finished-at="2019-02-12T10:58:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="when_EmptyStringIsPassedAsBody_Expect_400BadRequest()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_EmptyStringIsPassedAsBody_Expect_400BadRequest" duration-ms="32" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-02-12T10:58:32Z" finished-at="2019-02-12T10:58:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="when_EmptyStringIsPassedAsBody_Expect_400BadRequest()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_EmptyStringIsPassedAsBody_Expect_400BadRequest" duration-ms="27" started-at="2019-02-12T10:58:32Z" finished-at="2019-02-12T10:58:32Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[1 expectation failed.
@@ -241,7 +237,7 @@ at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecific
 at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
 at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:131)
 at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
-at requests.SideServiceTest.when_EmptyStringIsPassedAsBody_Expect_400BadRequest(SideServiceTest.java:379)
+at requests.SideServiceTest.when_EmptyStringIsPassedAsBody_Expect_400BadRequest(SideServiceTest.java:366)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -277,23 +273,23 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_EmptyStringIsPassedAsBody_Expect_400BadRequest -->
-        <test-method status="PASS" signature="when_EmptyStringIsPassedAsSide_Expect_SideNameNotSupportedException()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_EmptyStringIsPassedAsSide_Expect_SideNameNotSupportedException" duration-ms="15" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T10:58:32Z" finished-at="2019-02-12T10:58:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="when_EmptyStringIsPassedAsSide_Expect_SideNameNotSupportedException()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_EmptyStringIsPassedAsSide_Expect_SideNameNotSupportedException" duration-ms="14" started-at="2019-02-12T10:58:32Z" finished-at="2019-02-12T10:58:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_EmptyStringIsPassedAsSide_Expect_SideNameNotSupportedException -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2019-02-12T10:58:32Z" finished-at="2019-02-12T10:58:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight" duration-ms="78" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight" duration-ms="1273" started-at="2019-02-12T10:58:32Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_LeftAndRightSideRequestsAreMadeWithSameID_Expect_AcceptedDataForLeftAndRight -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="when_NegativeValueIsEnteredAsID_Expect_404NotFound()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_NegativeValueIsEnteredAsID_Expect_404NotFound" duration-ms="16" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="FAIL" signature="when_NegativeValueIsEnteredAsID_Expect_404NotFound()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_NegativeValueIsEnteredAsID_Expect_404NotFound" duration-ms="16" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[1 expectation failed.
@@ -326,7 +322,7 @@ at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecific
 at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
 at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:131)
 at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
-at requests.SideServiceTest.when_NegativeValueIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:202)
+at requests.SideServiceTest.when_NegativeValueIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:189)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -362,15 +358,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_NegativeValueIsEnteredAsID_Expect_404NotFound -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound" duration-ms="47" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="FAIL" signature="when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound" duration-ms="12" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[1 expectation failed.
@@ -403,7 +399,7 @@ at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecific
 at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
 at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:131)
 at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
-at requests.SideServiceTest.when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:181)
+at requests.SideServiceTest.when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:168)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -439,83 +435,83 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound -->
-        <test-method status="PASS" signature="when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException" duration-ms="15" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException" duration-ms="14" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_OnlyWhiteSpacesIsEnteredAsSide_Expect_SideNameNotSupportedException -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData" duration-ms="32" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData" duration-ms="32" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_SameSideRequestsAreMadeWithSameID_Expect_UpdatedData -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType" duration-ms="15" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType" duration-ms="15" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_SideRequestContentTypeIsHTML_Expect_415UnsupportedMediaType -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType" duration-ms="31" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType" duration-ms="23" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_SideRequestContentTypeIsText_Expect_415UnsupportedMediaType -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_SideRequestContentTypeIsXml_Expect_415UnsupportedMediaType()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_SideRequestContentTypeIsXml_Expect_415UnsupportedMediaType" duration-ms="16" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="when_SideRequestContentTypeIsXml_Expect_415UnsupportedMediaType()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_SideRequestContentTypeIsXml_Expect_415UnsupportedMediaType" duration-ms="11" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_SideRequestContentTypeIsXml_Expect_415UnsupportedMediaType -->
-        <test-method status="PASS" signature="when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType" duration-ms="16" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType" duration-ms="12" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_SideRequestHasNoContentType_Expect_415UnsupportedMediaType -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_SideRequestMethodIsPUT_Expect_405MethodNotAllowed()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_SideRequestMethodIsPUT_Expect_405MethodNotAllowed" duration-ms="31" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="when_SideRequestMethodIsPUT_Expect_405MethodNotAllowed()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_SideRequestMethodIsPUT_Expect_405MethodNotAllowed" duration-ms="19" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_SideRequestMethodIsPUT_Expect_405MethodNotAllowed -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException" duration-ms="16" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException" duration-ms="14" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_UpIsEnteredAsSide_Expect_SideNameNotSupportedException -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data" duration-ms="15" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data" duration-ms="15" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_ValidLeftSideRequestIsMade_Expect_AcceptedLeftSideBase64Data -->
-        <test-method status="PASS" signature="when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data" duration-ms="16" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data()[pri:0, instance:requests.SideServiceTest@614c5515]" name="when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data" duration-ms="14" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- when_ValidRightSideRequestIsMade_Expect_AcceptedRightSideBase64Data -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T08:59:29Z" finished-at="2019-02-12T08:59:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:requests.SideServiceTest@614c5515]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T10:58:33Z" finished-at="2019-02-12T10:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->

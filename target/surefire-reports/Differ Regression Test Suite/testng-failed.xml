@@ -8,8 +8,8 @@
     <classes>
       <class name="requests.DifferServiceTest">
         <methods>
-          <include name="setBaseURI"/>
           <include name="when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue"/>
+          <include name="initializeBaseURI"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- requests.DifferServiceTest -->
@@ -17,8 +17,8 @@
         <methods>
           <include name="when_EmptyStringIsPassedAsBody_Expect_400BadRequest"/>
           <include name="when_NegativeValueIsEnteredAsID_Expect_404NotFound"/>
-          <include name="setBaseURI"/>
           <include name="beforeMethod"/>
+          <include name="initializeBaseURI"/>
           <include name="when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound"/>
         </methods>
       </class> <!-- requests.SideServiceTest -->

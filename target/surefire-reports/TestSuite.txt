@@ -1,34 +1,34 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 28, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 3.678 s <<< FAILURE! - in TestSuite
-when_EmptyStringIsPassedAsBody_Expect_400BadRequest(requests.SideServiceTest)  Time elapsed: 0.047 s  <<< FAILURE!
+Tests run: 28, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 4.96 s <<< FAILURE! - in TestSuite
+when_EmptyStringIsPassedAsBody_Expect_400BadRequest(requests.SideServiceTest)  Time elapsed: 0.034 s  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <400> but was <200>.
 
-	at requests.SideServiceTest.when_EmptyStringIsPassedAsBody_Expect_400BadRequest(SideServiceTest.java:379)
+	at requests.SideServiceTest.when_EmptyStringIsPassedAsBody_Expect_400BadRequest(SideServiceTest.java:366)
 
-when_NegativeValueIsEnteredAsID_Expect_404NotFound(requests.SideServiceTest)  Time elapsed: 0 s  <<< FAILURE!
+when_NegativeValueIsEnteredAsID_Expect_404NotFound(requests.SideServiceTest)  Time elapsed: 0.013 s  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <404> but was <200>.
 
-	at requests.SideServiceTest.when_NegativeValueIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:202)
+	at requests.SideServiceTest.when_NegativeValueIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:189)
 
-when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(requests.SideServiceTest)  Time elapsed: 0.031 s  <<< FAILURE!
+when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(requests.SideServiceTest)  Time elapsed: 0.013 s  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <404> but was <200>.
 
-	at requests.SideServiceTest.when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:181)
+	at requests.SideServiceTest.when_OnlyWhiteSpacesIsEnteredAsID_Expect_404NotFound(SideServiceTest.java:168)
 
-when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(requests.DifferServiceTest)  Time elapsed: 0 s  <<< FAILURE!
+when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(requests.DifferServiceTest)  Time elapsed: 0.029 s  <<< FAILURE!
 java.lang.IllegalStateException: 
 Cannot parse content to class responseModels.UnequalDiffSuccessResponse because no content-type was present in the response and no default parser has been set.
 You can specify a default parser using e.g.:
 RestAssured.defaultParser = Parser.JSON;
 
 or you can specify an explicit ObjectMapper using as(class responseModels.UnequalDiffSuccessResponse, <ObjectMapper>);
-	at requests.DifferServiceTest.when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(DifferServiceTest.java:99)
+	at requests.DifferServiceTest.when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue(DifferServiceTest.java:85)
 
