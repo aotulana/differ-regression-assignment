@@ -1,8 +1,10 @@
 package responseModels;
 
+import lombok.Getter;
+
 /**
  * @author Adebowale Otulana
  */
 public class LeftSideSuccessResponse {
-    public String left;
+    private @Getter String left;
 }

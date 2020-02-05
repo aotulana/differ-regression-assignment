@@ -2,7 +2,6 @@ package utilities;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 
 import java.util.Base64;
 import java.util.Random;
@@ -18,7 +17,6 @@ import static io.restassured.RestAssured.given;
 public class TestUtililities {
 
     public static long id;
-    public static Response response;
 
     /**
      * This utility method performs Base64 encode operation using RFC4648 encoder.
@@ -39,7 +37,6 @@ public class TestUtililities {
     /**
      * This method creates a valid HTTP POST request for the side service.
      * It sets the ID, side and Base64 encoded data.
-     * It verifies the HTTP status code and Content Type of the response.
      *
      * @param id
      *        Identifies a side in the list of all sides
@@ -49,31 +46,94 @@ public class TestUtililities {
      *
      * @param value
      *        Request Body Data
+     *
+     * @return response
      **/
-    public static void setSideValue(long id, String side, String value) {
-        response =
+    public static Response setSideValue(long id, String side, String value) {
+        Response response =
                 given().
                         contentType(ContentType.JSON).
                         pathParam("id",id). //Sets ID
                         pathParam("side", side). //Sets side
-                        body("\"" + encodeInBase64(value) + "\""). //Sets Base64 encoded value
+                        body(value).
                 when().
                         post(Endpoints.POST_SIDE).
                 then().
-                        log().all().
-                extract().
-                        response();
+                        extract().
+                                response();
+
+        return response;
+    }
+
+    /**
+     * This method creates a valid HTTP POST request for the side service.
+     * It sets the ID, side and Base64 encoded data.
+     *
+     * @param id
+     *        Identifies a side in the list of all sides
+     *
+     * @param side
+     *        Left or Right
+     *
+     * @param value
+     *        Request Body Data
+     *
+     * @return response
+     **/
+    public static Response setSideValue(String id, String side, String value) {
+        Response response =
+                given().
+                        contentType(ContentType.JSON).
+                        pathParam("id",id). //Sets ID
+                        pathParam("side", side). //Sets side
+                        body(value).
+                when().
+                        post(Endpoints.POST_SIDE).
+                then().
+                        extract().
+                            response();
+
+        return response;
+    }
+
+    /**
+     * This method creates a valid HTTP POST request for the side service without a body.
+     * It sets the ID and side.
+     *
+     * @param id
+     *        Identifies a side in the list of all sides
+     *
+     * @param side
+     *        Left or Right
+     *
+     * @return response
+     **/
+    public static Response setSideValue(long id, String side) {
+        Response response =
+                given().
+                        contentType(ContentType.JSON).
+                        pathParam("id",id). //Sets ID
+                        pathParam("side", side). //Sets side
+                when().
+                        post(Endpoints.POST_SIDE).
+                then().
+                        extract().
+                            response();
+
+        return response;
     }
 
     /**
      * This method creates a valid HTTP GET request to differ sides.
-     * It also verifies the HTTP status code and Content Type of the response
+     * It also logs all request details.
      *
      * @param id
      *        A valid side ID
+     *
+     * @return response
      */
-    public static void differentiateSides(long id) {
-        response =
+    public static Response differentiateSides(long id) {
+        Response response =
                 given().
                         contentType(ContentType.JSON).
                         pathParam("id",id). //Sets ID
@@ -81,8 +141,10 @@ public class TestUtililities {
                         get(Endpoints.GET_DIFF).
                 then().
                         log().all().
-                extract().
-                        response();
+                        extract().
+                                response();
+
+        return response;
     }
 
     /**

@@ -1,8 +1,6 @@
 package hook;
 
 import io.restassured.RestAssured;
-import io.restassured.response.Response;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import utilities.ExtentReporterNG;
 
@@ -22,32 +20,20 @@ public class TestBase {
      **/
     public static Properties environment;
 
-    /**
-     * Before the test suite, it initializes the base URI
-     * which will be used by all test methods.
-     *
-     * @throws IOException
-     */
-    @BeforeSuite (alwaysRun = true)
     public void initializeBaseURI() throws IOException {
 
-        /*//Read file from location within project and get the defined HOST
+        //Read file from location within project and get the defined HOST
         environment = new Properties();
         FileInputStream environmentFile = new FileInputStream(System.getProperty("user.dir")
                 + "/src/main/resources/environment.properties"); //Location of the property file
         environment.load(environmentFile);
 
         //Set base URI
-        //RestAssured.baseURI = environment.getProperty("HOST");*/
+        RestAssured.baseURI = environment.getProperty("HOST");
 
-        //Set base URI
-        //RestAssured.baseURI = System.getProperty("server.host");
-        RestAssured.baseURI = "http://localhost";
-
-        //Set base port
+        /*RestAssured.baseURI = System.getProperty("server.host");
         String port = System.getProperty("server.port");
-        //RestAssured.port = Integer.valueOf(port);
-        RestAssured.port = 8081;
+        RestAssured.port = Integer.valueOf(port);*/
 
         //Set base path
         RestAssured.basePath = "/diffassign/v1/diff";

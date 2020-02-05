@@ -8,12 +8,10 @@ Regression Test Suite for the **differ-for-testers** assignment
 - **differ-for-tester** service must be running
 
 ## Running the Test Suite
-1. Get **host** and **port** the **differ-for-tester** service is running on
-2. From the project root folder, run `mvn clean test -Dserver.host=<host> -Dserver.port=<port>`
-
-        If host is http://localhost and port is 8081,
-        run "mvn clean test -Dserver.host=http://localhost -Dserver.port=8081"
-
+If the **differ-for-tester** service is running on default `localhost:8081`, skip Step 1.
+1. Open the environment property file `<project_root_folder>\src\main\resources\environment.properties`,
+update the value of the`HOST` key with the appropriate HOST
+2. From the project root folder, run `mvn clean test`
 
 ## Viewing Test Report
 1. Go to test report location: `<project_root_folder>\test-output`

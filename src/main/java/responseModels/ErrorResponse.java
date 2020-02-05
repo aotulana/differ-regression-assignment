@@ -1,9 +1,11 @@
 package responseModels;
 
+import lombok.Getter;
+
 /**
- * Created by aotulana on 2/11/2019.
+ * Created by Adebowale on 07/05/2019.
  */
 public class ErrorResponse {
-    public String errorCode;
-    public String errorMessage;
+    private @Getter int errorCode;
+    private @Getter String errorMessage;
 }
