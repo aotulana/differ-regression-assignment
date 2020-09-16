@@ -1,0 +1,42 @@
+version: 2.1
+jobs:
+  build:
+    working_directory: ~/differ-regression-assignment
+    docker:
+      - image: circleci/openjdk:8-stretch
+    steps:
+      - checkout
+      - run: mkdir test-output
+      - run:
+          name: Checkout differ-for-testers app
+          command: git clone https://github.com/aotulana/differ-for-testers.git ~/differ-for-testers
+      - restore_cache:
+          key: differ-regression-assignment-{{ checksum "pom.xml" }}
+      - run: mvn dependency:go-offline
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: differ-regression-assignment-{{ checksum "pom.xml" }}
+      - run:
+          name: Start differ-for-testers app
+          command: |
+            cd ~/differ-for-testers && mvn clean test
+            cd ~/differ-for-testers && mvn exec:java
+          background: true
+      - run:
+          name: Wait for differ-for-testers app to be ready
+          command: |
+            for i in `seq 1 60`;
+            do
+              nc -z localhost 8081 && echo Success && exit 0
+              echo -n .
+              sleep 1
+            done
+            echo Failed waiting for differ-for-testers app && exit 1
+      - run:
+          name: Run API Tests
+          command: mvn clean test
+      - store_test_results:
+          path: target/surefire-reports
+      - store_artifacts:
+          path: test-output
