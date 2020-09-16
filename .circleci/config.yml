@@ -9,7 +9,7 @@ jobs:
       - run: mkdir test-output
       - run:
           name: Checkout differ-for-testers app
-          command: git clone https://github.com/aotulana/differ-for-testers.git ~/differ-for-testers
+          command: git clone git@github.com:aotulana/differ-for-testers.git ~/differ-for-testers
       - restore_cache:
           key: differ-regression-assignment-{{ checksum "pom.xml" }}
       - run: mvn dependency:go-offline
