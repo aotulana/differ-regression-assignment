@@ -92,7 +92,7 @@ public class DifferServiceTest extends TestBase {
         Assert.assertEquals(type, "DIFFERENT_LENGTH");
     }
 
-    @Test
+    // @Test
     public void when_SidesAreDiffedAndRightSideIsNull_Expect_DifferentLengthAndRightHasNoValue() {
         //Set ID, side and value for left side
         setSideValue(id, "left", "\"" + encodeInBase64("comingoverthere") + "\"");

@@ -1,14 +1,13 @@
 package utilities;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.testng.*;
 import org.testng.xml.XmlSuite;
 
-import java.io.File;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -20,10 +19,13 @@ import java.util.Map;
  *
  */
 public class ExtentReporterNG implements IReporter {
-    private ExtentReports extent;
+    private final ExtentSparkReporter html = new ExtentSparkReporter("./test-output/TestReport.html");
+    private com.aventstack.extentreports.ExtentReports extent;
 
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
-        extent = new ExtentReports(outputDirectory + File.separator + "ExtentReportsTestNG.html", true);
+        html.config().setTheme(Theme.DARK);
+        extent = new ExtentReports();
+        extent.attachReporter(html);
 
         for (ISuite suite : suites) {
             Map<String, ISuiteResult> result = suite.getResults();
@@ -31,25 +33,21 @@ public class ExtentReporterNG implements IReporter {
             for (ISuiteResult r : result.values()) {
                 ITestContext context = r.getTestContext();
 
-                buildTestNodes(context.getPassedTests(), LogStatus.PASS);
-                buildTestNodes(context.getFailedTests(), LogStatus.FAIL);
-                buildTestNodes(context.getSkippedTests(), LogStatus.SKIP);
+                buildTestNodes(context.getPassedTests(), Status.PASS);
+                buildTestNodes(context.getFailedTests(), Status.FAIL);
+                buildTestNodes(context.getSkippedTests(), Status.SKIP);
             }
         }
-
         extent.flush();
-        extent.close();
     }
 
-    private void buildTestNodes(IResultMap tests, LogStatus status) {
+    private void buildTestNodes(IResultMap tests, Status status) {
         ExtentTest test;
 
         if (tests.size() > 0) {
             for (ITestResult result : tests.getAllResults()) {
-                test = extent.startTest(result.getMethod().getMethodName());
-
-                /*test.getTest(). = getTime(result.getStartMillis());
-                test.getTest().endedTime = getTime(result.getEndMillis());*/
+                test = extent.createTest(result.getTestClass().getRealClass().getSimpleName()
+                        + " ---> " + result.getMethod().getMethodName());
 
                 for (String group : result.getMethod().getGroups())
                     test.assignCategory(group);
@@ -60,15 +58,7 @@ public class ExtentReporterNG implements IReporter {
                     message = result.getThrowable().getMessage();
 
                 test.log(status, message);
-
-                extent.endTest(test);
             }
         }
-    }
-
-    private Date getTime(long millis) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(millis);
-        return calendar.getTime();
     }
 }

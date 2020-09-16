@@ -20,7 +20,7 @@ jobs:
       - run:
           name: Start differ-for-testers app
           command: |
-            cd ~/differ-for-testers && mvn clean test
+            cd ~/differ-for-testers && mvn test
             cd ~/differ-for-testers && mvn exec:java
           background: true
       - run:
@@ -37,6 +37,6 @@ jobs:
           name: Run API Tests
           command: mvn clean test
       - store_test_results:
-          path: target/surefire-reports
+          path: target/surefire-reports/Differ Regression Test Suite/*.xml
       - store_artifacts:
           path: test-output
